@@ -1,0 +1,5 @@
+name: Ωhm.com
+markdown: redcarpet
+safe: true
+lsi: false
+timezone: Europe/Copenhagen
