@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+h1 a {
+  font-weight: 700;
+}
+
 a small {
   font-size: 11px;
   color: #777;
@@ -208,6 +212,10 @@ footer {
 
 .blog-title {
   margin-bottom: 0;
+}
+
+.gift {
+  vertical-align: middle;
 }
 
 @media print, screen and (max-width: 960px) {
