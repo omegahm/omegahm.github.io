@@ -206,8 +206,12 @@ footer {
   border-radius: 50%;
 }
 
-.view {
+.view, .pages {
   margin-top: 10px;
+}
+
+.view a i {
+  color: grey;
 }
 
 .blog-title {
