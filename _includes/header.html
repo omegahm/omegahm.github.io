@@ -29,41 +29,78 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>
-          {% if page.url == '/index.html' %}
-            {{ site.name }}
-          {% else %}
-            <a href="/">
+      <aside>
+        <header>
+          <h1>
+            {% if page.url == '/index.html' %}
               {{ site.name }}
+            {% else %}
+              <a href="/">
+                {{ site.name }}
+              </a>
+            {% endif %}
+          </h1>
+
+          <p>My little corner of the web</p>
+
+          <img src="/img/face.jpeg" class="img-circle" alt="Omegahm" />
+
+          <nav class="links">
+            <a href="//github.com/omegahm">
+              <i class="icon-github-sign icon-2x"></i>
             </a>
-          {% endif %}
-        </h1>
 
-        <p>My little corner of the web</p>
+            <a href="//facebook.com/omegahm">
+              <i class="icon-facebook-sign icon-2x"></i>
+            </a>
 
-        <img src="/img/face.jpeg" class="img-circle" alt="Omegahm" />
+            <a href="//twitter.com/madsohm">
+              <i class="icon-twitter-sign icon-2x"></i>
+            </a>
 
-        <p class="view">
-          <a href="//github.com/omegahm">
-            <i class="icon-github-sign icon-2x"></i>
-          </a>
+            <a href="//dk.linkedin.com/in/madsohm">
+              <i class="icon-linkedin-sign icon-2x"></i>
+            </a>
+          </nav>
 
-          <a href="//facebook.com/omegahm">
-            <i class="icon-facebook-sign icon-2x"></i>
-          </a>
+          <nav class="pages">
+            <ul>
+              <li>
+                <a href="/files/cv.pdf">
+                  <i class="icon-star"></i>
+                  CV
+                </a>
+              </li>
 
-          <a href="//twitter.com/madsohm">
-            <i class="icon-twitter-sign icon-2x"></i>
-          </a>
+              <li>
+                <a href="/wishlist.html">
+                  <i class="icon-gift"></i>
+                  Wishlist
+                </a>
+              </li>
 
-          <a href="//dk.linkedin.com/in/madsohm">
-            <i class="icon-linkedin-sign icon-2x"></i>
-          </a>
-        </p>
+              <li>
+                <a href="/files/bachelors.pdf">
+                  <i class="icon-beaker"></i>
+                  Bachelor Thesis
+                </a>
+              </li>
 
-        <p class="pages">
-          <a href="/wishlist.html"><img class="gift" src="/img/gift.png" alt="gift" /> Wishlist</a>
-        </p>
-      </header>
-    <section>
+              <li>
+                <a href="/files/thesis.pdf">
+                  <i class="icon-beaker"></i>
+                  Master Thesis
+                </a>
+              </li>
+
+              <li>
+                <a href="/files/thesisslides.pdf">
+                  <i class="icon-beaker"></i>
+                  Slides for Master Thesis
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </aside>
+      <section>
