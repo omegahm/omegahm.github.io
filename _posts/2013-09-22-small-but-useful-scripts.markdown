@@ -48,7 +48,7 @@ Working with LocaleApp, we often want to pull new locale files for our project. 
 {% highlight bash %}
 function pfl {
   cd /Users/ohm/Work/autobutler;
-  rm config/locales/[^xx]*.yml
+  rm config/locales/*.yml
   localeapp pull
 }
 {% endhighlight %}
