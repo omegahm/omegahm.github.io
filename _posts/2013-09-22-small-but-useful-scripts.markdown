@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Small, but useful script"
-tags: zsh script
+tags: zsh scripts shell
 ---
 
 We all have those small lines of code that we write again and again and again. Why not write a script to do it for you?
