@@ -1,10 +1,10 @@
 @import url(https: //fonts.googleapis.com/css?family=Ubuntu: 300italic,700italic,300,700);
 
 body {
-  padding: 50px;
-  font: 14px/1.5 Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   font-weight: 300;
+  font: 14px/1.5 Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,36 +47,36 @@ h1 a {
 }
 
 a small {
-  font-size: 11px;
   color: #777;
-  margin-top: -0.6em;
   display: block;
+  font-size: 11px;
+  margin-top: -0.6em;
 }
 
 .wrapper {
-  width: 860px;
   margin: 0 auto;
+  width: 860px;
 }
 
 blockquote {
   border-left: 1px solid #e5e5e5;
+  font-style: italic;
   margin: 0;
   padding: 0 0 0 20px;
-  font-style: italic;
 }
 
 code, pre {
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #333;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   font-size: 12px;
 }
 
 pre {
-  padding: 8px 15px;
   background: #f8f8f8;
   border-radius: 5px;
   border: 1px solid #e5e5e5;
   overflow-x: auto;
+  padding: 8px 15px;
 }
 
 code {
@@ -95,14 +95,14 @@ pre code {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  width: 100%;
 }
 
 th, td {
-  text-align: left;
-  padding: 5px 10px;
   border-bottom: 1px solid #e5e5e5;
+  padding: 5px 10px;
+  text-align: left;
 }
 
 dt {
@@ -119,46 +119,43 @@ img {
 }
 
 header {
-  width: 270px;
   float: left;
   position: fixed;
+  width: 270px;
 }
 
 header > ul {
-  list-style: none;
-  height: 40px;
-
-  padding: 0;
-
   background: #eee;
   background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
   background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-
   border-radius: 5px;
   border: 1px solid #d2d2d2;
   box-shadow: inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+  height: 40px;
+  list-style: none;
+  padding: 0;
   width: 270px;
 }
 
 header > ul li {
-  width: 89px;
-  float: left;
   border-right: 1px solid #d2d2d2;
+  float: left;
   height: 40px;
+  width: 89px;
 }
 
 header > ul a {
-  line-height: 1;
-  font-size: 11px;
   color: #999;
   display: block;
-  text-align: center;
-  padding-top: 6px;
+  font-size: 11px;
   height: 40px;
+  line-height: 1;
+  padding-top: 6px;
+  text-align: center;
 }
 
 strong {
@@ -167,8 +164,8 @@ strong {
 }
 
 header > ul li + li {
-  width: 88px;
   border-left: 1px solid #fff;
+  width: 88px;
 }
 
 header > ul li + li + li {
@@ -177,15 +174,15 @@ header > ul li + li + li {
 }
 
 header > ul a strong {
-  font-size: 14px;
-  display: block;
   color: #222;
+  display: block;
+  font-size: 14px;
 }
 
 section {
-  width: 500px;
   float: right;
   padding-bottom: 50px;
+  width: 500px;
 }
 
 small {
@@ -193,17 +190,17 @@ small {
 }
 
 hr {
-  border: 0;
   background: #e5e5e5;
+  border: 0;
   height: 1px;
   margin: 0 0 20px;
 }
 
 footer {
-  width: 270px;
+  bottom: 50px;
   float: left;
   position: fixed;
-  bottom: 50px;
+  width: 270px;
 }
 
 .tag-list {
@@ -242,8 +239,8 @@ nav.pages > ul {
 
 @media print, screen and (max-width: 960px) {
   div.wrapper {
-    width: auto;
     margin: 0;
+    width: auto;
   }
 
   header, section, footer {
@@ -257,10 +254,10 @@ nav.pages > ul {
   }
 
   section {
-    border: 1px solid #e5e5e5;
     border-width: 1px 0;
-    padding: 20px 0;
+    border: 1px solid #e5e5e5;
     margin: 0 0 20px;
+    padding: 20px 0;
   }
 
   header a small {
@@ -305,8 +302,8 @@ nav.pages > ul {
 
 @media print {
   body {
-    padding: 0.4in;
-    font-size: 12pt;
     color: #444;
+    font-size: 12pt;
+    padding: 0.4in;
   }
 }
