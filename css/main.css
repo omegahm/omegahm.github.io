@@ -90,6 +90,10 @@ code.tag {
   font-size: 65%;
 }
 
+pre code {
+  padding: 2px 4px 2px 0px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
