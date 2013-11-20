@@ -1,4 +1,5 @@
-name: Ωhm.com
+name: Ohm
+website: omegahm.github.io
 markdown: redcarpet
 safe: true
 lsi: false
