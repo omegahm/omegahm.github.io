@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="text-muted">
-  {{ page.date | date_to_long_string }}
-</p>
+<div itemprop="" itemtype="http://schema.org/BlogPosting">
+  <h2 itemprop="name headline">{{ page.title }}</h2>
+  <p class="text-muted" itemprop="datePublished">
+    {{ page.date | date_to_long_string }}
+  </p>
 
-<div class="post">
-  {{ content }}
+  <div class="post" itemprop="articleBody">
+    {{ content }}
+  </div>
 </div>
