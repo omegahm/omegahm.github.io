@@ -80,6 +80,10 @@ body > aside > footer {
   padding-right: 10px;
 }
 
+.pages {
+  padding-top: 20px;
+}
+
 .pages ul {
   list-style: none;
   margin: 0;
@@ -87,7 +91,7 @@ body > aside > footer {
 }
 
 ul li {
-  padding-bottom: 5px;
+  padding: 2px 0;
 }
 
 .tag-list .tag {
