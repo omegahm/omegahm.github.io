@@ -2,6 +2,7 @@
 layout: post
 title:  "Even more failing comments"
 tags: ruby erb
+last_modified_at: 2013-11-15
 ---
 
 So I took my `erubis` for another spin.

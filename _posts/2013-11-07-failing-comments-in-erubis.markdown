@@ -2,6 +2,7 @@
 layout: post
 title:  "Failing comments in erubis"
 tags: ruby erb
+last_modified_at: 2013-11-07
 ---
 
 I'm doing a lot of back-end work in Ruby and in Rails.

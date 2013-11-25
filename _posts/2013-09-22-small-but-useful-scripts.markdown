@@ -2,6 +2,7 @@
 layout: post
 title:  "Small, but useful script"
 tags: zsh scripts shell
+last_modified_at: 2013-09-22
 ---
 
 We all have those small lines of code that we write again and again and again. Why not write a script to do it for you?

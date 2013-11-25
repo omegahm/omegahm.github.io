@@ -2,6 +2,7 @@
 layout: post
 title:  "New .bashrc-file"
 tags: scripts bash shell
+last_modified_at: 2013-11-04
 ---
 
 Previously I wrote about `functions` and `aliases`, however I just swtiched back to `bash` from `zsh` and thought I'd share some of my `.bashrc`-file. I also switched from TotalTerminal to iTerm 2.

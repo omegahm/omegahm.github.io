@@ -2,6 +2,7 @@
 layout: post
 title:  "✔ as a shortcut"
 tags: bash macosx
+last_modified_at: 2013-11-25
 ---
 
 I've been going crazy over that Mac OS X has a shortcut for `√` (Square root sign) but not for `✔` (Check mark).

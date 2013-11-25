@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://omegahm.github.io/sitemap.xml
