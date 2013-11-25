@@ -47,7 +47,7 @@ body > main > article {
   padding: 0 50px 50px;
 }
 
-body > main > article > p {
+body > main > article > div > p {
   padding-top: 10px;
 }
 

@@ -30,26 +30,31 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="clear">
+  <body class="clear" itemscope itemtype="http://schema.org/Blog">
     <aside class="clear">
       <header>
-        <h1>
-          <a href="/">
+        <h1 itemprop="name">
+          <a href="/" itemprop="url">
             {{ site.name }}
           </a>
         </h1>
 
         <p>My little corner of the web</p>
 
-        <img src="/img/face.jpeg" class="img-circle" alt="Ohm" />
+        <span itemprop="author" itemscope="author" itemtype="http://schema.org/Person">
+          <img src="/img/face.jpeg" class="img-circle" alt="Ohm" itemprop="image" />
 
-        <p class="about">
-          <small>
-            Mads Ohm Larsen, lead developer at
-            <a href="http://www.autobutler.dk" target="_blank">Autobutler.dk</a>,
-            Ruby on Rails magician, fun at work, <a href="http://projecteuler.net/profile/omegahm.png" taget="_blank">trying hard</a>
-          </small>
-        </p>
+          <p class="about">
+            <small>
+              <span itemprop="name">Mads Ohm Larsen</span>,
+              <span itemprop="description">
+                lead developer at
+                <a href="http://www.autobutler.dk" target="_blank" itemprop="worksFor">Autobutler.dk</a>,
+                Ruby on Rails magician, fun at work, <a href="http://projecteuler.net/profile/omegahm.png" taget="_blank" itemprop="award">trying hard</a>
+              </span>
+            </small>
+          </p>
+        </span>
 
         <nav class="pages">
           <ul>
