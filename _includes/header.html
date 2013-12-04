@@ -29,6 +29,21 @@
       ga('create', 'UA-43929022-2', 'omegahm.github.io');
       ga('send', 'pageview');
     </script>
+
+    {% if page.id %}
+      <script>
+        var disqus_shortname  = 'omegahm';
+        var disqus_title      = '{{ page.title }}';
+        var disqus_identifier = '{{ page.url }}';
+        var disqus_url        = 'http://{{ site.host }}{{ page.url }}';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    {% endif %}
   </head>
   <body class="clear" itemscope itemtype="http://schema.org/Blog">
     <aside class="clear">
