@@ -15,10 +15,17 @@ body > aside {
   background: #f7f5fa;
   bottom: 0px;
   left: 0px;
-  position: fixed;
+  position: relative;
   text-align: center;
   top: 0px;
-  width: 320px;
+  width: auto;
+}
+
+@media (min-width: 600px) {
+  body > aside {
+    position: fixed;
+    width: 320px;
+  }
 }
 
 body > aside,
@@ -39,8 +46,10 @@ body > aside > header > h1 > a:focus {
   font-weight: 500;
 }
 
-body > main {
-  margin: 0 0 0 320px;
+@media (min-width: 600px) {
+  body > main {
+    margin: 0 0 0 320px;
+  }
 }
 
 body > main > article {
@@ -51,11 +60,13 @@ body > main > article > div > p {
   padding-top: 10px;
 }
 
-body > aside > footer {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
+@media(min-width: 600px) {
+  body > aside > footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .about {
