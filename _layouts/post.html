@@ -2,7 +2,10 @@
 layout: default
 ---
 <div itemscope itemtype="http://schema.org/BlogPosting">
-  <h2 itemprop="name headline">{{ page.title }}</h2>
+  <div class="page-header">
+    <h1 itemprop="name headline">{{ page.title }}</h1>
+  </div>
+
   <p class="text-muted" itemprop="datePublished">
     {{ page.date | date_to_long_string }}
   </p>

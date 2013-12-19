@@ -38,7 +38,7 @@ body > aside a:hover,
 body > aside a:focus {
   color: #2a6496;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 body > aside > header > h1 > a:hover,
@@ -92,6 +92,7 @@ body > main > article > div > p {
 }
 
 .pages {
+  font-size: 0.85em;
   padding-top: 20px;
 }
 
@@ -109,8 +110,32 @@ ul li {
   font-size: 10px;
 }
 
-.clear:before,
-.clear:after {
-  content: ' ';
-  display: table;
+.callout {
+  background-color: #f4f8fa;
+  border-left: 3px solid #bce8f1;
+  margin: 5px auto 20px;
+  padding: 20px;
+}
+
+.callout:last-child {
+  margin-bottom: 5px;
+}
+
+.callout h4 {
+  color: #34789a;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.callout p {
+  margin: 0 0 10px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Bootstrap overrides */
+.panel-default > .panel-heading {
+  background-color: #f7f5fa;
 }
