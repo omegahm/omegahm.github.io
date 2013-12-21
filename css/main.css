@@ -2,8 +2,12 @@
 @import url("//fonts.googleapis.com/css?family=Source Code Pro: 400,500,700");
 
 body {
-  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 code, kbd, pre, samp {
@@ -21,11 +25,19 @@ body > aside {
   width: auto;
 }
 
+body > aside > header {
+  padding-top: 20px;
+}
+
 @media (min-width: 600px) {
   body > aside {
     position: fixed;
     width: 320px;
   }
+}
+
+body > aside h2 {
+  margin-top: 0;
 }
 
 body > aside,
@@ -46,14 +58,18 @@ body > aside > header > h1 > a:focus {
   font-weight: 500;
 }
 
+body > main > article {
+  padding: 0 10px 10px;
+}
+
 @media (min-width: 600px) {
   body > main {
     margin: 0 0 0 320px;
   }
-}
 
-body > main > article {
-  padding: 0 50px 50px;
+  body > main > article {
+    padding: 0 50px 50px;
+  }
 }
 
 body > main > article > div > p {
@@ -125,6 +141,10 @@ ul li {
   color: #34789a;
   margin-top: 0;
   margin-bottom: 5px;
+}
+
+.callout h4 a {
+  color: maroon;
 }
 
 .callout p {
