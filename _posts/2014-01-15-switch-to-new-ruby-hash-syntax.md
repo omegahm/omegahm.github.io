@@ -2,7 +2,7 @@
 layout: post
 title:  "Switch to New Ruby Hash Syntax"
 tags: ruby sublimetext regex
-last_modified_at: 2014-01-15
+last_modified_at: 2014-01-16
 ---
 
 When working on old Ruby code, you'll see the old (<= 1.9) hash syntax:
@@ -65,3 +65,66 @@ To get a shortcut to replace the old syntax with the new do the following:
 {% endhighlight %}
 
 Now you can just press "⌘+⇧+x" and replace the old with the new.
+
+
+---
+
+#### Edit: 2014-01-16
+
+There's a couple of shortcomings in the above regex.
+It will match these inside strings!
+Really doesn't matter for my use case.
+
+It will also _not_ retain the indention.
+That is, the example I gave at the top, will not work as shown.
+Rather, this:
+
+{% highlight ruby %}
+{
+  :name     => "Mads",
+  :age      => "25",
+  :position => "Lead developer"
+}
+{% endhighlight %}
+
+will become this:
+
+{% highlight ruby %}
+{
+  name: "Mads",
+  age: "25",
+  position: "Lead developer"
+}
+{% endhighlight %}
+
+That really will not do, so we change the regex to:
+
+{% highlight bash %}
+s/:(\\w+)\\s?(\\s*)=>\\s?(\\s*)/\1: \2\3/g
+{% endhighlight %}
+
+This will retain the indention and make sure that we will get:
+
+{% highlight ruby %}
+{
+  name:     "Mads",
+  age:      "25",
+  position: "Lead developer"
+}
+{% endhighlight %}
+
+The RegReplacer regex will now be:
+
+{% highlight json %}
+{
+  "replacements": {
+    "favor_new_hash_syntax": {
+      "find": ":(\\w+)\\s?(\\s*)=>\\s?(\\s*)",
+      "replace": "\\1: \\2\\3",
+      "greedy": true,
+      "case": false
+    }
+  }
+}
+{% endhighlight %}
+
