@@ -15,7 +15,7 @@ code, kbd, pre, samp {
   font-weight: 500;
 }
 
-body > aside {
+body aside {
   background: #f7f5fa;
   bottom: 0px;
   left: 0px;
@@ -25,64 +25,74 @@ body > aside {
   width: auto;
 }
 
-body > aside > header {
+body aside header {
   padding-top: 20px;
 }
 
 @media (min-width: 600px) {
-  body > aside {
+  body aside {
     position: fixed;
     width: 320px;
   }
 }
 
-body > aside h2 {
+body aside h2 {
   margin-top: 0;
 }
 
-body > aside,
-body > aside a,
-body > aside a:visited {
+body aside,
+body aside a,
+body aside a:visited {
   color: #716b7a;
 }
 
-body > aside a:hover,
-body > aside a:focus {
+body aside a:hover,
+body aside a:focus {
   color: #2a6496;
   text-decoration: none;
   font-weight: 500;
 }
 
-body > aside > header > h1 > a:hover,
-body > aside > header > h1 > a:focus {
+body aside header h1 a:hover,
+body aside header h1 a:focus {
   font-weight: 500;
 }
 
-body > main > article {
+body main article {
   padding: 0 10px 10px;
 }
 
 @media (min-width: 600px) {
-  body > main {
+  body main {
     margin: 0 0 0 320px;
   }
 
-  body > main > article {
+  body main article {
     padding: 0 50px 50px;
   }
 }
 
-body > main > article > div > p {
+body main article div p {
   padding-top: 10px;
 }
 
 @media(min-width: 600px) {
-  body > aside > footer {
+  body aside > footer {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
   }
+}
+
+@media(min-width: 600px) {
+  aside#foot {
+    top: inherit;
+  }
+}
+
+aside#head {
+  padding-bottom: 20px;
 }
 
 .about {
