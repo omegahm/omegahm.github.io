@@ -100,7 +100,7 @@ will become this:
 That really will not do, so we change the regex to:
 
 {% highlight bash %}
-s/:(\\w+)\\s?(\\s*)=>\\s?(\\s*)/\1: \2\3/g
+s/:(\w+)\s?(\s*)=>\s?(\s*)/\1: \2\3/g
 {% endhighlight %}
 
 This will retain the indention and make sure that we will get:
