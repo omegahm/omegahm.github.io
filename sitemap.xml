@@ -32,6 +32,4 @@ title: Ohm
       <lastmod>{{ post.last_modified_at }}</lastmod>
     </url>
   {% endfor %}
-
-
 </urlset>

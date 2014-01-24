@@ -17,11 +17,11 @@ code, kbd, pre, samp {
 
 body aside {
   background: #f7f5fa;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   position: relative;
   text-align: center;
-  top: 0px;
+  top: 0;
   width: auto;
 }
 
