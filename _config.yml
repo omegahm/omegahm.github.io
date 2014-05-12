@@ -4,3 +4,4 @@ markdown: redcarpet
 safe: true
 lsi: false
 timezone: Europe/Copenhagen
+encoding: utf-8

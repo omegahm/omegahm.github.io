@@ -53,6 +53,11 @@ body aside a:focus {
   font-weight: 500;
 }
 
+body aside a:hover > .fa,
+body aside a:focus > .fa {
+  text-decoration: none;
+}
+
 body aside header h1 a:hover,
 body aside header h1 a:focus {
   font-weight: 500;
@@ -60,6 +65,11 @@ body aside header h1 a:focus {
 
 body main article {
   padding: 0 10px 10px;
+}
+
+body main a:hover,
+body main a:hover > .fa {
+  text-decoration: underline;
 }
 
 @media (min-width: 600px) {
@@ -168,4 +178,18 @@ ul li {
 /* Bootstrap overrides */
 .panel-default > .panel-heading {
   background-color: #f7f5fa;
+}
+
+/* Google Ads */
+.adsbygoogle {
+  margin: 20px auto 0;
+  display: block;
+  width: 400px;
+  height: 90px;
+}
+
+@media(min-width: 600px) {
+  .adsbygoogle {
+    width: 100%;
+  }
 }
