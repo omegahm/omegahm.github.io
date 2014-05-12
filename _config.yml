@@ -5,3 +5,22 @@ safe: true
 lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
+
+navigation:
+- text: Blog
+  url: /
+  symbol: fa-pencil
+- text: CV
+  url: /cv.html
+  symbol: fa-star
+- text: Wish-list
+  url: /wishlist.html
+  symbol: fa-gift
+- text: Bachelor Thesis
+  title: Korte Kurver på Krumme Flader
+  url: /files/bachelors.pdf
+  symbol: fa-flask
+- text: Master Thesis
+  title: Exception Handling in Communicating Sequential Processes
+  url: /files/thesis.pdf
+  symbol: fa-flask

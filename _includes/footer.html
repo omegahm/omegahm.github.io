@@ -1,4 +1,4 @@
-        <ins class="adsbygoogle" data-ad-client="ca-pub-0344007993956524" data-ad-slot="3984940544"></ins>
+        <ins class="adsbygoogle" style="margin:20px auto 0;display:block;width:728px;height:90px;" data-ad-client="ca-pub-0344007993956524" data-ad-slot="3984940544"></ins>
       </article>
     </main>
 
@@ -6,36 +6,14 @@
       <footer>
         <nav class="pages">
           <ul>
-            <li>
-              <a href="/">
-                <i class="fa fa-pencil"></i> Blog
-              </a>
-            </li>
-
-            <li>
-              <a href="/cv.html">
-                <i class="fa fa-star"></i> CV
-              </a>
-            </li>
-
-            <li>
-              <a href="/wishlist.html">
-                <i class="fa fa-gift"></i> Wish-list
-              </a>
-            </li>
-
-            <li>
-              <a href="/files/bachelors.pdf" title="Korte Kurver på Krumme Flader">
-                <i class="fa fa-flask"></i> Bachelor Thesis
-              </a>
-            </li>
-
-            <li>
-              <a href="/files/thesis.pdf" title="Exception Handling in CSP">
-                <i class="fa fa-flask"></i> Master Thesis
-              </a>
-              <a href="/files/thesisslides.pdf">(Slides)</a>
-            </li>
+            {% assign url = page.url|remove:'index.html' %}
+            {% for link in site.navigation %}
+              <li{% if url == link.url %} class="current"{% endif %}>
+                <a href="{{ link.url }}"{% if link.title %} title="{{ link.title }}"{% endif %}>
+                  <i class="fa {{ link.symbol }}"></i> {{ link.text }}
+                </a>
+              </li>
+            {% endfor %}
           </ul>
         </nav>
 
