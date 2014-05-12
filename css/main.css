@@ -188,7 +188,7 @@ ul li {
   height: 90px;
 }
 
-@media(min-width: 728px) {
+@media(min-width: 1120px) {
   .adsbygoogle {
     width: 728px;
   }
