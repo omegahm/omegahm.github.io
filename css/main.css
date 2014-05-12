@@ -184,12 +184,12 @@ ul li {
 .adsbygoogle {
   margin: 20px auto 0;
   display: block;
-  width: 400px;
+  width: 100%;
   height: 90px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 728px) {
   .adsbygoogle {
-    width: 100%;
+    width: 728px;
   }
 }
