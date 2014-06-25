@@ -7,10 +7,10 @@ timezone: Europe/Copenhagen
 encoding: utf-8
 
 gems:
-- jekyll-mentions
-- jemoji
-- jekyll-redirect-from
-- jekyll-sitemap
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
 
 navigation:
 - text: Blog
@@ -22,11 +22,11 @@ navigation:
 - text: Wish-list
   url: /wishlist.html
   symbol: fa-gift
-- text: Bachelor Thesis
-  title: Korte Kurver på Krumme Flader
-  url: /files/bachelors.pdf
-  symbol: fa-flask
 - text: Master Thesis
   title: Exception Handling in Communicating Sequential Processes
   url: /files/thesis.pdf
+  symbol: fa-flask
+- text: Bachelor Thesis
+  title: Korte Kurver på Krumme Flader
+  url: /files/bachelors.pdf
   symbol: fa-flask
