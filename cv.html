@@ -1,6 +1,70 @@
 ---
 layout: default
 title: Curriculum vitae
+
+work:
+- title: Professional Experience
+  entries:
+  - name: Lokalebasen
+    url: http://www.lokalebasen.dk
+    place: Copenhagen, Denmark
+    position: Developer
+    start_time: July 2014
+    end_time: present
+    technologies: Ruby on Rails, PostgreSQL, Git, CoffeeScript, KnockoutJS, Go, Erlang, and more
+  - name: Autobutler
+    url: http://www.autobutler.dk
+    place: Copenhagen, Denmark
+    position: Lead developer
+    start_time: September 2012
+    end_time: July 2014
+    technologies: Ruby on Rails, PostgreSQL, Heroku, Git, HTML5, Bootstrap, jQuery, KnockoutJS, Grape, and more
+  - name: EasyCoaching
+    url: http://www.easycoaching.dk
+    place: Copenhagen/Aalborg, Denmark
+    position: Co-owner, developer, and server administrator
+    start_time: June 2011
+    end_time: June 2013
+    technologies: PHP, Apache, jQuery, MySQL
+  - name: NaviPartner
+    url: http://www.navipartner.dk
+    place: Copenhagen, Denmark
+    position: Part-time web developer
+    start_time: August 2009
+    end_time: July 2012
+    technologies: Web shops, PHP, MySQL, MSSQL, Microsoft Dynamics NAV
+
+hobby:
+- title: Hobby Projects
+  entries:
+  - name: Sorteringsguide
+    url: http://www.sorteringsguide.dk
+    description: Lookup system for Vestforbrænding and all recycling centers in Northern Zealand
+    time: Autumn 2013
+    technologies: Rails 4, KnockoutJS, Caching, Bootstrap, Heroku, Git
+  - name: Køkken 400 Ølloge
+    url: http://kk400.herokuapp.com
+    description: Accounting system for dormitory
+    time: Summer 2013
+    technologies: Rails 4, Bootstrap, Heroku, Git, HighCharts
+
+other:
+- title: Service
+  entries:
+  - name: Memeber of the network group at Prof. Ostenfeld Dormitory
+    time: 2009 - February 2013
+    description: Managed the Internet services for about 300 rooms
+- title: Technical Skills
+  entries:
+  - name: Programming
+    description: Ruby, Rails 3 &amp; 4, Python, PHP, JavaScript, C++, UNIX shell scripting (Bash), SQL, and others
+  - name: Other technologies
+    description: HTML5, CSS3, jQuery, Bootstrap, Git, GitHub, Heroku, PostgreSQL, and others
+  - name: Computer Applications
+    description: Vim, Sublime Text, common application in Windows (XP through 7), Linux (Ubuntu), and Mac OS X
+  - name: Languages
+    description: Danish (native), English (fluent)
+
 ---
 
 <div class="page-header">
@@ -14,73 +78,38 @@ title: Curriculum vitae
   </h1>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Professional Experience</h3>
+{% for thing in page.work %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ thing.title }}</h3>
+    </div>
+    <div class="panel-body">
+      {% for entry in thing.entries %}
+
+        <div class="callout">
+          <h4>
+            <a href="{{ entry.link }}">{{ entry.name }}</a>, {{ entry.place}}
+          </h4>
+
+          <div class="clearfix">
+            <em>{{ entry.position }}</em>
+            <span class="pull-right">
+              <time>{{ entry.start_time }}</time> - <time>{{ entry.end_time }}</time>
+            </span>
+          </div>
+
+          <p>
+            &mdash; {{ entry.technologies }}
+          </p>
+
+          <p>
+            Contact: <a href="/files/cv.pdf" title="Why? To not expose my contacts details to spambots and the like.">See PDF</a>
+          </p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-  <div class="panel-body">
-
-    <div class="callout">
-      <h4>
-        <a href="http://www.autobutler.dk">Autobutler</a>, Copenhagen, Denmark
-      </h4>
-
-      <div class="clearfix">
-        <em>Lead developer</em>
-        <span class="pull-right">
-          <time>September 2012</time> - <time>present</time>
-        </span>
-      </div>
-
-      <p>
-        &mdash; Ruby on Rails, PostgreSQL, Heroku, Git, HTML5, Bootstrap, jQuery, KnockoutJS, Grape
-      </p>
-
-      <p>
-        Contact: <a href="/files/cv.pdf" title="Why? To not expose my contacts details to spambots and the like.">See PDF</a>
-      </p>
-    </div>
-
-    <div class="callout">
-      <h4>
-        <a href="http://www.easycoaching.dk">EasyCoaching</a>, Copenhagen/Aalborg, Denmark
-      </h4>
-
-      <div class="clearfix">
-        <em>Co-owner, developer, and server administrator</em>
-        <span class="pull-right">
-          <time>June 2011</time> - <time>June 2013</time>
-        </span>
-      </div>
-
-      <p>
-        &mdash; PHP, Apache, jQuery, MySQL
-      </p>
-    </div>
-
-    <div class="callout">
-      <h4>
-        <a href="http://www.navipartner.dk">NaviPartner</a>, Copenhagen, Denmark
-      </h4>
-
-      <div class="clearfix">
-        <em>Part-time web developer</em>
-        <span class="pull-right">
-          <time>August 2009</time> - <time>July 2012</time>
-        </span>
-      </div>
-
-      <p>
-        &mdash; Web shops, PHP, MySQL, MSSQL, Microsoft Dynamics NAV
-      </p>
-
-      <p>
-        Contact: <a href="/files/cv.pdf" title="Why? To not expose my contacts details to spambots and the like.">See PDF</a>
-      </p>
-    </div>
-
-  </div>
-</div>
+{% endfor %}
 
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -142,114 +171,58 @@ title: Curriculum vitae
   </div>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Hobby Projects</h3>
+{% for thing in page.hobby %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ thing.title }}</h3>
+    </div>
+    <div class="panel-body">
+      {% for entry in thing.entries %}
+
+        <div class="callout">
+          <h4>
+            <a href="{{ entry.link }}">{{ entry.name }}</a>
+          </h4>
+
+          <div class="clearfix">
+            <em>{{ entry.description }}</em>
+            <span class="pull-right">
+              <time>{{ entry.time }}</time>
+            </span>
+          </div>
+
+          <p>
+            &mdash; {{ entry.technologies }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-  <div class="panel-body">
+{% endfor %}
 
-    <div class="callout">
-      <h4>
-        <a href="http://www.sorteringsguide.dk">Sorteringsguide</a>
-      </h4>
-
-      <div class="clearfix">
-        <em>Lookup system for Vestforbrænding and all recycling centers in Northern Zealand</em>
-        <span class="pull-right">
-          <time>Autumn 2013</time>
-        </span>
-      </div>
-
-      <p>
-        &mdash; Rails 4, KnockoutJS, Caching, Bootstrap, Heroku, Git
-      </p>
+{% for thing in page.other %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ thing.title }}</h3>
     </div>
+    <div class="panel-body">
+      {% for entry in thing.entries %}
 
-    <div class="callout">
-      <h4>
-        <a href="http://kk400.herokuapp.com">Køkken 400 Ølloge</a>
-      </h4>
+        <div class="callout">
+          <h4>
+            {{ entry.name }}
+          </h4>
 
-      <div class="clearfix">
-        <em>Accounting system for dormitory</em>
-        <span class="pull-right">
-          <time>Summer 2013</time>
-        </span>
-      </div>
-
-      <p>
-        &mdash; Rails 4, Bootstrap, Heroku, Git, HighCharts
-      </p>
+          <div class="clearfix">
+            <em>{{ entry.description }}</em>
+            {% if entry.time %}
+              <span class="pull-right">
+                <time>{{ entry.time }}</time>
+              </span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
     </div>
-
   </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Service</h3>
-  </div>
-  <div class="panel-body">
-
-    <div class="callout">
-      <h4>
-        Member of the network group at Prof. Ostenfeld Dormitory
-      </h4>
-
-      <div class="clearfix">
-        <em>Managed the Internet services for about 300 rooms</em>
-        <span class="pull-right">
-          <time>2009</time> - <time>February 2013</time>
-        </span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Technical Skills</h3>
-  </div>
-  <div class="panel-body">
-
-    <div class="callout">
-      <h4>
-        Programming
-      </h4>
-
-      <em>
-        Ruby, Rails 3 &amp; 4, Python, PHP, JavaScript, C++, UNIX shell scripting (Bash), SQL, and others
-      </em>
-    </div>
-
-    <div class="callout">
-      <h4>
-        Other technologies
-      </h4>
-
-      <em>
-         HTML5, CSS3, jQuery, Bootstrap, Git, GitHub, Heroku, PostgreSQL, and others
-      </em>
-    </div>
-
-    <div class="callout">
-      <h4>
-        Computer Applications
-      </h4>
-
-      <em>
-        Vim, Sublime Text 2, common application in Windows (XP through 7), Linux (Ubuntu), and Mac OS X
-      </em>
-    </div>
-
-    <div class="callout">
-      <h4>
-        Languages
-      </h4>
-
-      <em>Danish (native), English (fluent)</em>
-    </div>
-
-  </div>
-</div>
+{% endfor %}
