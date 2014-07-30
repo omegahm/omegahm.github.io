@@ -1,7 +1,6 @@
 name: Ohm
 website: ohm.sh
 markdown: redcarpet
-safe: true
 lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
@@ -10,7 +9,6 @@ gems:
   - jekyll-mentions
   - jemoji
   - jekyll-redirect-from
-  - jekyll-sitemap
 
 navigation:
 - text: Blog
