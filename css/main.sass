@@ -1,0 +1,153 @@
+---
+---
+
+$asideTextColor: #716b7a
+$asideHoverColor: #2a6496
+$asideBackground: #f7f5fa
+$calloutBackground: #f4f8fa
+$calloutBorder: #bce8f1
+$calloutHeader: #34789a
+$calloutLinkColor: maroon
+
+@import url("//fonts.googleapis.com/css?family=Ubuntu: 300italic,400italic,700italic,300,400,700")
+@import url("//fonts.googleapis.com/css?family=Source Code Pro: 400,500,700")
+
+body
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 300
+
+h1, h2, h3, h4, h5, h6
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif
+
+code, kbd, pre, samp
+  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace
+  font-weight: 500
+
+ul li
+  padding: 2px 0
+
+aside
+  background: $asideBackground
+  bottom: 0
+  left: 0
+  position: relative
+  text-align: center
+  top: 0
+  width: auto
+
+  header
+    padding-top: 20px
+
+    h1 a
+      &:hover, &:focus
+        font-weight: 500
+
+  h2
+    margin-top: 0
+
+  &, a, a:visited
+    color: $asideTextColor
+
+  a
+    &:hover, &:focus
+      color: $asideHoverColor
+      text-decoration: none
+      font-weight: 500
+
+      & > .fa
+        text-decoration: none
+
+aside#head
+  padding-bottom: 20px
+
+main
+  article
+    padding: 0 10px 10px
+
+    div p
+      padding-top: 10px
+
+  a:hover
+    &, & > .fa
+      text-decoration: underline
+
+.about
+  margin: 0 50px
+  padding-top: 10px
+
+  a
+    text-decoration: underline
+
+    &:hover, &:focus
+      font-weight: 300
+
+.links
+  padding: 20px 0
+
+  a:not(:last-child)
+    padding-right: 10px
+
+.pages
+  font-size: .85em
+  padding-top: 20px
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+  li.current
+    &, & > a, & > a:hover, & > a:focus
+      font-weight: bold
+
+.tag-list .tag
+  font-size: 10px
+
+.callout
+  background-color: $calloutBackground
+  border-left: 3px solid $calloutBorder
+  margin: 5px auto 20px
+  padding: 20px
+
+  &:last-child
+    margin-bottom: 5px
+
+  p
+    margin: 0 0 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  h4
+    color: $calloutHeader
+
+    a
+      color: $calloutLinkColor
+
+// Bootstrap override
+.panel-default > .panel-header
+  background-color: $asideBackground
+
+@media (min-width: 600px)
+  aside
+    position: fixed
+    width: 320px
+
+    & > footer
+      bottom: 0
+      left: 0
+      position: absolute
+      right: 0
+
+  aside#foot
+    top: inherit
+
+  main
+    margin: 0 0 0 320px
+
+    article
+      padding: 0 50px 50px
+
+@media(max-width: 1120px)
+  .adsbygoogle
+    width: 400px !important
