@@ -6,33 +6,59 @@ work:
 - title: Professional Experience
   entries:
   - name: Lokalebasen
-    url: http://www.lokalebasen.dk
+    url: https://www.lokalebasen.dk
     place: Copenhagen, Denmark
-    position: Developer
+    position: Developer / DevOps
     start_time: July 2014
     end_time: present
-    technologies: Ruby on Rails, PostgreSQL, Git, CoffeeScript, KnockoutJS, Go, Erlang, and more
+    tags:
+    - Ruby on Rails
+    - PostgreSQL
+    - Docker
+    - Git
+    - CoffeeScript
+    - KnockoutJS
+    - Go
+    - Chef
   - name: Autobutler
-    url: http://www.autobutler.dk
+    url: https://www.autobutler.dk
     place: Copenhagen, Denmark
     position: Lead developer
     start_time: September 2012
     end_time: July 2014
-    technologies: Ruby on Rails, PostgreSQL, Heroku, Git, HTML5, Bootstrap, jQuery, KnockoutJS, Grape, and more
+    tags:
+    - Ruby on Rails
+    - PostgreSQL
+    - Heroku
+    - Git
+    - HTML5
+    - Bootstrap
+    - jQuery
+    - KnockoutJS
+    - Grape
   - name: EasyCoaching
     url: http://www.easycoaching.dk
     place: Copenhagen/Aalborg, Denmark
     position: Co-owner, developer, and server administrator
     start_time: June 2011
     end_time: June 2013
-    technologies: PHP, Apache, jQuery, MySQL
+    tags:
+    - PHP
+    - Apache
+    - jQuery
+    - MySQL
   - name: NaviPartner
     url: http://www.navipartner.dk
     place: Copenhagen, Denmark
     position: Part-time web developer
     start_time: August 2009
     end_time: July 2012
-    technologies: Web shops, PHP, MySQL, MSSQL, Microsoft Dynamics NAV
+    tags:
+    - Web shops
+    - PHP
+    - MySQL
+    - MSSQL
+    - Microsoft Dynamics NAV
 
 hobby:
 - title: Hobby Projects
@@ -41,12 +67,23 @@ hobby:
     url: http://www.sorteringsguide.dk
     description: Lookup system for Vestforbrænding and all recycling centers in Northern Zealand
     time: Autumn 2013
-    technologies: Rails 4, KnockoutJS, Caching, Bootstrap, Heroku, Git
+    tags:
+    - Rails 4
+    - KnockoutJS
+    - Caching
+    - Bootstrap
+    - Heroku
+    - Git
   - name: Køkken 400 Ølloge
     url: http://kk400.herokuapp.com
     description: Accounting system for dormitory
     time: Summer 2013
-    technologies: Rails 4, Bootstrap, Heroku, Git, HighCharts
+    tags:
+    - Rails 4
+    - Bootstrap
+    - Heroku
+    - Git
+    - HighCharts
 
 other:
 - title: Service
@@ -57,13 +94,40 @@ other:
 - title: Technical Skills
   entries:
   - name: Programming
-    description: Ruby, Rails 3 &amp; 4, Python, PHP, JavaScript, C++, UNIX shell scripting (Bash), SQL, and others
+    tags:
+    - Ruby
+    - Rails 3
+    - Rails 4
+    - Go
+    - Python
+    - PHP
+    - JavaScript
+    - C++
+    - UNIX shell scripting (Bash)
+    - SQL
   - name: Other technologies
-    description: HTML5, CSS3, jQuery, Bootstrap, Git, GitHub, Heroku, PostgreSQL, and others
+    tags:
+    - HTML5
+    - CSS3
+    - jQuery
+    - Bootstrap
+    - Git
+    - GitHub
+    - Docker
+    - Chef
+    - Heroku
+    - PostgreSQL
   - name: Computer Applications
-    description: Vim, Sublime Text, common application in Windows (XP through 7), Linux (Ubuntu), and Mac OS X
+    tags:
+    - Vim
+    - Sublime Text
+    - Common application in Windows (XP through 7)
+    - Linux (Ubuntu)
+    - Mac OS X
   - name: Languages
-    description: Danish (native), English (fluent)
+    tags:
+    - Danish (native)
+    - English (fluent)
 
 ---
 
@@ -85,10 +149,9 @@ other:
     </div>
     <div class="panel-body">
       {% for entry in thing.entries %}
-
         <div class="callout">
-          <h4>
-            <a href="{{ entry.link }}">{{ entry.name }}</a>, {{ entry.place}}
+          <h4 class="lead">
+            <a href="{{ entry.url }}">{{ entry.name }}</a>, {{ entry.place}}
           </h4>
 
           <div class="clearfix">
@@ -98,13 +161,11 @@ other:
             </span>
           </div>
 
-          <p>
-            &mdash; {{ entry.technologies }}
-          </p>
-
-          <p>
-            Contact: <a href="/files/cv.pdf" title="Why? To not expose my contacts details to spambots and the like.">See PDF</a>
-          </p>
+          <div class="tags">
+            {% for tag in entry.tags %}
+              <span class="label label-primary">{{ tag }}</span>
+            {% endfor %}
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -118,7 +179,7 @@ other:
   <div class="panel-body">
 
     <div class="callout">
-      <h4>
+      <h4 class="lead">
         <a href="http://www.diku.dk">Copenhagen University</a>, Copenhagen, Denmark
       </h4>
 
@@ -156,7 +217,7 @@ other:
     </div>
 
     <div class="callout">
-      <h4>
+      <h4 class="lead">
         <a href="http://rts.dk/uddannelserhoved/htx">Roskilde Technical College</a>, Roskilde, Denmark
       </h4>
 
@@ -180,7 +241,7 @@ other:
       {% for entry in thing.entries %}
 
         <div class="callout">
-          <h4>
+          <h4 class="lead">
             <a href="{{ entry.link }}">{{ entry.name }}</a>
           </h4>
 
@@ -191,9 +252,11 @@ other:
             </span>
           </div>
 
-          <p>
-            &mdash; {{ entry.technologies }}
-          </p>
+          <div class="tags">
+            {% for tag in entry.tags %}
+              <span class="label label-primary">{{ tag }}</span>
+            {% endfor %}
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -209,12 +272,21 @@ other:
       {% for entry in thing.entries %}
 
         <div class="callout">
-          <h4>
+          <h4 class="lead">
             {{ entry.name }}
           </h4>
 
           <div class="clearfix">
-            <em>{{ entry.description }}</em>
+            {% if entry.description %}
+              <em>{{ entry.description }}</em>
+            {% endif %}
+
+            <div class="tags">
+              {% for tag in entry.tags %}
+                <span class="label label-primary">{{ tag }}</span>
+              {% endfor %}
+            </div>
+
             {% if entry.time %}
               <span class="pull-right">
                 <time>{{ entry.time }}</time>
