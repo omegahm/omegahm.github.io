@@ -8,7 +8,7 @@ last_modified_at: 2014-10-01
 We have all our infrastructure on Rackspace.
 Rackspace had to reboot all the servers recently, so we decided to get some better monitoring going on our servers, e.g. are they up and are the services running on them up.
 
-To do this, I created two small dashboards using (Dashing)[https://github.com/Shopify/dashing].
+To do this, I created two small dashboards using [Dashing](https://github.com/Shopify/dashing).
 
 The Dashing uses the `rufus-scheduler` to run jobs.
 These jobs were simple to set up, just ping (via `Net::Ping::TCP`) each server, and return the response time.
