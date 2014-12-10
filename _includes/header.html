@@ -49,7 +49,7 @@
       </script>
     {% endif %}
   </head>
-  <body itemscope itemtype="http://schema.org/Blog">
+  <body itemscope itemtype="http://data-vocabulary.org/Blog">
     <aside id="head">
       <header>
         <h2 itemprop="name">
@@ -60,15 +60,16 @@
 
         <p>My little corner of the web</p>
 
-        <span itemprop="author" itemscope="author" itemtype="http://schema.org/Person">
-          <img src="/img/face.jpeg" class="img-circle" alt="Ohm" itemprop="image" />
+        <span itemprop="author" itemscope itemtype="http://data-vocabulary.org/Person">
+          <img src="/img/face.jpeg" class="img-circle" alt="Ohm" itemprop="photo">
 
           <p class="about">
             <small>
+              <meta itemprop="nickname" content="Ohm">
               <span itemprop="name">Mads Ohm Larsen</span>,
               <span itemprop="description">
-                developer at <a href="http://www.lokalebasen.dk" target="_blank" itemprop="worksFor">Lokalebasen.dk</a>,
-                Ruby on Rails magician, fun at work, <a href="http://projecteuler.net/profile/omegahm.png" taget="_blank" itemprop="award">trying hard</a> or <a href="http://www.codewars.com/users/omegahm">hardly trying</a>.
+                <span itemprop="role">developer</span> at <a href="http://www.lokalebasen.dk" target="_blank" itemprop="worksFor">Lokalebasen.dk</a>,
+                <span itemprop="title">Ruby on Rails magician</span>, fun at work, <a href="http://projecteuler.net/profile/omegahm.png" taget="_blank" itemprop="award">trying hard</a> or <a href="http://www.codewars.com/users/omegahm">hardly trying</a>.
                 Active member of <a href="https://railsforum.com/" target="_blank">RailsForum</a>.
               </span>
             </small>
