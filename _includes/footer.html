@@ -5,12 +5,12 @@
     <aside id="foot">
       <footer>
         <nav class="pages">
-          <ul>
+          <ul class="nav nav-pills nav-stacked">
             {% assign url = page.url|remove:'index.html' %}
             {% for link in site.navigation %}
-              <li{% if url == link.url %} class="current"{% endif %}>
+              <li role="presentation" {% if url == link.url %} class="current"{% endif %}>
                 <a href="{{ link.url }}"{% if link.title %} title="{{ link.title }}"{% endif %}>
-                  <i class="fa {{ link.symbol }}"></i> {{ link.text }}
+                  <i class="fa fa-2x fa-fw {{ link.symbol }}"></i> {{ link.text }}
                 </a>
               </li>
             {% endfor %}
@@ -34,7 +34,7 @@
             <i class="fa fa-linkedin-square fa-2x"></i>
           </a>
 
-          <a href="https://plus.google.com/u/1/101353225056422469688?rel=author">
+          <a href="https://plus.google.com/+MadsOhmLarsen" rel="author">
             <i class="fa fa-google-plus-square fa-2x"></i>
           </a>
         </nav>
@@ -47,6 +47,6 @@
     </aside>
 
     <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
