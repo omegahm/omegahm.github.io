@@ -1,4 +1,9 @@
-        <ins class="adsbygoogle" style="margin:20px auto 0;display:block;width:728px;height:90px;" data-ad-client="ca-pub-0344007993956524" data-ad-slot="3984940544"></ins>
+        <div class="ad-space">
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:728px;height:90px"
+               data-ad-client="ca-pub-0344007993956524"
+               data-ad-slot="3984940544"></ins>
+        </div>
       </article>
     </main>
 
@@ -43,10 +48,30 @@
             Hosted on GitHub Pages
           </small>
         </p>
+        <ins class="adsbygoogle"
+               style="display:inline-block;width:160px;height:90px"
+               data-ad-client="ca-pub-0344007993956524"
+               data-ad-slot="6135130548"></ins>
       </footer>
     </aside>
 
     <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      {% if page.id %}
+        var disqus_shortname  = 'omegahm';
+        var disqus_title      = '{{ page.title }}';
+        var disqus_identifier = '{{ page.url }}';
+        var disqus_url        = 'http://{{ site.host }}{{ page.url }}';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      {% endif %}
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </body>
 </html>
