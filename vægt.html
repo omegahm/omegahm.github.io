@@ -1,0 +1,245 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vægtskema</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <style>
+    .form-group {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <div class="container-fluid">
+    <form id="form" class="form-inline">
+      <div class="form-group">
+        <label for="user">Person</label>
+        <select class="form-control" id="user" name="user"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="weight">Vægt i kg</label>
+        <input class="form-control" type="text" placeholder="f.eks. 55.1" id="weight" name="weight">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Dato</label>
+        <input class="form-control" type="text" placeholder="" id="date" name="date">
+      </div>
+
+      <button class="btn btn-success" type="submit">Gem</button>
+    </form>
+
+    <div id="highcharts" style="width: 1500px; height: 600px;"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  <script>
+    $(function () {
+      $('#highcharts').highcharts({
+        chart: {
+          type: 'spline'
+        },
+
+        credits: {
+          enabled: false
+        },
+
+        title: {
+          text: 'Vægt'
+        },
+
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: {
+            month: '%e. %b',
+            year: '%b'
+          },
+          title: {
+            text: "Dato"
+          }
+        },
+
+        yAxis: {
+          title: {
+            text: 'Vægt'
+          },
+          labels: {
+            formatter: function () {
+              return this.value + ' kg';
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    Highcharts.createElement('link', {
+      href: 'http://fonts.googleapis.com/css?family=Dosis:400,600',
+      rel: 'stylesheet',
+      type: 'text/css'
+    }, null, document.getElementsByTagName('head')[0]);
+
+    Highcharts.theme = {
+      colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+               "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+      chart: {
+        backgroundColor: null,
+        style: {
+          fontFamily: "Dosis, sans-serif"
+        }
+      },
+      title: {
+        style: {
+          fontSize: '16px',
+          fontWeight: 'bold',
+          textTransform: 'uppercase'
+        }
+      },
+      tooltip: {
+        borderWidth: 0,
+        backgroundColor: 'rgba(219,219,216,0.8)',
+        shadow: false
+      },
+      legend: {
+        itemStyle: {
+          fontWeight: 'bold',
+          fontSize: '13px'
+        }
+      },
+      xAxis: {
+        gridLineWidth: 1,
+        labels: {
+          style: {
+            fontSize: '12px'
+          }
+        }
+      },
+      yAxis: {
+        minorTickInterval: 'auto',
+        title: {
+          style: {
+            textTransform: 'uppercase'
+          }
+        },
+        labels: {
+          style: {
+            fontSize: '12px'
+          }
+        }
+      },
+      plotOptions: {
+        candlestick: {
+          lineColor: '#404048'
+        }
+      },
+      // General
+      background2: '#F0F0EA'
+
+    };
+
+    // Apply the theme
+    Highcharts.setOptions(Highcharts.theme);
+  </script>
+
+  <script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+  <script>
+    function today() {
+      var date = new Date;
+      var day, month;
+
+      day = date.getDate()
+      day = day < 10 ? "0" + day : day;
+
+      month = date.getMonth() + 1
+      month = month < 10 ? "0" + month : month;
+      return day + "-" + month + "-" + date.getFullYear();
+    }
+
+    function parseDate(date) {
+      var dateArr = date.split('-');
+      var day   = parseInt(dateArr[0]);
+      var month = parseInt(dateArr[1]);
+      var year  = parseInt(dateArr[2]);
+      return Date.UTC(year, month-1, day)
+    }
+
+    $(function () {
+      var dateElem = document.getElementById("date");
+      dateElem.value = today();
+
+      var dataRef = new Firebase("https://intense-inferno-1350.firebaseio.com/weight");
+
+      var option;
+      dataRef.child("users").once("value", function(snap) {
+        var chart = $("#highcharts").highcharts();
+
+        snap.forEach(function(user) {
+          option = document.createElement("option");
+          option.text = user.val().name;
+          option.value = user.key();
+          document.getElementById("user").appendChild(option);
+
+          if (user.val().weight) {
+            var serie = {
+              name: user.val().name,
+              data: $.map(user.val().weight, function(elem) {
+                return [[parseDate(elem.date), parseFloat(elem.weight)]];
+              }).sort(function(a, b) {
+                return a[0] - b[0];
+              })
+            };
+
+            chart.addSeries(serie);
+          }
+        })
+      });
+
+      dataRef.child("users").on("child_changed", function(user) {
+        var chart = $("#highcharts").highcharts();
+        var series = $.grep(chart.series, function(s) {
+          return (s.name == user.val().name);
+        });
+
+        if (series.length > 0) {
+          series[0].setData($.map(user.val().weight, function(elem) {
+            return [[parseDate(elem.date), parseFloat(elem.weight)]];
+          }).sort(function(a, b) {
+            return a[0] - b[0];
+          }));
+        }
+      });
+
+      var form = document.getElementById("form");
+      form.addEventListener("submit", function(event) {
+        if (event.preventDefault) event.preventDefault();
+        event.returnValue = false;
+
+        var id     = form.elements["user"].value;
+        var weight = form.elements["weight"].value;
+        var date   = form.elements["date"].value;
+
+        weight = weight.replace(",", ".");
+
+        if (!date.match(/^\d{2}-\d{2}-\d{4}$/i)) {
+          alert("Det skal være en dato. Skriv f.eks. '03-01-2015'.");
+          return;
+        } else if (weight == "" || date == "") {
+          alert("Mangler data!");
+          return;
+        }
+
+        dataRef.child("users/" + id + "/weight").push({
+          date: date,
+          weight: weight
+        });
+      }, false);
+    });
+  </script>
+</body>
+</html>
