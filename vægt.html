@@ -199,6 +199,11 @@
             chart.addSeries(serie);
           }
         })
+
+        var lastUser = localStorage.getItem("lastUser");
+        if (lastUser) {
+          $("#user").val(lastUser);
+        }
       });
 
       dataRef.child("users").on("child_changed", function(user) {
@@ -239,6 +244,8 @@
           date: date,
           weight: weight
         });
+
+        localStorage.setItem("lastUser", id);
 
         $(".alert.alert-success").fadeIn();
         setTimeout(function() {
