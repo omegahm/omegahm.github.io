@@ -119,6 +119,11 @@
       },
       xAxis: {
         gridLineWidth: 1,
+        title: {
+          style: {
+            textTransform: 'uppercase'
+          }
+        },
         labels: {
           style: {
             fontSize: '12px'
@@ -251,10 +256,9 @@
 
         localStorage.setItem("lastUser", id);
 
-        $(".alert.alert-success").fadeIn();
-        setTimeout(function() {
-          $(".alert.alert-success").fadeOut();
-        }, 2000);
+        $(".alert.alert-success").fadeIn(2000, function() {
+          $(".alert.alert-success").fadeOut(2000);
+        });
       }, false);
     });
   </script>
