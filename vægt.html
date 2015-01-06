@@ -232,11 +232,11 @@
             tableRow.id = user.val().name + "-row";
             tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
 
-            firstWeight = serie.data[0][1];
-            tableRow.innerHTML += "<td>" + firstWeight + " kg</td>";
+            firstWeight = parseFloat(serie.data[0][1]);
+            tableRow.innerHTML += "<td>" + firstWeight.toFixed(2) + " kg</td>";
 
-            lastWeight = serie.data[serie.data.length - 1][1];
-            tableRow.innerHTML += "<td>" + lastWeight + " kg</td>";
+            lastWeight = parseFloat(serie.data[serie.data.length - 1][1]);
+            tableRow.innerHTML += "<td>" + lastWeight.toFixed(2) + " kg</td>";
 
             difference = parseFloat(firstWeight - lastWeight).toFixed(2);
             tableRow.innerHTML += "<td>" + difference + " kg</td>";
@@ -270,11 +270,11 @@
           tableRow.id = user.val().name + "-row";
           tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
 
-          firstWeight = serie[0][1];
-          tableRow.innerHTML += "<td>" + firstWeight + " kg</td>";
+          firstWeight = parseFloat(serie[0][1]);
+          tableRow.innerHTML += "<td>" + firstWeight.toFixed(2) + " kg</td>";
 
-          lastWeight = serie[serie.length - 1][1];
-          tableRow.innerHTML += "<td>" + lastWeight + " kg</td>";
+          lastWeight = parseFloat(serie[serie.length - 1][1]);
+          tableRow.innerHTML += "<td>" + lastWeight.toFixed(2) + " kg</td>";
 
           difference = parseFloat(firstWeight - lastWeight).toFixed(2);
           tableRow.innerHTML += "<td>" + difference + " kg</td>";
