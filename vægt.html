@@ -16,7 +16,7 @@
 </head>
 <body>
   <br>
-  <div class="container-fluid">
+  <div class="container-fluid text-center">
     <form id="form" class="form-inline">
       <div class="form-group">
         <label for="user">Person:</label>
@@ -34,10 +34,27 @@
       </div>
 
       <button class="btn btn-success" type="submit">Gem</button>
-      <span class="alert alert-success" style="display: none;">Gemt!</span>
     </form>
 
-    <div id="highcharts" style="width: 1500px; height: 600px; margin: 30px auto;"></div>
+    <div id="highcharts" style="width: 1500px; height: 600px; margin: 10px auto;"></div>
+
+    <table class="table table-condensed table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Person</th>
+          <th>Start vægt</th>
+          <th>Nuværende</th>
+          <th>Tab</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+
+      </tbody>
+    </table>
+
+    <div id="alert" style="display: none; z-index: 100;">
+      <div class="alert alert-success" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; vertical-align: middle; display: table-cell; line-height: 100vh; font-size: 110px; margin: 0; padding: 0;">Gemt!</div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -185,7 +202,7 @@
 
       var dataRef = new Firebase("https://intense-inferno-1350.firebaseio.com/weight");
 
-      var option;
+      var option, tableRow, firstWeight, lastWeight, difference;
       dataRef.child("users").once("value", function(snap) {
         var chart = $("#highcharts").highcharts();
 
@@ -206,6 +223,21 @@
             };
 
             chart.addSeries(serie);
+
+            tableRow = document.createElement("tr");
+            tableRow.id = user.val().name + "-row";
+            tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
+
+            firstWeight = serie.data[0][1];
+            tableRow.innerHTML += "<td>" + firstWeight + " kg</td>";
+
+            lastWeight = serie.data[serie.data.length - 1][1];
+            tableRow.innerHTML += "<td>" + lastWeight + " kg</td>";
+
+            difference = parseFloat(firstWeight - lastWeight).toFixed(2);
+            tableRow.innerHTML += "<td>" + difference + " kg</td>";
+
+            document.getElementById("table-body").appendChild(tableRow);
           }
         })
 
@@ -222,11 +254,28 @@
         });
 
         if (series.length > 0) {
-          series[0].setData($.map(user.val().weight, function(elem) {
+          var serie = $.map(user.val().weight, function(elem) {
             return [[parseDate(elem.date), parseFloat(elem.weight)]];
           }).sort(function(a, b) {
             return a[0] - b[0];
-          }));
+          });
+
+          series[0].setData(serie);
+
+          var tableRow = document.createElement("tr");
+          tableRow.id = user.val().name + "-row";
+          tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
+
+          firstWeight = serie[0][1];
+          tableRow.innerHTML += "<td>" + firstWeight + " kg</td>";
+
+          lastWeight = serie[serie.length - 1][1];
+          tableRow.innerHTML += "<td>" + lastWeight + " kg</td>";
+
+          difference = parseFloat(firstWeight - lastWeight).toFixed(2);
+          tableRow.innerHTML += "<td>" + difference + " kg</td>";
+
+          document.getElementById(tableRow.id).innerHTML = tableRow.innerHTML;
         }
       });
 
@@ -244,10 +293,17 @@
         if (!date.match(/^\d{2}-\d{2}-\d{4}$/i)) {
           alert("Det skal være en dato. Skriv f.eks. '03-01-2015'.");
           return;
+        } else if (!weight.toString().match(/^\d+([.,]\d+)?$/i)) {
+          alert("Vægt skal være et tal. Skriv f.eks. '55.1'.");
+          return;
         } else if (weight == "" || date == "") {
           alert("Mangler data!");
           return;
         }
+
+        $("#alert").css({ zIndex: 100 }).fadeIn(500, function() {
+          $("#alert").fadeOut(2000);
+        });
 
         dataRef.child("users/" + id + "/weight").push({
           date: date,
@@ -255,10 +311,6 @@
         });
 
         localStorage.setItem("lastUser", id);
-
-        $(".alert.alert-success").fadeIn(2000, function() {
-          $(".alert.alert-success").fadeOut(2000);
-        });
       }, false);
     });
   </script>
