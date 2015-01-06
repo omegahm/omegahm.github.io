@@ -45,19 +45,19 @@
 
     <div id="highcharts" style="width: 1500px; height: 600px; margin: 10px auto;"></div>
 
-    <table class="table table-condensed table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Person</th>
-          <th>Start vægt</th>
-          <th>Nuværende</th>
-          <th>Tab</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-
-      </tbody>
-    </table>
+    <div class="col-xs-4" style="float: none; margin: auto;">
+      <table class="table table-condensed table-bordered table-striped">
+        <thead>
+          <tr>
+            <th class="text-left">Person</th>
+            <th class="text-right">Start vægt</th>
+            <th class="text-right">Nuværende</th>
+            <th class="text-right">Tab</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -230,16 +230,20 @@
 
             tableRow = document.createElement("tr");
             tableRow.id = user.val().name + "-row";
-            tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
+            tableRow.innerHTML  = "<td class='text-left'>" + user.val().name + "</td>";
 
             firstWeight = parseFloat(serie.data[0][1]);
-            tableRow.innerHTML += "<td>" + firstWeight.toFixed(1) + " kg</td>";
+            tableRow.innerHTML += "<td class='text-right'>" + firstWeight.toFixed(1) + " kg</td>";
 
             lastWeight = parseFloat(serie.data[serie.data.length - 1][1]);
-            tableRow.innerHTML += "<td>" + lastWeight.toFixed(1) + " kg</td>";
+            tableRow.innerHTML += "<td class='text-right'>" + lastWeight.toFixed(1) + " kg</td>";
 
-            difference = parseFloat(firstWeight - lastWeight).toFixed(2);
-            tableRow.innerHTML += "<td>" + difference + " kg</td>";
+            difference = parseFloat(firstWeight - lastWeight);
+            tableRow.innerHTML += "<td class='text-right'>" + difference.toFixed(2) + " kg</td>";
+
+            if (difference < 0) {
+              tableRow.className = "warning";
+            }
 
             document.getElementById("table-body").appendChild(tableRow);
           }
@@ -268,16 +272,20 @@
 
           var tableRow = document.createElement("tr");
           tableRow.id = user.val().name + "-row";
-          tableRow.innerHTML  = "<td>" + user.val().name + "</td>";
+          tableRow.innerHTML  = "<td class='text-left'>" + user.val().name + "</td>";
 
           firstWeight = parseFloat(serie[0][1]);
-          tableRow.innerHTML += "<td>" + firstWeight.toFixed(1) + " kg</td>";
+          tableRow.innerHTML += "<td class='text-right'>" + firstWeight.toFixed(1) + " kg</td>";
 
           lastWeight = parseFloat(serie[serie.length - 1][1]);
-          tableRow.innerHTML += "<td>" + lastWeight.toFixed(1) + " kg</td>";
+          tableRow.innerHTML += "<td class='text-right'>" + lastWeight.toFixed(1) + " kg</td>";
 
-          difference = parseFloat(firstWeight - lastWeight).toFixed(2);
-          tableRow.innerHTML += "<td>" + difference + " kg</td>";
+          difference = parseFloat(firstWeight - lastWeight);
+          tableRow.innerHTML += "<td class='text-right'>" + difference.toFixed(2) + " kg</td>";
+
+          if (difference < 0) {
+            tableRow.className = "warning";
+          }
 
           document.getElementById(tableRow.id).innerHTML = tableRow.innerHTML;
         }
