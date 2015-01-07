@@ -7,17 +7,11 @@
 
   <title>Vægtskema</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://tristanedwards.me/u/SweetAlert/lib/sweet-alert.css">
+  <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/lib/sweet-alert.css">
   <link rel="icon" type="image/png" href="http://i.imgur.com/Fo8GQOM.png">
   <style>
     .form-group {
       margin-right: 10px;
-    }
-
-    .showSweetAlert * {
-      -webkit-box-sizing: initial;
-         -mox-box-sizing: initial;
-              box-sizing: initial;
     }
   </style>
 </head>
@@ -41,6 +35,7 @@
       </div>
 
       <button class="btn btn-success" type="submit">Gem</button>
+      <button id="goal" class="btn btn-info" type="button">Opret nyt mål</button>
     </form>
 
     <div id="highcharts" style="width: 1500px; height: 600px; margin: 10px auto;"></div>
@@ -53,6 +48,8 @@
             <th class="text-right">Start vægt</th>
             <th class="text-right">Nuværende</th>
             <th class="text-right">Tab</th>
+            <th class="text-right">Næste mål</th>
+            <th class="text-right">Til næste mål</th>
           </tr>
         </thead>
         <tbody id="table-body"></tbody>
@@ -61,14 +58,15 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="http://tristanedwards.me/u/SweetAlert/lib/sweet-alert.js"></script>
+  <script src="https://lipis.github.io/bootstrap-sweetalert/lib/sweet-alert.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
   <script>
     $(function () {
       $('#highcharts').highcharts({
         chart: {
-          type: 'spline'
+          type: 'spline',
+          zoomType: 'xy'
         },
 
         credits: {
@@ -87,7 +85,9 @@
           },
           title: {
             text: "Dato"
-          }
+          },
+          min: Date.UTC(2015, 0, 1),
+          max: new Date((Date.now() + 3 * 24 * 3600 * 1000)).valueOf() // 3 days from now
         },
 
         yAxis: {
@@ -206,7 +206,7 @@
 
       var dataRef = new Firebase("https://intense-inferno-1350.firebaseio.com/weight");
 
-      var option, tableRow, firstWeight, lastWeight, difference;
+      var option, chartSerie, tableRow, firstWeight, lastWeight, difference, goals, nextGoal, toNextGoal;
       dataRef.child("users").once("value", function(snap) {
         var chart = $("#highcharts").highcharts();
 
@@ -226,7 +226,7 @@
               })
             };
 
-            chart.addSeries(serie);
+            chartSerie = chart.addSeries(serie);
 
             tableRow = document.createElement("tr");
             tableRow.id = user.val().name + "-row";
@@ -241,8 +241,36 @@
             difference = parseFloat(firstWeight - lastWeight);
             tableRow.innerHTML += "<td class='text-right'>" + difference.toFixed(2) + " kg</td>";
 
-            if (difference < 0) {
-              tableRow.className = "warning";
+            if (user.val().goals) {
+              goals = $.map(user.val().goals, function(elem) {
+                if (parseDate(elem.date) > new Date()) {
+                  return [[parseDate(elem.date), parseFloat(elem.goal)]];
+                }
+              }).sort(function(a, b) {
+                return a[0] - b[0];
+              });
+              nextGoal = goals[0];
+              nextGoalWeight = parseFloat(nextGoal[1])
+
+              tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
+
+              toNextGoal = parseFloat(lastWeight - nextGoalWeight);
+              tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
+
+              if (toNextGoal < 0) {
+                tableRow.className = "success";
+              }
+
+              chart.addSeries({
+                name: user.val().name + " mål",
+                data: [serie.data[0], nextGoal],
+                color: chartSerie.color,
+                symbol: chartSerie.symbol,
+                dashStyle: "dot",
+                linkedTo: ":previous"
+              });
+            } else {
+              tableRow.innerHTML += "<td></td><td></td>";
             }
 
             document.getElementById("table-body").appendChild(tableRow);
@@ -259,6 +287,9 @@
         var chart = $("#highcharts").highcharts();
         var series = $.grep(chart.series, function(s) {
           return (s.name == user.val().name);
+        });
+        var goalSerie = $.grep(chart.series, function(s) {
+          return (s.name == (user.val().name + " mål"));
         });
 
         if (series.length > 0) {
@@ -283,8 +314,29 @@
           difference = parseFloat(firstWeight - lastWeight);
           tableRow.innerHTML += "<td class='text-right'>" + difference.toFixed(2) + " kg</td>";
 
-          if (difference < 0) {
-            tableRow.className = "warning";
+          if (user.val().goals) {
+            goals = $.map(user.val().goals, function(elem) {
+              if (parseDate(elem.date) > new Date()) {
+                return [[parseDate(elem.date), parseFloat(elem.goal)]];
+              }
+            }).sort(function(a, b) {
+              return a[0] - b[0];
+            });
+            nextGoal = goals[0];
+            nextGoalWeight = parseFloat(nextGoal[1])
+
+            tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
+
+            toNextGoal = parseFloat(lastWeight - nextGoalWeight);
+            tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
+
+            if (toNextGoal < 0) {
+              tableRow.className = "success";
+            }
+
+            goalSerie[0].setData([serie[0], nextGoal]);
+          } else {
+            tableRow.innerHTML += "<td></td><td></td>";
           }
 
           document.getElementById(tableRow.id).innerHTML = tableRow.innerHTML;
@@ -296,20 +348,35 @@
         if (event.preventDefault) event.preventDefault();
         event.returnValue = false;
 
-        var id     = form.elements["user"].value;
+        var userId = form.elements["user"].value;
         var weight = form.elements["weight"].value;
         var date   = form.elements["date"].value;
 
         weight = weight.replace(",", ".");
 
         if (!date.match(/^\d{2}-\d{2}-\d{4}$/i)) {
-          sweetAlert("Ups...", "Det skal være en dato. Skriv f.eks. '03-01-2015'.", "error");
+          sweetAlert({
+            title: "Ups...",
+            text: "Det skal være en dato. Skriv f.eks. '03-01-2015'.",
+            type: "error",
+            allowOutsideClick: true
+          });
           return;
         } else if (!weight.toString().match(/^\d+([.,]\d+)?$/i)) {
-          sweetAlert("Ups...", "Vægt skal være et tal. Skriv f.eks. '55.1'.", "error");
+          sweetAlert({
+            title: "Ups...",
+            text: "Vægt skal være et tal. Skriv f.eks. '55.1'.",
+            type: "error",
+            allowOutsideClick: true
+          });
           return;
         } else if (weight == "" || date == "") {
-          sweetAlert("Ups...", "Mangler data!", "error");
+          sweetAlert({
+            title: "Ups...",
+            text: "Mangler data!",
+            type: "error",
+            allowOutsideClick: true
+          });
           return;
         }
 
@@ -319,13 +386,58 @@
           type: "success"
         });
 
-        dataRef.child("users/" + id + "/weight").push({
+        dataRef.child("users/" + userId + "/weight").push({
           date: date,
           weight: weight
         });
 
-        localStorage.setItem("lastUser", id);
+        localStorage.setItem("lastUser", userId);
       }, false);
+
+      $("#goal").click(function() {
+        var userId     = form.elements["user"].value;
+        var weightGoal = form.elements["weight"].value;
+        var date       = form.elements["date"].value;
+
+        weightGoal = weightGoal.replace(",", ".");
+
+        if (!date.match(/^\d{2}-\d{2}-\d{4}$/i)) {
+          sweetAlert({
+            title: "Ups...",
+            text: "Det skal være en dato. Skriv f.eks. '03-01-2015'.",
+            type: "error",
+            allowOutsideClick: true
+          });
+          return;
+        } else if (!weightGoal.toString().match(/^\d+([.,]\d+)?$/i)) {
+          sweetAlert({
+            title: "Ups...",
+            text: "Vægt skal være et tal. Skriv f.eks. '55.1'.",
+            type: "error",
+            allowOutsideClick: true
+          });
+          return;
+        } else if (weightGoal == "" || date == "") {
+          sweetAlert({
+            title: "Ups...",
+            text: "Mangler data!",
+            type: "error",
+            allowOutsideClick: true
+          });
+          return;
+        }
+
+        sweetAlert({
+          title: "Mål gemt!",
+          timer: 2000,
+          type: "success"
+        });
+
+        dataRef.child("users/" + userId + "/goals").push({
+          date: date,
+          goal: weightGoal
+        });
+      });
     });
   </script>
 </body>
