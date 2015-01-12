@@ -7,6 +7,7 @@
     <title>{{ page.title }} | {{ site.website }}</title>
 
     <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,7 +41,7 @@
           </a>
         </h2>
 
-        <p>My little corner of the web</p>
+        <p>{{ site.description }}</p>
 
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           <meta itemprop="url" content="http://ohm.sh/">

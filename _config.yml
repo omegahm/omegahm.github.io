@@ -1,5 +1,6 @@
 name: Ohm
 website: ohm.sh
+description: My little corner of the web
 markdown: redcarpet
 lsi: false
 timezone: Europe/Copenhagen
