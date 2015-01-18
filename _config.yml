@@ -1,6 +1,7 @@
 name: Ohm
 website: ohm.sh
 description: My little corner of the web
+metadescription: "Mads Ohm Larsen, DevOps at Lokalebasen.dk, located in Copenhagen, Denmark , Ruby on Rails magician, fun at work, trying hard or hardly trying."
 markdown: redcarpet
 lsi: false
 timezone: Europe/Copenhagen
