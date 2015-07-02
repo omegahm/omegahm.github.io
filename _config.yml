@@ -1,11 +1,16 @@
+##########
+# CONFIG #
+##########
 name: Ohm
 website: ohm.sh
-description: My little corner of the web
+description: My Little Part of the Web
 metadescription: "Mads Ohm Larsen, DevOps at Lokalebasen.dk, located in Copenhagen, Denmark , Ruby on Rails magician, fun at work, trying hard or hardly trying."
 markdown: redcarpet
 lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
+
+include: ['_wishlist']
 
 sass:
   sass_dir: _sass
@@ -16,6 +21,9 @@ gems:
   - jemoji
   - jekyll-redirect-from
 
+##############
+# NAVIGATION #
+##############
 navigation:
 - text: Blog
   url: /
@@ -34,3 +42,96 @@ navigation:
   title: Korte Kurver på Krumme Flader
   url: /files/bachelors.pdf
   symbol: fa-flask
+
+##########
+# WISHES #
+##########
+wish_categories:
+- title: Stuff for the house
+  title_da: Ting til huset
+  wishes:
+  - title: Grill Pan
+    title_da: Grillpande
+    url: http://www.imerco.dk/koekkenudstyr/pander/cook-baker-grillpande-aluminium-28-x-28-cm-1-stk?id=100321717
+  - title: Rosendahl Grand Cru plate holder (38x25cm)
+    title_da: Holder til Rosendahl Grand Cru fad (38x25cm)
+    url: http://www.imerco.dk/rosendahl-holder-til-fad?id=100157035
+  - title: Rosendahl Grand Cru Dinner Plate (27cm) (x12)
+    title_da: Rosendahl Grand Cru Middagstallerken (27cm) (x12)
+    url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-middagstallerken-27-cm-1-stk?id=100316651
+  - title: Rosendahl Grand Cru Lunch Plate (23cm) (x12)
+    title_da: Rosendahl Grand Cru Frokosttallerken (23cm) (x12)
+    url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-frokosttallerken-23-cm-1-stk?id=100316652
+  - title: Rosendahl Grand Cru Deep Plate (27cm) (x12)
+    title_da: Rosendahl Grand Cru Dyb tallerken (21cm) (x12)
+    url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-dyb-tallerken-21-cm-1-stk?id=100316653
+  - title: Kitchen Scale
+    title_da: Køkkenvægt
+    url: http://www.imerco.dk/el/cook-baker-koekkenvaegt?id=100331055
+  - title: Raadvad Carving set
+    title_da: Raadvad Forskærersæt
+    url: http://www.goshop.dk/produkter/9-koekkenknive/274-raadvad-royal-forskaerersaet/
+  - title: Bodum Pebo Coffeemaker
+    title_da: Bodum Pebo Kaffebrygger
+    url: http://www.imerco.dk/el/bodum-pebo-kaffebrygger?id=100333806
+  - title: Towels (70x140cm and 50x100cm)
+    title_da: Håndklæder (70x140cm og 50x100cm)
+    url: http://www.imerco.dk/bolig-og-indretning/toilet-og-bad/haandklaede/comfort-haandklaede-petrol-70-x-140-cm?id=100178167
+
+- title: Boardgames
+  title_da: Brætspil
+  wishes:
+  - title: 'Zombie Dice 2: Double Feature'
+    title_da:
+    url: http://www.amazon.co.uk/Zombie-Dice-2-Double-Feature/dp/B007JPS3YY
+  - title: Summoner Wars Master Set
+    title_da:
+    url: http://www.amazon.co.uk/gp/product/B005E7A3OM
+  - title: 'Galaxy Trucker: The Big Expansion'
+    title_da:
+    url: http://www.amazon.co.uk/Galaxy-Trucker-The-Big-Expansion/dp/B001Q8LL2Q
+  - title: 'Arkham Horror Board Game: A Call of Cthulhu'
+    title_da:
+    url: http://www.amazon.co.uk/Arkham-Horror-Cthulhu-Boardgame-Gameboard/dp/1589942108
+  - title: 'Betrayal at House on the Hill'
+    title_da:
+    url: http://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734
+  - title: Quarriors Dice Game
+    title_da:
+    url: http://www.amazon.co.uk/WizKids-WZK-70234-Wizkids-Quarriors/dp/B004U5RD1A
+  - title: 'Quarriors: Rise of Demons Expansion'
+    title_da:
+    url: http://www.amazon.co.uk/Quarriors-Rise-of-Demons-Expansion/dp/B005S8LPZ8
+  - title: 'Descent: Journey in the Dark (2nd Edition)'
+    title_da:
+    url: http://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898
+  - title: 'Descent: Lair of the Wyrm (2nd Edition)'
+    title_da:
+    url: http://www.amazon.co.uk/Descent-Second-Edition-Lair-Wyrm/dp/1616614625
+  - title: 'Descent: Labyrinth of Ruin (2nd Edition)'
+    title_da:
+    url: http://www.amazon.co.uk/Descent-Second-Edition-Labyrinth-Expansion/dp/1616615427
+
+- title: Books - Nonfiction
+  title_da: Bøger - Faglitteratur
+  wishes:
+  - title: Seven Databases in Seven Weeks
+    url: http://pragprog.com/book/rwdata/seven-databases-in-seven-weeks
+  - title: Programming Clojure (2nd edition)
+    url: http://pragprog.com/book/shcloj2/programming-clojure
+  - title: The Rails View
+    url: http://pragprog.com/book/warv/the-rails-view
+  - title: Mac Kung Fu
+    url: http://pragprog.com/book/ktmack/mac-kung-fu
+  - title: The Developer's Code
+    url: http://pragprog.com/book/kcdc/the-developer-s-code
+  - title: CoffeeScript
+    url: http://pragprog.com/book/tbcoffee/coffeescript
+  - title: 'Design for Hackers: Reverse Engineering Beauty'
+    url: http://www.amazon.co.uk/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956
+  - title: 'Growing Object-Oriented Software, Guided by Tests'
+    url: http://www.amazon.co.uk/gp/product/B002TIOYVW/
+  - title: 'Refactoring: Improving the Design of Existing Code'
+    url: http://www.amazon.co.uk/gp/product/B007WTFWJ6/
+  - title: 'Clean Code: A Handbook of Agile Software Craftsmanship'
+    url: http://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
