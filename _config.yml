@@ -116,14 +116,8 @@ wish_categories:
     url: http://pragprog.com/book/rwdata/seven-databases-in-seven-weeks
   - title: Programming Clojure (2nd edition)
     url: http://pragprog.com/book/shcloj2/programming-clojure
-  - title: The Rails View
-    url: http://pragprog.com/book/warv/the-rails-view
-  - title: Mac Kung Fu
-    url: http://pragprog.com/book/ktmack/mac-kung-fu
   - title: The Developer's Code
     url: http://pragprog.com/book/kcdc/the-developer-s-code
-  - title: CoffeeScript
-    url: http://pragprog.com/book/tbcoffee/coffeescript
   - title: 'Growing Object-Oriented Software, Guided by Tests'
     url: http://www.amazon.co.uk/gp/product/B002TIOYVW/
   - title: 'Refactoring: Improving the Design of Existing Code'
