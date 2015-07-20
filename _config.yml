@@ -50,25 +50,18 @@ wish_categories:
 - title: Stuff for the house
   title_da: Ting til huset
   wishes:
-  - title: Grill Tongs (for indoor use on stoveware)
-    title_da: Grilltang (til indendørs brug på potter og pander)
   - title: Grill Pan
     title_da: Grillpande
     url: http://www.imerco.dk/koekkenudstyr/pander/cook-baker-grillpande-aluminium-28-x-28-cm-1-stk?id=100321717
-  - title: Meat hammer
-    title_da: Kødhammer
   - title: Rosendahl Grand Cru plate holder (38x25cm)
     title_da: Holder til Rosendahl Grand Cru fad (38x25cm)
     url: http://www.imerco.dk/rosendahl-holder-til-fad?id=100157035
-  - title: Rosendahl Grand Cru Dinner Plate (27cm) (x12)
-    title_da: Rosendahl Grand Cru Middagstallerken (27cm) (x12)
+  - title: Rosendahl Grand Cru Dinner Plate (27cm) (x8)
+    title_da: Rosendahl Grand Cru Middagstallerken (27cm) (x8)
     url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-middagstallerken-27-cm-1-stk?id=100316651
-  - title: Rosendahl Grand Cru Lunch Plate (23cm) (x12)
-    title_da: Rosendahl Grand Cru Frokosttallerken (23cm) (x12)
+  - title: Rosendahl Grand Cru Lunch Plate (23cm) (x8)
+    title_da: Rosendahl Grand Cru Frokosttallerken (23cm) (x8)
     url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-frokosttallerken-23-cm-1-stk?id=100316652
-  - title: Rosendahl Grand Cru Deep Plate (27cm) (x12)
-    title_da: Rosendahl Grand Cru Dyb tallerken (21cm) (x12)
-    url: http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-dyb-tallerken-21-cm-1-stk?id=100316653
   - title: Kitchen Scale
     title_da: Køkkenvægt
     url: http://www.imerco.dk/el/cook-baker-koekkenvaegt?id=100331055
@@ -131,8 +124,6 @@ wish_categories:
     url: http://pragprog.com/book/kcdc/the-developer-s-code
   - title: CoffeeScript
     url: http://pragprog.com/book/tbcoffee/coffeescript
-  - title: 'Design for Hackers: Reverse Engineering Beauty'
-    url: http://www.amazon.co.uk/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956
   - title: 'Growing Object-Oriented Software, Guided by Tests'
     url: http://www.amazon.co.uk/gp/product/B002TIOYVW/
   - title: 'Refactoring: Improving the Design of Existing Code'
