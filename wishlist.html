@@ -1,0 +1,29 @@
+---
+layout: default
+title: Wish-list
+permalink: /wishlist.html
+extra_script_url: '/js/wishlist.js'
+---
+
+<div id="wishes">
+  <div class="page-header">
+    <h1>
+      <i class="fa fa-gift"></i>
+      <span data-bind="text: headline"></span>
+    </h1>
+  </div>
+
+  <div class="pull-right">
+    <span data-bind="text: changeLanguage"></span>
+    <select data-bind="options: languages, value: language"></select>
+  </div>
+
+  <div data-bind="foreach: wishCategories">
+    <h4 data-bind="text: title"></h4>
+    <ul data-bind="foreach: wishes">
+      <li>
+        <a data-bind="attr: { href: url }, text: title"></a>
+      </li>
+    </ul>
+  </div>
+</div>
