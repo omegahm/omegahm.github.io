@@ -79,13 +79,16 @@
 
         xAxis: {
           type: 'datetime',
+
           dateTimeLabelFormats: {
             month: '%e. %b',
             year: '%b'
           },
+
           title: {
             text: "Dato"
           },
+
           min: Date.UTC(2015, 0, 1),
           max: new Date((Date.now() + 3 * 24 * 3600 * 1000)).valueOf() // 3 days from now
         },
@@ -94,6 +97,7 @@
           title: {
             text: 'Vægt'
           },
+
           labels: {
             formatter: function () {
               return this.value + ' kg';
@@ -114,12 +118,15 @@
     Highcharts.theme = {
       colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
                "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+
       chart: {
         backgroundColor: null,
+
         style: {
           fontFamily: "Dosis, sans-serif"
         }
       },
+
       title: {
         style: {
           fontSize: '16px',
@@ -127,51 +134,60 @@
           textTransform: 'uppercase'
         }
       },
+
       tooltip: {
         borderWidth: 0,
-        backgroundColor: 'rgba(219,219,216,0.8)',
+        backgroundColor: 'rgba(219, 219, 216, 0.8)',
         shadow: false
       },
+
       legend: {
         itemStyle: {
           fontWeight: 'bold',
           fontSize: '13px'
         }
       },
+
       xAxis: {
         gridLineWidth: 1,
+
         title: {
           style: {
             textTransform: 'uppercase'
           }
         },
+
         labels: {
           style: {
             fontSize: '12px'
           }
         }
       },
+
       yAxis: {
         minorTickInterval: 'auto',
+
         title: {
           style: {
             textTransform: 'uppercase'
           }
         },
+
         labels: {
           style: {
             fontSize: '12px'
           }
         }
       },
+
       plotOptions: {
         candlestick: {
           lineColor: '#404048'
         }
       },
+
       // General
       background2: '#F0F0EA'
-
     };
 
     // Apply the theme
@@ -249,26 +265,31 @@
               }).sort(function(a, b) {
                 return a[0] - b[0];
               });
+
               nextGoal = goals[0];
-              nextGoalWeight = parseFloat(nextGoal[1])
+              if (nextGoal !== undefined) {
+                nextGoalWeight = parseFloat(nextGoal[1])
 
-              tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
+                tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
 
-              toNextGoal = parseFloat(lastWeight - nextGoalWeight);
-              tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
+                toNextGoal = parseFloat(lastWeight - nextGoalWeight);
+                tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
 
-              if (toNextGoal < 0) {
-                tableRow.className = "success";
+                if (toNextGoal < 0) {
+                  tableRow.className = "success";
+                }
+
+                chart.addSeries({
+                  name: user.val().name + " mål",
+                  data: [serie.data[0], nextGoal],
+                  color: chartSerie.color,
+                  symbol: chartSerie.symbol,
+                  dashStyle: "dot",
+                  linkedTo: ":previous"
+                });
+              } else {
+                tableRow.innerHTML += "<td></td><td></td>"
               }
-
-              chart.addSeries({
-                name: user.val().name + " mål",
-                data: [serie.data[0], nextGoal],
-                color: chartSerie.color,
-                symbol: chartSerie.symbol,
-                dashStyle: "dot",
-                linkedTo: ":previous"
-              });
             } else {
               tableRow.innerHTML += "<td></td><td></td>";
             }
@@ -322,19 +343,24 @@
             }).sort(function(a, b) {
               return a[0] - b[0];
             });
+
             nextGoal = goals[0];
-            nextGoalWeight = parseFloat(nextGoal[1])
+            if (nextGoal !== undefined) {
+              nextGoalWeight = parseFloat(nextGoal[1])
 
-            tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
+              tableRow.innerHTML += "<td class='text-right'>" + nextGoalWeight.toFixed(2) + " kg</td>";
 
-            toNextGoal = parseFloat(lastWeight - nextGoalWeight);
-            tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
+              toNextGoal = parseFloat(lastWeight - nextGoalWeight);
+              tableRow.innerHTML += "<td class='text-right'>" + toNextGoal.toFixed(2) + " kg</td>";
 
-            if (toNextGoal < 0) {
-              tableRow.className = "success";
+              if (toNextGoal < 0) {
+                tableRow.className = "success";
+              }
+
+              goalSerie[0].setData([serie[0], nextGoal]);
+            } else {
+              tableRow.innerHTML += "<td></td><td></td>";
             }
-
-            goalSerie[0].setData([serie[0], nextGoal]);
           } else {
             tableRow.innerHTML += "<td></td><td></td>";
           }
