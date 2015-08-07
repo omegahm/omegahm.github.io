@@ -97,6 +97,10 @@
     },
     "wishes": [
       {
+        "title": { "en": "The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win" },
+        "url": "http://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business/dp/0988262509"
+      },
+      {
         "title": { "en": "Seven Databases in Seven Weeks" },
         "url": "http://pragprog.com/book/rwdata/seven-databases-in-seven-weeks"
       },
