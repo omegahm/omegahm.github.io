@@ -18,6 +18,8 @@ extra_script_url: '/js/wishlist.js'
     <select data-bind="options: languages, value: language"></select>
   </div>
 
+  <small><i data-bind="text: info"></i></small>
+
   <div data-bind="foreach: wishCategories">
     <h4 data-bind="text: title"></h4>
     <ul data-bind="foreach: wishes">

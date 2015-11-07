@@ -33,10 +33,6 @@
         "url": "http://www.goshop.dk/produkter/9-koekkenknive/274-raadvad-royal-forskaerersaet/"
       },
       {
-        "title": { "en": "Bodum Pebo Coffeemaker", "da": "Bodum Pebo Kaffebrygger" },
-        "url": "http://www.imerco.dk/el/bodum-pebo-kaffebrygger?id=100333806"
-      },
-      {
         "title": { "en": "Towels (70x140cm and 50x100cm)", "da": "Håndklæder (70x140cm og 50x100cm)" },
         "url": "http://www.imerco.dk/bolig-og-indretning/toilet-og-bad/haandklaede/comfort-haandklaede-petrol-70-x-140-cm?id=100178167"
       }
@@ -49,8 +45,12 @@
     },
     "wishes": [
       {
-        "title": { "en": "Zombie Dice 2: Double Feature" },
-        "url": "http://www.amazon.co.uk/Zombie-Dice-2-Double-Feature/dp/B007JPS3YY"
+        "title": { "en": "Android Netrunner: The Card Game Core Set" },
+        "url": "http://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
+      },
+      {
+        "title": { "en": "Betrayal at House on the Hill" },
+        "url": "http://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734"
       },
       {
         "title": { "en": "Summoner Wars Master Set" },
@@ -63,10 +63,6 @@
       {
         "title": { "en": "Arkham Horror Board Game: A Call of Cthulhu" },
         "url": "http://www.amazon.co.uk/Arkham-Horror-Cthulhu-Boardgame-Gameboard/dp/1589942108"
-      },
-      {
-        "title": { "en": "Betrayal at House on the Hill" },
-        "url": "http://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734"
       },
       {
         "title": { "en": "Quarriors Dice Game" },
@@ -127,4 +123,3 @@
     ]
   }
 ]
-

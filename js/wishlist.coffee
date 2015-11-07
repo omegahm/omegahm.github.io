@@ -2,39 +2,30 @@
 ---
 
 class WishList
-  constructor: (language) ->
+  constructor: (language, @i18n) ->
     @wishCategories = ko.observableArray([])
     @languages = ['en', 'da']
-    @language = ko.observable(language.replace('#', ''))
+    @language = ko.observable(language)
 
     @language.subscribe (language) ->
       location.hash = language
 
-    @headline = ko.pureComputed =>
-      @i18n('wishlist')
-
-    @changeLanguage = ko.pureComputed =>
-      @i18n('change_language')
+    @headline       = @t('wishlist')
+    @changeLanguage = @t('change_language')
+    @info           = @t('info')
 
     ko.computed =>
-      $(document).prop('title', @headline() + " | ohm.sh")
+      $(document).prop('title', @headline() + " | {{ site.website }}")
 
-  i18n: (key) =>
-    {
-      "en": {
-        "wishlist": "Wish-list",
-        "change_language": "Change language:"
-      },
-      "da": {
-        "wishlist": "Ønskeseddel",
-        "change_language": "Skift sprog:"
-      }
-    }[@language()][key]
+  addCategory: (category) =>
+    @wishCategories.push(new Category(category, @language()))
+
+  t: (key) =>
+    ko.pureComputed => @i18n[@language()][key]
 
 class Category
   constructor: (data, language) ->
-    @title = ko.pureComputed =>
-      data.title[language()] || data.title['en']
+    @title  = ko.pureComputed => data.title[language()] || data.title['en']
     @wishes = ko.observableArray([])
 
     @initWishes(data.wishes, language)
@@ -45,13 +36,26 @@ class Category
 
 class Wish
   constructor: (data, language) ->
-    @title = ko.pureComputed =>
-      data.title[language()] || data.title['en']
-    @url = data.url
+    @title = ko.pureComputed => data.title[language()] || data.title['en']
+    @url   = data.url
+
 $ ->
-  viewModel = new WishList(location.hash || 'en')
-  ko.applyBindings viewModel, document.getElementById('wishes')
+  wistList = new WishList(
+    (location.hash || 'en').replace('#', ''),
+    {
+      "en": {
+        "wishlist": "Wish-list",
+        "change_language": "Change language:",
+        "info": "Wishes are sorted by preference."
+      },
+      "da": {
+        "wishlist": "Ønskeseddel",
+        "change_language": "Skift sprog:",
+        "info": "Ønskerne er sorteret efter præference."
+      }
+    }
+  )
+  ko.applyBindings wistList, document.getElementById('wishes')
 
   $.getJSON '/js/wishes.json', (data) ->
-    data.forEach (category) ->
-      viewModel.wishCategories.push(new Category(category, viewModel.language))
+    data.forEach (category) -> wistList.addCategory(category)
