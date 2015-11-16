@@ -7,8 +7,8 @@ class WishList
     @languages = ['en', 'da']
     @language = ko.observable(language)
 
-    @language.subscribe (language) ->
-      location.hash = language
+    @language.subscribe (lang) ->
+      location.hash = lang
 
     @headline       = @t('wishlist')
     @changeLanguage = @t('change_language')
@@ -18,7 +18,7 @@ class WishList
       $(document).prop('title', @headline() + " | {{ site.website }}")
 
   addCategory: (category) =>
-    @wishCategories.push(new Category(category, @language()))
+    @wishCategories.push(new Category(category, @language))
 
   t: (key) =>
     ko.pureComputed => @i18n[@language()][key]
