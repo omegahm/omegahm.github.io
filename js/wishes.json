@@ -45,14 +45,6 @@
     },
     "wishes": [
       {
-        "title": { "en": "Arcadia Quest" },
-        "url": "http://www.amazon.co.uk/gp/product/B00OZTG1F0"
-      },
-      {
-        "title": { "en": "Arcadia Quest: Beyond the Grave" },
-        "url": "http://www.amazon.co.uk/gp/product/B00TU8W4ZW"
-      },
-      {
         "title": { "en": "Android Netrunner: The Card Game Core Set" },
         "url": "http://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
       },
