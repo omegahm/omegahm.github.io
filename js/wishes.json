@@ -9,24 +9,12 @@
     },
     "wishes": [
       {
-        "title": { "en": "Grill Pan", "da": "Grillpande" },
-        "url": "http://www.imerco.dk/koekkenudstyr/pander/cook-baker-grillpande-aluminium-28-x-28-cm-1-stk?id=100321717"
-      },
-      {
-        "title": { "en": "Rosendahl Grand Cru plate holder (38x25cm)", "da": "Holder til Rosendahl Grand Cru fad (38x25cm)" },
-        "url": "http://www.imerco.dk/rosendahl-holder-til-fad?id=100157035"
-      },
-      {
         "title": { "en": "Rosendahl Grand Cru Dinner Plate (27cm) (x8)", "da": "Rosendahl Grand Cru Middagstallerken (27cm) (x8)" },
         "url": "http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-middagstallerken-27-cm-1-stk?id=100316651"
       },
       {
-        "title": { "en": "Rosendahl Grand Cru Lunch Plate (23cm) (x8)", "da": "Rosendahl Grand Cru Frokosttallerken (23cm) (x8)" },
+        "title": { "en": "Rosendahl Grand Cru Lunch Plate (23cm) (x7)", "da": "Rosendahl Grand Cru Frokosttallerken (23cm) (x7)" },
         "url": "http://www.imerco.dk/borddaekning/stel/tallerken/rosendahl-frokosttallerken-23-cm-1-stk?id=100316652"
-      },
-      {
-        "title": { "en": "Kitchen Scale", "da": "Køkkenvægt" },
-        "url": "http://www.imerco.dk/el/cook-baker-koekkenvaegt?id=100331055"
       },
       {
         "title": { "en": "Raadvad Carving set", "da": "Raadvad Forskærersæt" },
@@ -93,14 +81,6 @@
     },
     "wishes": [
       {
-        "title": { "en": "The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win" },
-        "url": "http://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business/dp/0988262509"
-      },
-      {
-        "title": { "en": "Seven Databases in Seven Weeks" },
-        "url": "http://pragprog.com/book/rwdata/seven-databases-in-seven-weeks"
-      },
-      {
         "title": { "en": "Programming Clojure (2nd edition)" },
         "url": "http://pragprog.com/book/shcloj2/programming-clojure"
       },
@@ -115,10 +95,6 @@
       {
         "title": { "en": "Refactoring: Improving the Design of Existing Code" },
         "url": "http://www.amazon.co.uk/gp/product/B007WTFWJ6/"
-      },
-      {
-        "title": { "en": "Clean Code: A Handbook of Agile Software Craftsmanship" },
-        "url": "http://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
       }
     ]
   }
