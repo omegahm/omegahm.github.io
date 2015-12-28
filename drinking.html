@@ -1,0 +1,36 @@
+---
+layout: default
+title: Drinking
+extra_script_url: '/js/drinking.js'
+permalink: /drinking.html
+---
+
+<div id="drinking" class="drinking-content">
+  <div class="page-header">
+    <h1>
+      <i class="fa fa-beer"></i>
+      Drinking begins in
+    </h1>
+  </div>
+
+  <p style="display: none;" data-bind="visible: done">
+    <strong style="font-size: 5em">NOW!</strong>
+  </p>
+
+  <p data-bind="visible: !done()">
+    <span class="clock-0" data-bind="css: days">&nbsp;</span>
+    days
+
+    <span class="clock-0" data-bind="css: hours0">&nbsp;</span>
+    <span class="clock-0" data-bind="css: hours1">&nbsp;</span>
+    hours
+
+    <span class="clock-0" data-bind="css: minutes0">&nbsp;</span>
+    <span class="clock-0" data-bind="css: minutes1">&nbsp;</span>
+    minutes
+
+    <span class="clock-0" data-bind="css: seconds0">&nbsp;</span>
+    <span class="clock-0" data-bind="css: seconds1">&nbsp;</span>
+    seconds
+  </p>
+</div>
