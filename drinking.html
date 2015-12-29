@@ -9,7 +9,7 @@ permalink: /drinking.html
   <div class="page-header">
     <h1>
       <i class="fa fa-beer"></i>
-      Drinking begins in
+      Drinking commences in
     </h1>
   </div>
 
@@ -17,20 +17,32 @@ permalink: /drinking.html
     <strong style="font-size: 5em">NOW!</strong>
   </p>
 
-  <p data-bind="visible: !done()">
-    <span class="clock-0" data-bind="css: days">&nbsp;</span>
-    days
+  <div class="row" data-bind="visible: !done()">
+    <div class="col-md-2 col-md-offset-2">
+      <span class="clock-0" data-bind="css: days">&nbsp;</span>
+      <br>
+      days
+    </div>
 
-    <span class="clock-0" data-bind="css: hours0">&nbsp;</span>
-    <span class="clock-0" data-bind="css: hours1">&nbsp;</span>
-    hours
+    <div class="col-md-2">
+      <span class="clock-0" data-bind="css: hours0">&nbsp;</span>
+      <span class="clock-0" data-bind="css: hours1">&nbsp;</span>
+      <br>
+      hours
+    </div>
 
-    <span class="clock-0" data-bind="css: minutes0">&nbsp;</span>
-    <span class="clock-0" data-bind="css: minutes1">&nbsp;</span>
-    minutes
+    <div class="col-md-2">
+      <span class="clock-0" data-bind="css: minutes0">&nbsp;</span>
+      <span class="clock-0" data-bind="css: minutes1">&nbsp;</span>
+      <br>
+      minutes
+    </div>
 
-    <span class="clock-0" data-bind="css: seconds0">&nbsp;</span>
-    <span class="clock-0" data-bind="css: seconds1">&nbsp;</span>
-    seconds
-  </p>
+    <div class="col-md-2">
+      <span class="clock-0" data-bind="css: seconds0">&nbsp;</span>
+      <span class="clock-0" data-bind="css: seconds1">&nbsp;</span>
+      <br>
+      seconds
+    </div>
+  </div>
 </div>
