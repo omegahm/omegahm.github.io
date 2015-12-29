@@ -9,11 +9,24 @@
 @for $i from 0 through 9
   .clock-#{$i}
     background-position: 0 -540px * $i
+    zoom: 100%
     @each $prefix in "" "-webkit-" "-o-" "-moz-"
       #{$prefix}transition-property: background-position
       #{$prefix}transition-duration: 0.4s
       #{$prefix}transition-timing-function: steps(6, end)
 
+    @media (min-width: 1200px)
+      zoom: 50%
+
+    @media (min-width: 1440px)
+      zoom: 100%
+
 .drinking-content
   font-size: 3em
   text-align: center
+
+  @media (min-width: 1200px)
+    font-size: 2em
+
+  @media (min-width: 1440px)
+    font-size: 3em
