@@ -42,7 +42,7 @@ class Drinking
     , 1000
 
 $ ->
-  drinking = new Drinking("2016-01-02 19:00:00")
+  drinking = new Drinking("2016-01-02T18:00:00.000Z")
   drinking.startTimer()
 
   ko.applyBindings drinking, document.getElementById('drinking')
