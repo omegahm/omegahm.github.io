@@ -85,6 +85,10 @@
         "url": "http://pragprog.com/book/shcloj2/programming-clojure"
       },
       {
+        "title": { "en": "Don't Make Me Think" },
+        "url": "http://www.amazon.co.uk/Dont-Make-Me-Think-Usability-ebook/dp/B000SEGQNS/"
+      },
+      {
         "title": { "en": "The Developer's Code" },
         "url": "http://pragprog.com/book/kcdc/the-developer-s-code"
       },
