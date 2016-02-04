@@ -9,6 +9,10 @@ lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
 sass:
   sass_dir: _sass
   style: compressed
