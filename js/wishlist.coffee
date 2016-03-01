@@ -26,6 +26,7 @@ class WishList
 class Category
   constructor: (data, language) ->
     @title  = ko.pureComputed => data.title[language()] || data.title['en']
+    @icon   = "fa-#{data.icon}"
     @wishes = ko.observableArray([])
 
     @initWishes(data.wishes, language)

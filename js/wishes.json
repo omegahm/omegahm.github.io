@@ -3,6 +3,7 @@
 
 [
   {
+    "icon": "home",
     "title": {
       "en": "Stuff for the house",
       "da": "Ting til huset"
@@ -27,6 +28,7 @@
     ]
   },
   {
+    "icon": "cubes",
     "title": {
       "en": "Boardgames",
       "da": "Brætspil"
@@ -71,10 +73,15 @@
       {
         "title": { "en": "Descent: Labyrinth of Ruin (2nd Edition)" },
         "url": "http://www.amazon.co.uk/Descent-Second-Edition-Labyrinth-Expansion/dp/1616615427"
+      },
+      {
+        "title": { "en": "Mage Knight Board Game" },
+        "url": "http://www.amazon.co.uk/WizKids-WZK-70495-Knight-Board/dp/B005S8KR6Q"
       }
     ]
   },
   {
+    "icon": "book",
     "title": {
       "en": "Books - Non-fiction",
       "da": "Bøger - Faglitteratur"

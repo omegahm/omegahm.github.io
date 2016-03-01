@@ -21,7 +21,10 @@ extra_script_url: '/js/wishlist.js'
   <small><i data-bind="text: info"></i></small>
 
   <div data-bind="foreach: wishCategories">
-    <h4 data-bind="text: title"></h4>
+    <h4>
+      <i class="fa" data-bind="css: icon"></i>
+      <span data-bind="text: title"></span>
+    </h4>
     <ul data-bind="foreach: wishes">
       <li>
         <a data-bind="attr: { href: url }, text: title"></a>
