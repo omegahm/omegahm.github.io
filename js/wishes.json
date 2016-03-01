@@ -23,7 +23,7 @@
       },
       {
         "title": { "en": "Towels (70x140cm and 50x100cm)", "da": "Håndklæder (70x140cm og 50x100cm)" },
-        "url": "http://www.imerco.dk/bolig-og-indretning/toilet-og-bad/haandklaede/comfort-haandklaede-petrol-70-x-140-cm?id=100178167"
+        "url": "http://www.imerco.dk/bolig-og-indretning/toilet-og-bad/haandklaede/sdahl-haandklaede-china-blue-ice-blue-50-x-100-cm?id=100349623"
       }
     ]
   },
@@ -35,12 +35,20 @@
     },
     "wishes": [
       {
+        "title": { "en": "Forbidden Desert" },
+        "url": "http://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
+      },
+      {
         "title": { "en": "Android Netrunner: The Card Game Core Set" },
         "url": "http://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
       },
       {
         "title": { "en": "Betrayal at House on the Hill" },
         "url": "http://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734"
+      },
+      {
+        "title": { "en": "Eldritch Horror" },
+        "url": "http://www.amazon.co.uk/Eldritch-Horror-EH01-Board-Game/dp/1616617667"
       },
       {
         "title": { "en": "Summoner Wars Master Set" },
