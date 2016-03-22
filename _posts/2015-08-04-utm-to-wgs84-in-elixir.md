@@ -25,7 +25,7 @@ Thanks!
 
 Below is the code to do this, if anybody is interested. :heart:
 
-```elixir
+{% highlight elixir %}
 defmodule Geoex.Coord do
   require Logger
   import :math, only: [pi: 0, pow: 2, sin: 1, sinh: 1, asin: 1, cos: 1, cosh: 1, tan: 1, atan: 1, atanh: 1, sqrt: 1]
@@ -117,18 +117,18 @@ defmodule Geoex.Coord do
 
   defp utmz(lng), do: 1 + Float.floor((lng + 180) / 6)
 end
-```
+{% endhighlight %}
 
 Note: I strugged with this code for a long time (~2 hours), thinking I had misplaced a parenthesis.
 I had not, but instead I had the following code:
 
 
-```elixir
+{% highlight elixir %}
 def utm32_to_wgs84(e, n),      do: utm32_to_wgs84(n, e, 32)
 def utm32_to_wgs84(e, n, zone) do
   ...
 end
-```
+{% endhighlight %}
 
 Why would I switch the arguments - and more importantly: WHY DIDN'T I SEE THIS?
 

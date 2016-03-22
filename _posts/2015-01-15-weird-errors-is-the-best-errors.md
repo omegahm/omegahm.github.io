@@ -12,7 +12,7 @@ I couldn't quite see from the data, where I got that `h` from, so the hunt began
 
 The code, which I had fiddled with was this
 
-```ruby
+{% highlight ruby %}
 private
 
 def photos
@@ -22,28 +22,28 @@ def photos
     ImageResizer.resize_url_for(photo, 700, 490)
   end
 end
-```
+{% endhighlight %}
 
 After having found the error, I can see that I did a hell of a job rewriting the above method.
 Of course the `#map` returns an array and my `return` on the first line does not.
 
 The reason I got `/images/h` out was that we were using the `#photos` method in `#first_image`
 
-```ruby
+{% highlight ruby %}
 def first_image
   return '' unless photos.first.present?
   h.image_tag photos.first, class: 'property-thumb-box-images-image'
 end
-```
+{% endhighlight %}
 
 Here `photos` is the first method.
 It checks if the array contains an element and then uses that first element to create the image tag.
 
 However(!) in Rails we have a `String#first` method, which just takes the first character out of the string
 
-```ruby
+{% highlight ruby %}
 "hello".first # => "h"
-```
+{% endhighlight %}
 
 My image URLs were of course starting with `"http"`, so I kept getting `"h"` out.
 
@@ -52,30 +52,30 @@ I simply love it.
 
 When trying to figure out the problem, I launched an `irb` (not `rails console`) and fired some commands at it.
 
-```bash
+{% highlight bash %}
 $ irb
 irb(main):001:0> "hello".first
 NoMethodError: undefined method `first' for "hello":String
                from (irb):1
                from /Users/ohm/.rbenv/versions/1.9.3-p547/bin/irb:12:in `<main>'
 irb(main):002:0>
-```
+{% endhighlight %}
 
 I should of course have used the Rails console (but our Rails environment is sooo slow to boot):
 
-```bash
+{% highlight bash %}
 $ rails c
 irb(main):001:0> "hello".first
 => "h"
 irb(main):002:0>
-```
+{% endhighlight %}
 
 Oh well.
 Lesson learned I guess.
 
 I quickly fixed my err in the first snippet and changed the second to be nicer:
 
-```ruby
+{% highlight ruby %}
 def first_image
   return '' unless photos.any?
   h.image_tag photos.first, class: 'property-thumb-box-images-image'
@@ -90,4 +90,4 @@ def photos
     ImageResizer.resize_url_for(photo, 700, 490)
   end
 end
-```
+{% endhighlight %}

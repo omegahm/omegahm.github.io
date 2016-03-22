@@ -18,8 +18,10 @@ sass:
   style: compressed
 
 gems:
+  - jemoji
   - jekyll-gist
   - jekyll-coffeescript
+  - jekyll-mentions
 
 ##############
 # NAVIGATION #

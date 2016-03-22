@@ -14,7 +14,7 @@ It's not even the same weekday!
 
 Have a look at this Ruby code:
 
-```ruby
+{% highlight ruby %}
 irb(main):001:0> DateTime.iso8601('1616-04-23', Date::ENGLAND).to_s
 => "1616-04-23T00:00:00+00:00"
 irb(main):002:0> DateTime.iso8601('1616-04-23', Date::ITALY).to_s
@@ -27,18 +27,18 @@ irb(main):005:0> DateTime.iso8601('1616-04-23', Date::ENGLAND).httpdate
 => "Tue, 23 Apr 1616 00:00:00 GMT"
 irb(main):006:0> DateTime.iso8601('1616-04-23', Date::ITALY).httpdate
 => "Sat, 23 Apr 1616 00:00:00 GMT"
-```
+{% endhighlight %}
 
 So even though that they have the same string representation (`#to_s`) they are clearly different dates.
 
 One is in fact from the Julian calendar while the other is Gregorian:
 
-```ruby
+{% highlight ruby %}
 irb(main):007:0> DateTime.iso8601('1616-04-23', Date::ENGLAND).julian?
 => true
 irb(main):008:0> DateTime.iso8601('1616-04-23', Date::ITALY).gregorian?
 => true
-```
+{% endhighlight %}
 
 Oh my god! I have working with dates so much!
 
