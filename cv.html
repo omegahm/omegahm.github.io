@@ -68,7 +68,7 @@ hobby:
   entries:
   - name: Sorteringsguide
     url: http://www.sorteringsguide.dk
-    description: Lookup system for Vestforbrænding and all recycling centers in Northern Zealand
+    description: Lookup system for Vestforbrænding and all recycling centers in Northern Zealand (no longer maintained)
     time: Autumn 2013
     tags:
     - Ruby on Rails
@@ -91,9 +91,14 @@ hobby:
 other:
 - title: Service
   entries:
+  - name: Moderator on MetaRuby.com
+    time: 2016 - present
+    description: Moderate people on the forum as well as actively posting
+    url: http://metaruby.com/
   - name: Moderator on RailsForum.com
     time: 2014 - present
     description: Moderate people on the forum as well as actively posting
+    url: https://railsforum.com/
   - name: Memeber of the network group at Prof. Ostenfeld Dormitory
     time: 2009 - February 2013
     description: Managed the Internet services for about 300 rooms
@@ -260,7 +265,7 @@ other:
 
         <div class="callout">
           <h4 class="lead">
-            <a href="{{ entry.link }}">{{ entry.name }}</a>
+            <a href="{{ entry.url }}">{{ entry.name }}</a>
           </h4>
 
           <div class="clearfix">
@@ -291,7 +296,11 @@ other:
 
         <div class="callout">
           <h4 class="lead">
-            {{ entry.name }}
+            {% if entry.url %}
+              <a href="{{ entry.url }}">{{ entry.name }}</a>
+            {% else %}
+              {{ entry.name }}
+            {% endif %}
           </h4>
 
           <div class="clearfix">
