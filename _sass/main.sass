@@ -1,10 +1,11 @@
-$asideTextColor: #716b7a
-$asideHoverColor: #2a6496
-$asideBackground: #f7f5fa
+$asideTextColor: white
+$asideHoverTextColor: #ecf0f1
+$asideHoverColor: #9b59b6
+$asideBackground: #8e44ad
 $calloutBackground: #f4f8fa
 $calloutBorder: #bce8f1
 $calloutHeader: #34789a
-$calloutLinkColor: maroon
+$calloutLinkColor: #8e44ad
 
 body
   font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -44,7 +45,7 @@ aside
 
   a
     &:hover, &:focus
-      color: $asideHoverColor
+      color: $asideHoverTextColor
       text-decoration: none
       font-weight: 300
 
@@ -100,7 +101,7 @@ main
       padding-bottom: 5px
 
     li:hover, li a:hover
-      background-color: #ccc
+      background-color: $asideHoverColor
 
   li.current
     &, & > a, & > a:hover, & > a:focus
