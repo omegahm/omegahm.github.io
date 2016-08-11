@@ -44,59 +44,59 @@
     "wishes": [
       {
         "title": { "en": "Forbidden Desert" },
-        "url": "http://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
+        "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
       },
       {
         "title": { "en": "Pandemic Legacy: Season 1" },
-        "url": "http://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
+        "url": "https://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
       },
       {
         "title": { "en": "Android Netrunner: The Card Game Core Set" },
-        "url": "http://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
+        "url": "https://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
       },
       {
         "title": { "en": "Betrayal at House on the Hill" },
-        "url": "http://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734"
+        "url": "https://www.amazon.co.uk/Avalon-Hill-266330000WOC-Betrayal-House/dp/B003HC9734"
       },
       {
         "title": { "en": "Eldritch Horror" },
-        "url": "http://www.amazon.co.uk/Eldritch-Horror-EH01-Board-Game/dp/1616617667"
+        "url": "https://www.amazon.co.uk/Eldritch-Horror-EH01-Board-Game/dp/1616617667"
       },
       {
         "title": { "en": "Summoner Wars Master Set" },
-        "url": "http://www.amazon.co.uk/gp/product/B005E7A3OM"
+        "url": "https://www.amazon.co.uk/gp/product/B005E7A3OM"
       },
       {
         "title": { "en": "Galaxy Trucker: The Big Expansion" },
-        "url": "http://www.amazon.co.uk/Galaxy-Trucker-The-Big-Expansion/dp/B001Q8LL2Q"
+        "url": "https://www.amazon.co.uk/Galaxy-Trucker-The-Big-Expansion/dp/B001Q8LL2Q"
       },
       {
         "title": { "en": "Arkham Horror Board Game: A Call of Cthulhu" },
-        "url": "http://www.amazon.co.uk/Arkham-Horror-Cthulhu-Boardgame-Gameboard/dp/1589942108"
+        "url": "https://www.amazon.co.uk/Arkham-Horror-Cthulhu-Boardgame-Gameboard/dp/1589942108"
       },
       {
         "title": { "en": "Quarriors Dice Game" },
-        "url": "http://www.amazon.co.uk/WizKids-WZK-70234-Wizkids-Quarriors/dp/B004U5RD1A"
+        "url": "https://www.amazon.co.uk/WizKids-WZK-70234-Wizkids-Quarriors/dp/B004U5RD1A"
       },
       {
         "title": { "en": "Quarriors: Rise of Demons Expansion" },
-        "url": "http://www.amazon.co.uk/Quarriors-Rise-of-Demons-Expansion/dp/B005S8LPZ8"
+        "url": "https://www.amazon.co.uk/Quarriors-Rise-of-Demons-Expansion/dp/B005S8LPZ8"
       },
       {
         "title": { "en": "Descent: Journey in the Dark (2nd Edition)" },
-        "url": "http://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898"
+        "url": "https://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898"
       },
       {
         "title": { "en": "Descent: Lair of the Wyrm (2nd Edition)" },
-        "url": "http://www.amazon.co.uk/Descent-Second-Edition-Lair-Wyrm/dp/1616614625"
+        "url": "https://www.amazon.co.uk/Descent-Second-Edition-Lair-Wyrm/dp/1616614625"
       },
       {
         "title": { "en": "Descent: Labyrinth of Ruin (2nd Edition)" },
-        "url": "http://www.amazon.co.uk/Descent-Second-Edition-Labyrinth-Expansion/dp/1616615427"
+        "url": "https://www.amazon.co.uk/Descent-Second-Edition-Labyrinth-Expansion/dp/1616615427"
       },
       {
         "title": { "en": "Mage Knight Board Game" },
-        "url": "http://www.amazon.co.uk/WizKids-WZK-70495-Knight-Board/dp/B005S8KR6Q"
+        "url": "https://www.amazon.co.uk/WizKids-WZK-70495-Knight-Board/dp/B005S8KR6Q"
       }
     ]
   },
@@ -108,24 +108,28 @@
     },
     "wishes": [
       {
-        "title": { "en": "Programming Clojure (2nd edition)" },
-        "url": "http://pragprog.com/book/shcloj2/programming-clojure"
+        "title": { "en": "The Pragmatic Programmer" },
+        "url": "https://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X"
       },
       {
         "title": { "en": "Don't Make Me Think" },
-        "url": "http://www.amazon.co.uk/Dont-Make-Me-Think-Usability-ebook/dp/B000SEGQNS/"
+        "url": "https://www.amazon.co.uk/Dont-Make-Me-Think-Usability-ebook/dp/B000SEGQNS/"
       },
       {
         "title": { "en": "The Developer's Code" },
-        "url": "http://pragprog.com/book/kcdc/the-developer-s-code"
+        "url": "https://pragprog.com/book/kcdc/the-developer-s-code"
+      },
+      {
+        "title": { "en": "Programming Clojure (2nd edition)" },
+        "url": "https://pragprog.com/book/shcloj2/programming-clojure"
       },
       {
         "title": { "en": "Growing Object-Oriented Software, Guided by Tests" },
-        "url": "http://www.amazon.co.uk/gp/product/B002TIOYVW/"
+        "url": "https://www.amazon.co.uk/gp/product/B002TIOYVW/"
       },
       {
         "title": { "en": "Refactoring: Improving the Design of Existing Code" },
-        "url": "http://www.amazon.co.uk/gp/product/B007WTFWJ6/"
+        "url": "https://www.amazon.co.uk/gp/product/B007WTFWJ6/"
       }
     ]
   }
