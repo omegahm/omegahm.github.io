@@ -83,6 +83,111 @@
   {
     "icon": "book",
     "title": {
+      "en": "Books - Fiction",
+      "da": "Bøger - Skønlitteratur"
+    },
+    "wishes": [
+      {
+        "title": { "en": "Neuromancer - William Gibson (Series)" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Animal Farm - George Orwell" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Ender's Game - Orson Scott Card" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The War of the Worlds - H.G. Wells" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Of Mice and Men - John Steinbeck" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Catcher in the Rye - J.D. Salinger" },
+        "url": ""
+      },
+      {
+        "title": { "en": "I, Robot - Isaac Asimov (Series)" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Adventures of Huckleberry Finn - Mark Twain" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Adventures of Tom Sawyer - Mark Twain" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Heart of Darkness - Joseph Conrad" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Adventures of Sherlock Holmes" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Great Gatsby - F. Scott Fitzgerald" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Color Purple - Alice Walker" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Little Prince - Antoine de Saint-Exupéry" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Life of Pi - Yann Martel" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Lord of the Flies - William Golding" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Great Expectations - Charles Dickens" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Egg - Andy Weir" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Stardust - Neil Gaiman" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Winnie-the-Pooh - A.A. Milne" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Bicentennial Man - Isaac Asimov" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Wonderful Wizard of Oz - L. Frank Baum (Series)" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The 5th Wave - Rick Yancey (Series)" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Bad Beginning - Lemony Snicket (Series)" },
+        "url": ""
+      }
+    ]
+  },
+  {
+    "icon": "book",
+    "title": {
       "en": "Books - Non-fiction",
       "da": "Bøger - Faglitteratur"
     },
