@@ -88,10 +88,6 @@
     },
     "wishes": [
       {
-        "title": { "en": "Neuromancer - William Gibson (Series)" },
-        "url": ""
-      },
-      {
         "title": { "en": "Animal Farm - George Orwell" },
         "url": ""
       },
@@ -121,10 +117,6 @@
       },
       {
         "title": { "en": "The Adventures of Tom Sawyer - Mark Twain" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Heart of Darkness - Joseph Conrad" },
         "url": ""
       },
       {
