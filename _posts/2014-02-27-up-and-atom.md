@@ -5,7 +5,7 @@ tags: ruby atom editor
 last_modified_at: 2014-02-27
 ---
 
-So today I got an early access for Githubs new [Atom editor](http://atom.io).
+So today I got an early access for Githubs new [Atom editor](https://atom.io).
 (Thanks [Kasper](https://twitter.com/kasperlewau)!)
 
 I got to play around with it at work.

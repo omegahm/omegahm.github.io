@@ -7,7 +7,7 @@ last_modified_at: 2015-08-04
 
 We are currently in the midst of integrating with a Norwegian company at work.
 They supply the Norwegian bus- and trainstops with coordinates.
-We want to show this to our customers at [MatchOffice.no](http://www.matchoffice.no/) so that they can see how far a location is to public transportation.
+We want to show this to our customers at [MatchOffice.no](https://www.matchoffice.no/) so that they can see how far a location is to public transportation.
 
 This third party company supplies the coordinates in the UTM coordinate system.
 We want to work with WGS84, because that is how most of our system works.

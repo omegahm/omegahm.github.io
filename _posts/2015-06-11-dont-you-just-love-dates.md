@@ -7,7 +7,7 @@ last_modified_at: 2015-06-11
 
 Hahaha, dates, you're so funny.
 
-Did you know that the Swedes have actually had a [February 30th](http://en.wikipedia.org/wiki/February_30)?
+Did you know that the Swedes have actually had a [February 30th](https://en.wikipedia.org/wiki/February_30)?
 
 Did you also know that because of all the switching back and forth between calendars that all the countries have been doing, April 23, 1616 isn't the same day everywhere?
 It's not even the same weekday!

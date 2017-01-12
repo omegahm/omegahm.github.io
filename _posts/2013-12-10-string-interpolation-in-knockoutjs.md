@@ -5,7 +5,7 @@ tags: javascript ruby rails knockout
 last_modified_at: 2013-12-10
 ---
 
-At [autobutler.dk](http://www.autobutler.dk) we are currently developing a new flow for car owners to enter.
+At [autobutler.dk](https://www.autobutler.dk) we are currently developing a new flow for car owners to enter.
 This flow is based on a data-driven API.
 The new flow will be a front-end client of this API.
 

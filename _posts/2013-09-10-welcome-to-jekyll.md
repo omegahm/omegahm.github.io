@@ -23,4 +23,4 @@ Just to try out some Jekyll features, here is some code: (acutally the solution 
 puts (1...1000).select {|num| num % 3 == 0 or num % 5 == 0 }.inject(:+) # => 233168
 {% endhighlight %}
 
-[euler]: http://projecteuler.net/
+[euler]: https://projecteuler.net/

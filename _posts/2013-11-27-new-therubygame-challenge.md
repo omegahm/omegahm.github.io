@@ -8,7 +8,7 @@ last_modified_at: 2013-11-27
 So [TheRubyGame](http://www.therubygame.com/) was just brought back from the dead.
 The newest challenge (Challenge #1) is about ducks and fire and ducks on fire.
 
-Actually the newest challenge is a [Fizz buzz](http://en.wikipedia.org/wiki/Fizz_buzz) challenge.
+Actually the newest challenge is a [Fizz buzz](https://en.wikipedia.org/wiki/Fizz_buzz) challenge.
 
 The fun -- and sometimes educational -- part here is golfing, that is creating the shortest Ruby script that can solve the challenge.
 When we count the shortest, we count only the content of the method.
@@ -34,7 +34,7 @@ Call the last `c` and remove that count from the two others (all numbers that ar
 
 Lets golf a bit.
 It is fairly simple to reach 57 characters.
-We refactor a bit and end up with something like (this is [nbaum](http://github.com/nbaum)s original shortest solution)
+We refactor a bit and end up with something like (this is [nbaum](https://github.com/nbaum)s original shortest solution)
 
 {% highlight ruby %}
 s,e=startpos-1,endpos;c=e/15-s/15;[e/3-s/3-c,e/5-s/5-c,c]

@@ -5,7 +5,7 @@ tags: ruby grape json
 last_modified_at: 2014-01-06
 ---
 
-So we're building this JSON API at [autobutler.dk](http://www.autobutler.dk), in which we want the JSON outputted to be human readable (pretty).
+So we're building this JSON API at [autobutler.dk](https://www.autobutler.dk), in which we want the JSON outputted to be human readable (pretty).
 Nothing is worse than trying to debug a JSON service, and always having to parse it through e.g. `json_pp`.
 
 Instead we just want the service to output the pretty JSON.
