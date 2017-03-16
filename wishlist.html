@@ -21,6 +21,7 @@ extra_script_url: '/js/wishlist.js'
   <small><i data-bind="text: info"></i></small>
 
   <div class="wish-categories" data-bind="foreach: wishCategories">
+    <!-- ko ifnot: wishes().length == 0 -->
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4>
@@ -43,5 +44,6 @@ extra_script_url: '/js/wishlist.js'
         </ul>
       </div>
     </div>
+    <!-- /ko -->
   </div>
 </div>

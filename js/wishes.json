@@ -27,14 +27,6 @@
     },
     "wishes": [
       {
-        "title": { "en": "Forbidden Desert" },
-        "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
-      },
-      {
-        "title": { "en": "Pandemic Legacy: Season 1" },
-        "url": "https://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
-      },
-      {
         "title": { "en": "Hive" },
         "url": "https://www.amazon.co.uk/Gen42-Games-5513656-HIVE/dp/B000EN5ZLW"
       },
@@ -43,8 +35,12 @@
         "url": "https://www.amazon.co.uk/Flat-River-Group-MFG3505-Patchwork/dp/B00RCCAPPE"
       },
       {
-        "title": { "en": "Android Netrunner: The Card Game Core Set" },
-        "url": "https://www.amazon.co.uk/Android-Netrunner-Card-Game-Core/dp/1616614609"
+        "title": { "en": "Forbidden Desert" },
+        "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
+      },
+      {
+        "title": { "en": "Pandemic Legacy: Season 1" },
+        "url": "https://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
       },
       {
         "title": { "en": "Galaxy Trucker: The Big Expansion" },
@@ -53,10 +49,6 @@
       {
         "title": { "en": "Descent: Journey in the Dark (2nd Edition)" },
         "url": "https://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898"
-      },
-      {
-        "title": { "en": "Mage Knight Board Game" },
-        "url": "https://www.amazon.co.uk/WizKids-WZK-70495-Knight-Board/dp/B005S8KR6Q"
       }
     ]
   },
@@ -216,19 +208,6 @@
       "en": "Books - Non-fiction",
       "da": "Bøger - Faglitteratur"
     },
-    "wishes": [
-      {
-        "title": { "en": "The Pragmatic Programmer" },
-        "url": "https://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X"
-      },
-      {
-        "title": { "en": "Don't Make Me Think" },
-        "url": "https://www.amazon.co.uk/Dont-Make-Me-Think-Usability-ebook/dp/B000SEGQNS/"
-      },
-      {
-        "title": { "en": "The Developer's Code" },
-        "url": "https://pragprog.com/book/kcdc/the-developer-s-code"
-      }
-    ]
+    "wishes": []
   }
 ]
