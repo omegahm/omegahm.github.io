@@ -16,6 +16,22 @@
       {
         "title": { "en": "4x Herb/Spice Grinder", "da": "4x Kværn" },
         "url": "https://www.rosendahl.dk/shop/serier/grand-cru/p-112/gc-kvaern"
+      },
+      {
+        "title": { "en": "Detail Brush - Army Painter", "da": "Detail Brush - Army Painter" },
+        "url": "https://www.faraos.dk/games/figurspil/figurmaling/pensler/item/4019769336929"
+      },
+      {
+        "title": { "en": "Insane Detail Brush - Army Painter", "da": "Insane Detail Brush - Army Painter" },
+        "url": "https://www.faraos.dk/games/figurspil/figurmaling/pensler/item/4019769336943"
+      },
+      {
+        "title": { "en": "Precise Detail Brush - Army Painter", "da": "Precise Detail Brush - Army Painter" },
+        "url": "https://www.faraos.dk/games/figurspil/figurmaling/pensler/item/4019769107017"
+      },
+      {
+        "title": { "en": "Anti-shine Spray", "da": "Anti-shine Spray" },
+        "url": "https://www.faraos.dk/games/figurspil/figurmaling/sprays/item/2540101130032"
       }
     ]
   },
@@ -91,7 +107,6 @@
         "title": { "en": "The Adventures of Tom Sawyer - Mark Twain" },
         "url": ""
       },
-
       {
         "title": { "en": "The Adventures of Sherlock Holmes" },
         "url": ""
@@ -198,6 +213,62 @@
       },
       {
         "title": { "en": "Frygt og Bæven - Søren Kierkegaard" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Brothers Karamazov - Fyodor Dostoyevsky" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Phantom Tollbooth - Norton Juster" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Things They Carried - Tim O'Brien" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Yellow Wallpaper - Charlote Perkins Gilman" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Meditations - Marcus Aurelius" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Brave New World - Aldous Huxley" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Stand - Stephen King" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Catch-22 - Joseph Heller" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Maus (1 and 2) - Art Spiegelman" },
+        "url": ""
+      },
+      {
+        "title": { "en": "Night - Elie Wiesel" },
+        "url": ""
+      },
+      {
+        "title": { "en": "The Last Question - Isaac Asimov" },
+        "url": ""
+      },
+      {
+        "title": { "en": "One Hundred Years of Solitude - Gabriel García Márquez" },
+        "url": ""
+      },
+      {
+        "title": { "en": "East of Eden - John Steinbeck" },
+        "url": ""
+      },
+      {
+        "title": { "en": "All Queit on the Western Front - Erich Maria Remarque" },
         "url": ""
       }
     ]
