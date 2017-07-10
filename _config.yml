@@ -17,7 +17,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-gems:
+plugins:
   - jemoji
   - jekyll-gist
   - jekyll-coffeescript
