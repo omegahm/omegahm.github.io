@@ -31,6 +31,10 @@
     },
     "wishes": [
       {
+        "title": { "en": "Joking Hazard" },
+        "url": "https://www.amazon.co.uk/Joking-Hazard-JHUS0000/dp/B01MXFWV4Q"
+      },
+      {
         "title": { "en": "Patchwork" },
         "url": "https://www.amazon.co.uk/Flat-River-Group-MFG3505-Patchwork/dp/B00RCCAPPE"
       },
