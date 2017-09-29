@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Countdown!</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <style type="text/css">
+      body {
+        background-color: pink;
+        height: 100vh;
+        margin: 0;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      .center-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .heart {
+        font-size: 7.5em;
+        text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
+      }
+
+      time {
+        order: 1;
+        flex: 0 1 auto;
+        min-width: 0;
+        min-height: auto;
+        align-self: auto;
+        text-align: center;
+        font-size: 3.5em;
+        text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
+      }
+
+      time::after {
+        content: '';
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-container">
+      <div class="heart">❤️</div>
+      <time data-c="Oct 31, 2017 15:45:00">Bettina</time>
+    </div>
+
+    <script type="text/javascript">
+      function zeroPad(text, limit) {
+        zeros = "";
+        tmp = text;
+        if (tmp == 0) { tmp += 1; }
+        while (tmp < limit) {
+          zeros += "0";
+          tmp *= 10;
+        }
+        return zeros + text;
+      }
+
+      /* Waiting for Bettina <3 */
+      function startBettinaCounter() {
+        document.querySelectorAll('time').forEach(function(elem) {
+          var countDownDate = new Date(elem.dataset.c).getTime();
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((countDownDate - now) / (1000 * 60 * 60)) - days * 24;
+          var minutes = Math.floor((countDownDate - now) / (1000 * 60)) - 60*(hours + days * 24);
+          var seconds = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
+          var milliseconds = Math.floor((countDownDate - now)) - 1000*(seconds + 60*(minutes + 60*(hours + days*24)));
+
+          elem.innerHTML = zeroPad(days, 10) + "d " + zeroPad(hours, 10) + "t " + zeroPad(minutes, 10) + "m " + zeroPad(seconds, 10) + "s " + zeroPad(milliseconds, 100) + "ms";
+        });
+      }
+
+      (function() {
+        /* Waiting for Bettina <3 */
+        setInterval(startBettinaCounter, 1);
+        startBettinaCounter();
+      })();
+    </script>
+  </body>
+</html>
