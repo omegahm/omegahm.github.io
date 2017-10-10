@@ -46,10 +46,10 @@
       }
 
       .text {
-        font-size: 2em;
+        font-size: 1.3em;
         text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
         position: relative;
-        top: -13px;
+        top: -10px;
         margin-left: 5px;
         margin-right: 5px;
       }
@@ -61,12 +61,20 @@
         width: 67px;
         content: '';
         background-position: 0 0;
-        zoom: 0.5;
+        zoom: 0.4;
+      }
+
+      .digit-animate {
+        transition: background-position 0.5s;
+        transition-timing-function: steps(6, start);
       }
 
       @media (min-width: 384px) {
         .digit { zoom: 1; }
-        .text { top: -30px; }
+        .text {
+          top: -30px;
+          font-size: 2em;
+        }
       }
     </style>
   </head>
@@ -75,23 +83,25 @@
       <div class="heart">❤️</div>
 
       <div>
-        <span class="digit day-0" style="background-position: 0 0;"></span>
-        <span class="digit day-1" style="background-position: 0 0;"></span>
+        <span class="digit day-0 digit-animate" style="background-position: 0 0;"></span>
+        <span class="digit day-1 digit-animate" style="background-position: 0 0;"></span>
 
-        <span class="text">:</span>
-
-        <span class="digit hour-0" style="background-position: 0 0;"></span>
-        <span class="digit hour-1" style="background-position: 0 0;"></span>
+        <span class="text">dage</span>
       </div>
-      <br>
+
       <div>
-        <span class="digit minute-0" style="background-position: 0 0;"></span>
-        <span class="digit minute-1" style="background-position: 0 0;"></span>
+        <span class="digit hour-0 digit-animate" style="background-position: 0 0;"></span>
+        <span class="digit hour-1 digit-animate" style="background-position: 0 0;"></span>
 
         <span class="text">:</span>
 
-        <span class="digit second-0" style="background-position: 0 0;"></span>
-        <span class="digit second-1" style="background-position: 0 0;"></span>
+        <span class="digit minute-0 digit-animate" style="background-position: 0 0;"></span>
+        <span class="digit minute-1 digit-animate" style="background-position: 0 0;"></span>
+
+        <span class="text">:</span>
+
+        <span class="digit second-0 digit-animate" style="background-position: 0 0;"></span>
+        <span class="digit second-1 digit-animate" style="background-position: 0 0;"></span>
 
         <span class="text">:</span>
 
