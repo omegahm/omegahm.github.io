@@ -44,12 +44,61 @@
         content: '';
         margin-left: 5px;
       }
+
+      .text {
+        font-size: 2em;
+        text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
+        position: relative;
+        top: -13px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .digit {
+        display: inline-block;
+        background: url(img/digits.png);
+        height: 90px;
+        width: 67px;
+        content: '';
+        background-position: 0 0;
+        zoom: 0.5;
+      }
+
+      @media (min-width: 384px) {
+        .digit { zoom: 1; }
+        .text { top: -30px; }
+      }
     </style>
   </head>
   <body>
     <div class="center-container">
       <div class="heart">❤️</div>
-      <time data-c="Oct 31, 2017 15:45:00">Bettina</time>
+
+      <div>
+        <span class="digit day-0" style="background-position: 0 0;"></span>
+        <span class="digit day-1" style="background-position: 0 0;"></span>
+
+        <span class="text">:</span>
+
+        <span class="digit hour-0" style="background-position: 0 0;"></span>
+        <span class="digit hour-1" style="background-position: 0 0;"></span>
+      </div>
+      <br>
+      <div>
+        <span class="digit minute-0" style="background-position: 0 0;"></span>
+        <span class="digit minute-1" style="background-position: 0 0;"></span>
+
+        <span class="text">:</span>
+
+        <span class="digit second-0" style="background-position: 0 0;"></span>
+        <span class="digit second-1" style="background-position: 0 0;"></span>
+
+        <span class="text">:</span>
+
+        <span class="digit millisecond-0" style="background-position: 0 0;"></span>
+        <span class="digit millisecond-1" style="background-position: 0 0;"></span>
+        <span class="digit millisecond-2" style="background-position: 0 0;"></span>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -66,21 +115,35 @@
 
       /* Waiting for Bettina <3 */
       function startBettinaCounter() {
-        document.querySelectorAll('time').forEach(function(elem) {
-          var countDownDate = new Date(elem.dataset.c).getTime();
+          var countDownDate = new Date("Oct 31, 2017 15:45:00").getTime();
 
           // Get todays date and time
           var now = new Date().getTime();
 
           // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((countDownDate - now) / (1000 * 60 * 60)) - days * 24;
-          var minutes = Math.floor((countDownDate - now) / (1000 * 60)) - 60*(hours + days * 24);
-          var seconds = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
+          var days         = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
+          var hours        = Math.floor((countDownDate - now) / (1000 * 60 * 60)) - days * 24;
+          var minutes      = Math.floor((countDownDate - now) / (1000 * 60)) - 60*(hours + days * 24);
+          var seconds      = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
           var milliseconds = Math.floor((countDownDate - now)) - 1000*(seconds + 60*(minutes + 60*(hours + days*24)));
 
-          elem.innerHTML = zeroPad(days, 10) + "d " + zeroPad(hours, 10) + "t " + zeroPad(minutes, 10) + "m " + zeroPad(seconds, 10) + "s " + zeroPad(milliseconds, 100) + "ms";
-        });
+          days         = zeroPad(days,          10);
+          hours        = zeroPad(hours,         10);
+          minutes      = zeroPad(minutes,       10);
+          seconds      = zeroPad(seconds,       10);
+          milliseconds = zeroPad(milliseconds, 100);
+
+          document.querySelector(".day-0").style.backgroundPositionY         = -540*parseInt(        days[0]) + "px";
+          document.querySelector(".day-1").style.backgroundPositionY         = -540*parseInt(        days[1]) + "px";
+          document.querySelector(".hour-0").style.backgroundPositionY        = -540*parseInt(       hours[0]) + "px";
+          document.querySelector(".hour-1").style.backgroundPositionY        = -540*parseInt(       hours[1]) + "px";
+          document.querySelector(".minute-0").style.backgroundPositionY      = -540*parseInt(     minutes[0]) + "px";
+          document.querySelector(".minute-1").style.backgroundPositionY      = -540*parseInt(     minutes[1]) + "px";
+          document.querySelector(".second-0").style.backgroundPositionY      = -540*parseInt(     seconds[0]) + "px";
+          document.querySelector(".second-1").style.backgroundPositionY      = -540*parseInt(     seconds[1]) + "px";
+          document.querySelector(".millisecond-0").style.backgroundPositionY = -540*parseInt(milliseconds[0]) + "px";
+          document.querySelector(".millisecond-1").style.backgroundPositionY = -540*parseInt(milliseconds[1]) + "px";
+          document.querySelector(".millisecond-2").style.backgroundPositionY = -540*parseInt(milliseconds[2]) + "px";
       }
 
       (function() {
