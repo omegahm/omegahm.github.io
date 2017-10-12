@@ -37,7 +37,7 @@ class Category
 
 class Wish
   constructor: (data, language) ->
-    @title = ko.pureComputed => data.title[language()] || data.title['en']
+    @title = ko.pureComputed => data.title[language()] || data.title['en'] || data.title
     @url   = data.url
 
 $ ->

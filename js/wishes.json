@@ -16,10 +16,23 @@
       {
         "title": { "en": "3x Herb/Spice Grinder", "da": "3x Rosendahl Grand Cru Krydderikværn" },
         "url": "https://www.rosendahl.dk/shop/serier/grand-cru/kvaerne/p-112/gc-kvaern"
-      },
+      }
+    ]
+  },
+  {
+    "icon": "paint-brush",
+    "title": {
+      "en": "Stuff for painting/boardgames",
+      "da": "Ting til maling/brætspil"
+    },
+    "wishes": [
       {
         "title": { "en": "Field Grass", "da": "Field Grass" },
         "url": "https://www.fanatic.dk/shop/field-grass/"
+      },
+      {
+        "title": { "en": "Ash Grey - Gravel", "da": "Grus" },
+        "url": "https://www.fanatic.dk/shop/ash-grey-2/"
       }
     ]
   },
@@ -68,197 +81,60 @@
     },
     "wishes": [
       {
-        "title": { "en": "Animal Farm - George Orwell" },
-        "url": ""
+        "title": {
+          "en": "Kindle address: mads.ohm@kindle.com. You can buy books directly for Kindle on Amazon.com.",
+          "da": "Kindle-adresse: mads.ohm@kindle.com. Du kan købe bøger direkte til denne adresse på Amazon.com."
+        }
       },
-      {
-        "title": { "en": "Ender's Game - Orson Scott Card" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The War of the Worlds - H.G. Wells" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Of Mice and Men - John Steinbeck" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Catcher in the Rye - J.D. Salinger" },
-        "url": ""
-      },
-      {
-        "title": { "en": "I, Robot - Isaac Asimov (Series)" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Adventures of Huckleberry Finn - Mark Twain" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Adventures of Tom Sawyer - Mark Twain" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Adventures of Sherlock Holmes" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Great Gatsby - F. Scott Fitzgerald" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Color Purple - Alice Walker" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Little Prince - Antoine de Saint-Exupéry" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Lord of the Flies - William Golding" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Great Expectations - Charles Dickens" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Egg - Andy Weir" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Stardust - Neil Gaiman" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Winnie-the-Pooh - A.A. Milne" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Bicentennial Man - Isaac Asimov" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Wonderful Wizard of Oz - L. Frank Baum (Series)" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The 5th Wave - Rick Yancey (Series)" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Bad Beginning - Lemony Snicket (Series)" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Slaughterhouse-Five - Kurt Vonnegut" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Lord of the Flies - William Golding" },
-        "url": ""
-      },
-      {
-        "title": { "en": "To Kill a Mockingbird - Harper Lee (Series)" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Steppenwolf - Hermann Hesse" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Don Quixote - Miguel de Cervantes" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Thus Spoke Zarathustra - Friedrich Nietzsche" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Federalist Papers - Alexander Hamilton" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Moby Dick - Herman Melville" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Frankenstein - Mary Shelley" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Hamlet - William Shakespeare" },
-        "url": ""
-      },
-      {
-        "title": { "en": "A Tale of Two Citites - Charles Dickens" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Fahrenheit 451 - Ray Bradbury" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Frygt og Bæven - Søren Kierkegaard" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Brothers Karamazov - Fyodor Dostoyevsky" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Phantom Tollbooth - Norton Juster" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Things They Carried - Tim O'Brien" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Yellow Wallpaper - Charlote Perkins Gilman" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Meditations - Marcus Aurelius" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Brave New World - Aldous Huxley" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Stand - Stephen King" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Catch-22 - Joseph Heller" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Maus (1 and 2) - Art Spiegelman" },
-        "url": ""
-      },
-      {
-        "title": { "en": "Night - Elie Wiesel" },
-        "url": ""
-      },
-      {
-        "title": { "en": "The Last Question - Isaac Asimov" },
-        "url": ""
-      },
-      {
-        "title": { "en": "One Hundred Years of Solitude - Gabriel García Márquez" },
-        "url": ""
-      },
-      {
-        "title": { "en": "East of Eden - John Steinbeck" },
-        "url": ""
-      },
-      {
-        "title": { "en": "All Queit on the Western Front - Erich Maria Remarque" },
-        "url": ""
-      }
+      { "title": "" },
+      { "title": "Animal Farm - George Orwell" },
+      { "title": "Ender's Game - Orson Scott Card" },
+      { "title": "The War of the Worlds - H.G. Wells" },
+      { "title": "Of Mice and Men - John Steinbeck" },
+      { "title": "The Catcher in the Rye - J.D. Salinger" },
+      { "title": "I, Robot - Isaac Asimov (Series)" },
+      { "title": "The Adventures of Huckleberry Finn - Mark Twain" },
+      { "title": "The Adventures of Tom Sawyer - Mark Twain" },
+      { "title": "The Adventures of Sherlock Holmes" },
+      { "title": "The Great Gatsby - F. Scott Fitzgerald" },
+      { "title": "The Color Purple - Alice Walker" },
+      { "title": "The Little Prince - Antoine de Saint-Exupéry" },
+      { "title": "Lord of the Flies - William Golding" },
+      { "title": "Great Expectations - Charles Dickens" },
+      { "title": "The Egg - Andy Weir" },
+      { "title": "Stardust - Neil Gaiman" },
+      { "title": "Winnie-the-Pooh - A.A. Milne" },
+      { "title": "The Bicentennial Man - Isaac Asimov" },
+      { "title": "The Wonderful Wizard of Oz - L. Frank Baum (Series)" },
+      { "title": "The 5th Wave - Rick Yancey (Series)" },
+      { "title": "The Bad Beginning - Lemony Snicket (Series)" },
+      { "title": "Slaughterhouse-Five - Kurt Vonnegut" },
+      { "title": "Lord of the Flies - William Golding" },
+      { "title": "To Kill a Mockingbird - Harper Lee (Series)" },
+      { "title": "Steppenwolf - Hermann Hesse" },
+      { "title": "Don Quixote - Miguel de Cervantes" },
+      { "title": "Thus Spoke Zarathustra - Friedrich Nietzsche" },
+      { "title": "The Federalist Papers - Alexander Hamilton" },
+      { "title": "Moby Dick - Herman Melville" },
+      { "title": "Frankenstein - Mary Shelley" },
+      { "title": "Hamlet - William Shakespeare" },
+      { "title": "A Tale of Two Citites - Charles Dickens" },
+      { "title": "Fahrenheit 451 - Ray Bradbury" },
+      { "title": "Frygt og Bæven - Søren Kierkegaard" },
+      { "title": "The Brothers Karamazov - Fyodor Dostoyevsky" },
+      { "title": "The Phantom Tollbooth - Norton Juster" },
+      { "title": "The Things They Carried - Tim O'Brien" },
+      { "title": "The Yellow Wallpaper - Charlote Perkins Gilman" },
+      { "title": "Meditations - Marcus Aurelius" },
+      { "title": "Brave New World - Aldous Huxley" },
+      { "title": "The Stand - Stephen King" },
+      { "title": "Catch-22 - Joseph Heller" },
+      { "title": "Maus (1 and 2) - Art Spiegelman" },
+      { "title": "Night - Elie Wiesel" },
+      { "title": "The Last Question - Isaac Asimov" },
+      { "title": "One Hundred Years of Solitude - Gabriel García Márquez" },
+      { "title": "East of Eden - John Steinbeck" },
+      { "title": "All Queit on the Western Front - Erich Maria Remarque" }
     ]
   },
   {

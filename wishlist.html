@@ -31,12 +31,17 @@ extra_script_url: '/js/wishlist.js'
       </div>
       <div class="panel-body">
         <ul class="wish-list" data-bind="foreach: wishes">
-          <!-- ko if: url == '' -->
+          <!-- ko ifnot: url -->
           <li>
+            <!-- ko ifnot: title -->
+            <hr style="margin: 0 -20px; left: -5px; position: relative;">
+            <!-- /ko -->
+            <!-- ko if: title -->
             <span data-bind="text: title"></span>
+            <!-- /ko -->
           </li>
           <!-- /ko -->
-          <!-- ko ifnot: url == '' -->
+          <!-- ko if: url -->
           <li>
             <a data-bind="attr: { href: url }, text: title"></a>
           </li>
