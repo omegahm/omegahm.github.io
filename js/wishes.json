@@ -44,31 +44,35 @@
     },
     "wishes": [
       {
-        "title": { "en": "Joking Hazard" },
+        "title": "Codenames: Duet",
+        "url": "https://smile.amazon.com/Czech-Games-Codenames-Duet-Board/dp/B072J234ZF"
+      },
+      {
+        "title": "Joking Hazard",
         "url": "https://www.amazon.co.uk/Joking-Hazard-JHUS0000/dp/B01MXFWV4Q"
       },
       {
-        "title": { "en": "Patchwork" },
+        "title": "Patchwork",
         "url": "https://www.amazon.co.uk/Flat-River-Group-MFG3505-Patchwork/dp/B00RCCAPPE"
       },
       {
-        "title": { "en": "Forbidden Desert" },
+        "title": "Forbidden Desert",
         "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
       },
       {
-        "title": { "en": "Android: Netrunner" },
+        "title": "Android: Netrunner",
         "url": "https://www.amazon.co.uk/d/Games/Fantasy-Flight-ADN01-Android-Netrunner-Card-Core/1616614609"
       },
       {
-        "title": { "en": "Hive" },
+        "title": "Hive",
         "url": "https://www.amazon.co.uk/Gen42-Games-5513656-HIVE/dp/B000EN5ZLW"
       },
       {
-        "title": { "en": "Pandemic Legacy: Season 1" },
+        "title": "Pandemic Legacy: Season 1",
         "url": "https://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
       },
       {
-        "title": { "en": "Descent: Journey in the Dark (2nd Edition)" },
+        "title": "Descent: Journey in the Dark (2nd Edition)",
         "url": "https://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898"
       }
     ]
@@ -82,8 +86,8 @@
     "wishes": [
       {
         "title": {
-          "en": "Kindle address: mads.ohm@kindle.com. You can buy books directly for Kindle on Amazon.com.",
-          "da": "Kindle-adresse: mads.ohm@kindle.com. Du kan købe bøger direkte til denne adresse på Amazon.com."
+          "en": "Kindle address: <a href='mailto:mads.ohm@kindle.com'>mads.ohm@kindle.com</a>. You can buy books directly for Kindle on Amazon.com.",
+          "da": "Kindle-adresse: <a href='mailto:mads.ohm@kindle.com'>mads.ohm@kindle.com</a>. Du kan købe bøger direkte til denne adresse på Amazon.com."
         }
       },
       { "title": "" },

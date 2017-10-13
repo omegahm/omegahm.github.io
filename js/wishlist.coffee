@@ -47,12 +47,12 @@ $ ->
       "en": {
         "wishlist": "Wish-list",
         "change_language": "Change language:",
-        "info": "Wishes are sorted by preference."
+        "info": "Wishes are sorted by preference in each category."
       },
       "da": {
         "wishlist": "Ønskeseddel",
         "change_language": "Skift sprog:",
-        "info": "Ønskerne er sorteret efter præference."
+        "info": "Ønskerne er sorteret efter præference i hver kategori."
       }
     }
   )
