@@ -5,8 +5,8 @@
   {
     "icon": "home",
     "title": {
-      "en": "Stuff for the house",
-      "da": "Ting til huset"
+      "en": "Stuff",
+      "da": "Ting"
     },
     "wishes": [
       {
@@ -16,6 +16,10 @@
       {
         "title": { "en": "3x Herb/Spice Grinder", "da": "3x Rosendahl Grand Cru Krydderikværn" },
         "url": "https://www.rosendahl.dk/shop/serier/grand-cru/kvaerne/p-112/gc-kvaern"
+      },
+      {
+        "title": { "en": "Black/Volt 42mm Apple Watch band", "da": "Sort/Volt (grønt) 42mm Apple Watch rem" },
+        "url": "https://www.apple.com/dk/shop/product/MQ2H2ZM/A/sort-volt-nike-sportsrem-38-mm-s-m-og-m-l"
       }
     ]
   },
@@ -48,16 +52,16 @@
         "url": "https://smile.amazon.com/Czech-Games-Codenames-Duet-Board/dp/B072J234ZF"
       },
       {
-        "title": "Joking Hazard",
-        "url": "https://www.amazon.co.uk/Joking-Hazard-JHUS0000/dp/B01MXFWV4Q"
-      },
-      {
         "title": "Patchwork",
         "url": "https://www.amazon.co.uk/Flat-River-Group-MFG3505-Patchwork/dp/B00RCCAPPE"
       },
       {
         "title": "Forbidden Desert",
         "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
+      },
+      {
+        "title": "Joking Hazard",
+        "url": "https://www.amazon.co.uk/Joking-Hazard-JHUS0000/dp/B01MXFWV4Q"
       },
       {
         "title": "Android: Netrunner",
