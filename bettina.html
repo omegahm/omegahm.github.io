@@ -125,10 +125,11 @@
 
       /* Waiting for Bettina <3 */
       function startBettinaCounter() {
-          var countDownDate = new Date("Oct 31, 2017 15:45:00").getTime();
+          var countDownDate = new Date("Oct 31, 2017 15:45:00 GMT-0700").getTime();
 
           // Get todays date and time
-          var now = new Date().getTime();
+          var d = new Date();
+          var now = new Date(d.getTime() + (d.getTimezoneOffset() - 420) * 6000); // GMT-0700
 
           // Time calculations for days, hours, minutes and seconds
           var days         = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
