@@ -83,13 +83,6 @@
       <div class="heart">❤️</div>
 
       <div>
-        <span class="digit day-0 digit-animate" style="background-position: 0 0;"></span>
-        <span class="digit day-1 digit-animate" style="background-position: 0 0;"></span>
-
-        <span class="text">dag</span>
-      </div>
-
-      <div>
         <span class="digit hour-0 digit-animate" style="background-position: 0 0;"></span>
         <span class="digit hour-1 digit-animate" style="background-position: 0 0;"></span>
 
@@ -138,14 +131,11 @@
           var seconds      = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
           var milliseconds = Math.floor((countDownDate - now)) - 1000*(seconds + 60*(minutes + 60*(hours + days*24)));
 
-          days         = zeroPad(days,          10);
           hours        = zeroPad(hours,         10);
           minutes      = zeroPad(minutes,       10);
           seconds      = zeroPad(seconds,       10);
           milliseconds = zeroPad(milliseconds, 100);
 
-          document.querySelector(".day-0").style.backgroundPositionY         = -540*parseInt(        days[0]) + "px";
-          document.querySelector(".day-1").style.backgroundPositionY         = -540*parseInt(        days[1]) + "px";
           document.querySelector(".hour-0").style.backgroundPositionY        = -540*parseInt(       hours[0]) + "px";
           document.querySelector(".hour-1").style.backgroundPositionY        = -540*parseInt(       hours[1]) + "px";
           document.querySelector(".minute-0").style.backgroundPositionY      = -540*parseInt(     minutes[0]) + "px";
