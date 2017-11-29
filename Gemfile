@@ -8,3 +8,4 @@ gem 'jekyll-mentions'
 gem 'jemoji'
 
 gem 'capistrano', '~> 2'
+gem 'yajl-ruby', '~> 1.3.1'
