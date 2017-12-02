@@ -86,7 +86,7 @@
         <span class="digit day-0 digit-animate" style="background-position: 0 0;"></span>
         <span class="digit day-1 digit-animate" style="background-position: 0 0;"></span>
 
-        <span class="text">dag</span>
+        <span class="text">dag<span class="e">e</span></span>
       </div>
 
       <div>
@@ -137,6 +137,10 @@
           var minutes      = Math.floor((countDownDate - now) / (1000 * 60)) - 60*(hours + days * 24);
           var seconds      = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
           var milliseconds = Math.floor((countDownDate - now)) - 1000*(seconds + 60*(minutes + 60*(hours + days*24)));
+
+          if(days == 1) {
+            document.querySelector(".e").style.display = "none";
+          }
 
           days         = zeroPad(days,          10);
           hours        = zeroPad(hours,         10);
