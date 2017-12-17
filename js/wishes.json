@@ -18,10 +18,6 @@
         "url": "https://www.rosendahl.dk/shop/serier/grand-cru/kvaerne/p-112/gc-kvaern"
       },
       {
-        "title": { "en": "Black/Volt 42mm Apple Watch band", "da": "Sort/Volt (grønt) 42mm Apple Watch rem" },
-        "url": "https://www.apple.com/dk/shop/product/MQ2H2ZM/A/sort-volt-nike-sportsrem-38-mm-s-m-og-m-l"
-      },
-      {
         "title": { "en": "Kitchen Machine (Kenwood or KitchenAid)", "da": "Køkkenmaskine (røremaskine) fra Kenwood eller KitchenAid" }
       },
       {
@@ -47,11 +43,11 @@
     "wishes": [
       {
         "title": { "en": "Field Grass", "da": "Field Grass" },
-        "url": "https://www.fanatic.dk/shop/field-grass/"
+        "url": "http://amzn.to/2yKU8Qv"
       },
       {
         "title": { "en": "Ash Grey - Gravel", "da": "Grus" },
-        "url": "https://www.fanatic.dk/shop/ash-grey-2/"
+        "url": "http://amzn.to/2CoNG3Z"
       }
     ]
   },
@@ -64,39 +60,35 @@
     "wishes": [
       {
         "title": "Codenames: Duet",
-        "url": "https://smile.amazon.com/Czech-Games-Codenames-Duet-Board/dp/B072J234ZF"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B072J234ZF&asins=B072J234ZF&linkId=53403b044991b189671025db92a738d3&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Patchwork",
-        "url": "https://www.amazon.co.uk/Flat-River-Group-MFG3505-Patchwork/dp/B00RCCAPPE"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00RCCAPPE&asins=B00RCCAPPE&linkId=ae21eb38786ce9c8771f9c8169114162&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Forbidden Desert",
-        "url": "https://www.amazon.co.uk/Gamewright-415-Forbidden-Desert-Game/dp/B00B4ECHJI"
-      },
-      {
-        "title": "Joking Hazard",
-        "url": "https://www.amazon.co.uk/Joking-Hazard-JHUS0000/dp/B01MXFWV4Q"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00B4ECHJI&asins=B00B4ECHJI&linkId=319e628a82a15aa0d0ca4c884b6c6927&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Necromunda: Underhive",
-        "url": "https://www.amazon.co.uk/NECROMUNDA-UNDERHIVE/dp/B0779M8VD5"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B0779M8VD5&asins=B0779M8VD5&linkId=f80f6ee8e3fd3763aa730ea904a83c56&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Android: Netrunner",
-        "url": "https://www.amazon.co.uk/d/Games/Fantasy-Flight-ADN01-Android-Netrunner-Card-Core/1616614609"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=1616614609&asins=1616614609&linkId=2ff72a899766b2ac889c2e19581aac5d&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Hive",
-        "url": "https://www.amazon.co.uk/Gen42-Games-5513656-HIVE/dp/B000EN5ZLW"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B000EN5ZLW&asins=B000EN5ZLW&linkId=0235799d30bffda620b5a7308eb3f08d&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Pandemic Legacy: Season 1",
-        "url": "https://www.amazon.co.uk/Z-Man-Games-Pandemic-Legacy-Season/dp/B00TQ5SEAI"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00TQ0DXR2&asins=B00TQ0DXR2&linkId=490a80c44b5ded4a4f617ad889bc5587&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       },
       {
         "title": "Descent: Journey in the Dark (2nd Edition)",
-        "url": "https://www.amazon.co.uk/Descent-Journeys-Dark-2nd-Edition/dp/1616611898"
+        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=1616611898&asins=1616611898&linkId=744582a61c1293971723d9d28b7a480f&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       }
     ]
   },
@@ -114,54 +106,51 @@
         }
       },
       { "title": "" },
-      { "title": "Animal Farm - George Orwell" },
-      { "title": "Ender's Game - Orson Scott Card" },
-      { "title": "The War of the Worlds - H.G. Wells" },
-      { "title": "Of Mice and Men - John Steinbeck" },
-      { "title": "The Catcher in the Rye - J.D. Salinger" },
-      { "title": "I, Robot - Isaac Asimov (Series)" },
-      { "title": "The Adventures of Huckleberry Finn - Mark Twain" },
-      { "title": "The Adventures of Tom Sawyer - Mark Twain" },
-      { "title": "The Adventures of Sherlock Holmes" },
-      { "title": "The Great Gatsby - F. Scott Fitzgerald" },
-      { "title": "The Color Purple - Alice Walker" },
-      { "title": "The Little Prince - Antoine de Saint-Exupéry" },
-      { "title": "Lord of the Flies - William Golding" },
-      { "title": "Great Expectations - Charles Dickens" },
-      { "title": "The Egg - Andy Weir" },
-      { "title": "Stardust - Neil Gaiman" },
-      { "title": "Winnie-the-Pooh - A.A. Milne" },
-      { "title": "The Bicentennial Man - Isaac Asimov" },
-      { "title": "The Wonderful Wizard of Oz - L. Frank Baum (Series)" },
-      { "title": "The 5th Wave - Rick Yancey (Series)" },
-      { "title": "The Bad Beginning - Lemony Snicket (Series)" },
-      { "title": "Slaughterhouse-Five - Kurt Vonnegut" },
-      { "title": "Lord of the Flies - William Golding" },
-      { "title": "To Kill a Mockingbird - Harper Lee (Series)" },
-      { "title": "Steppenwolf - Hermann Hesse" },
-      { "title": "Don Quixote - Miguel de Cervantes" },
-      { "title": "Thus Spoke Zarathustra - Friedrich Nietzsche" },
-      { "title": "The Federalist Papers - Alexander Hamilton" },
-      { "title": "Moby Dick - Herman Melville" },
-      { "title": "Frankenstein - Mary Shelley" },
-      { "title": "Hamlet - William Shakespeare" },
-      { "title": "A Tale of Two Citites - Charles Dickens" },
-      { "title": "Fahrenheit 451 - Ray Bradbury" },
-      { "title": "Frygt og Bæven - Søren Kierkegaard" },
-      { "title": "The Brothers Karamazov - Fyodor Dostoyevsky" },
-      { "title": "The Phantom Tollbooth - Norton Juster" },
-      { "title": "The Things They Carried - Tim O'Brien" },
-      { "title": "The Yellow Wallpaper - Charlote Perkins Gilman" },
-      { "title": "Meditations - Marcus Aurelius" },
-      { "title": "Brave New World - Aldous Huxley" },
-      { "title": "The Stand - Stephen King" },
-      { "title": "Catch-22 - Joseph Heller" },
-      { "title": "Maus (1 and 2) - Art Spiegelman" },
-      { "title": "Night - Elie Wiesel" },
-      { "title": "The Last Question - Isaac Asimov" },
-      { "title": "One Hundred Years of Solitude - Gabriel García Márquez" },
-      { "title": "East of Eden - John Steinbeck" },
-      { "title": "All Queit on the Western Front - Erich Maria Remarque" }
+      { "title": "A Tale of Two Citites - Charles Dickens",              "url": "http://amzn.to/2AYJ6gL" },
+      { "title": "All Quiet on the Western Front - Erich Maria Remarque"                                 },
+      { "title": "Animal Farm - George Orwell",                          "url": "http://amzn.to/2yM1ljs" },
+      { "title": "Artemis - Andy Weir"                                                                   },
+      { "title": "Brave New World - Aldous Huxley"                                                       },
+      { "title": "Catch-22 - Joseph Heller",                             "url": "http://amzn.to/2CGbCAJ" },
+      { "title": "Don Quixote - Miguel de Cervantes",                    "url": "http://amzn.to/2kB0rBn" },
+      { "title": "East of Eden - John Steinbeck"                                                         },
+      { "title": "Ender's Game - Orson Scott Card",                      "url": "http://amzn.to/2CrhCwb" },
+      { "title": "Fahrenheit 451 - Ray Bradbury"                                                         },
+      { "title": "Frankenstein - Mary Shelley",                          "url": "http://amzn.to/2yKVdYz" },
+      { "title": "Frygt og Bæven - Søren Kierkegaard"                                                    },
+      { "title": "Hamlet - William Shakespeare",                         "url": "http://amzn.to/2CJxvzn" },
+      { "title": "I, Robot - Isaac Asimov (Series)",                     "url": "http://amzn.to/2yLD0dD" },
+      { "title": "Lord of the Flies - William Golding",                  "url": "http://amzn.to/2kDE6D7" },
+      { "title": "Meditations - Marcus Aurelius",                        "url": "http://amzn.to/2CqfrJF" },
+      { "title": "Moby Dick - Herman Melville",                          "url": "http://amzn.to/2AZYTvP" },
+      { "title": "Night - Elie Wiesel",                                  "url": "http://amzn.to/2kB18dX" },
+      { "title": "Of Mice and Men - John Steinbeck"                                                      },
+      { "title": "One Hundred Years of Solitude - Gabriel García Márquez"                                },
+      { "title": "Slaughterhouse-Five - Kurt Vonnegut",                  "url": "http://amzn.to/2AZ9oPH" },
+      { "title": "Stardust - Neil Gaiman",                               "url": "http://amzn.to/2AYGO10" },
+      { "title": "Steppenwolf - Hermann Hesse",                          "url": "http://amzn.to/2AZxF8e" },
+      { "title": "The 5th Wave - Rick Yancey (Series)"                                                   },
+      { "title": "The Adventures of Sherlock Holmes",                    "url": "http://amzn.to/2BvZ1T9" },
+      { "title": "The Adventures of Tom Sawyer - Mark Twain",            "url": "http://amzn.to/2yLGJaQ" },
+      { "title": "The Bad Beginning - Lemony Snicket (Series)",          "url": "http://amzn.to/2ByJ26J" },
+      { "title": "The Bicentennial Man - Isaac Asimov"                                                   },
+      { "title": "The Brothers Karamazov - Fyodor Dostoyevsky",          "url": "http://amzn.to/2yKvIH5" },
+      { "title": "The Catcher in the Rye - J.D. Salinger",               "url": "http://amzn.to/2BxrLLc" },
+      { "title": "The Color Purple - Alice Walker"                                                       },
+      { "title": "The Egg - Andy Weir"                                                                   },
+      { "title": "The Federalist Papers - Alexander Hamilton",           "url": "http://amzn.to/2AZvJww" },
+      { "title": "The Great Gatsby - F. Scott Fitzgerald",               "url": "http://amzn.to/2kAGXNd" },
+      { "title": "The Last Question - Isaac Asimov"                                                      },
+      { "title": "The Little Prince - Antoine de Saint-Exupéry",         "url": "http://amzn.to/2CIPZQr" },
+      { "title": "The Phantom Tollbooth - Norton Juster",                "url": "http://amzn.to/2yKoRNT" },
+      { "title": "The Stand - Stephen King",                             "url": "http://amzn.to/2CKW6np" },
+      { "title": "The Things They Carried - Tim O'Brien",                "url": "http://amzn.to/2Bx2lgS" },
+      { "title": "The War of the Worlds - H.G. Wells",                   "url": "http://amzn.to/2yLvu2h" },
+      { "title": "The Wonderful Wizard of Oz - L. Frank Baum (Series)",  "url": "http://amzn.to/2By97ml" },
+      { "title": "The Yellow Wallpaper - Charlote Perkins Gilman",       "url": "http://amzn.to/2kBSpbm" },
+      { "title": "Thus Spoke Zarathustra - Friedrich Nietzsche",         "url": "http://amzn.to/2BlWvfO" },
+      { "title": "To Kill a Mockingbird - Harper Lee (Series)",          "url": "http://amzn.to/2Bx6LUO" },
+      { "title": "Winnie-the-Pooh - A.A. Milne"                                                          }
     ]
   },
   {
