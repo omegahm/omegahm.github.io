@@ -18,9 +18,6 @@
         "url": "https://www.rosendahl.dk/shop/serier/grand-cru/kvaerne/p-112/gc-kvaern"
       },
       {
-        "title": { "en": "Kitchen Machine (Kenwood or KitchenAid)", "da": "Køkkenmaskine (røremaskine) fra Kenwood eller KitchenAid" }
-      },
-      {
         "title": "Dyson DC33 Stubborn",
         "url": "https://www.wupti.com/produkter/husholdning/stoevsugere/poseloese-stoevsugere/dyson-dc33-stubborn-opretstaae"
       },
@@ -41,14 +38,6 @@
       "da": "Ting til maling/brætspil"
     },
     "wishes": [
-      {
-        "title": { "en": "Field Grass", "da": "Field Grass" },
-        "url": "http://amzn.to/2yKU8Qv"
-      },
-      {
-        "title": { "en": "Ash Grey - Gravel", "da": "Grus" },
-        "url": "http://amzn.to/2CoNG3Z"
-      }
     ]
   },
   {
@@ -58,10 +47,6 @@
       "da": "Brætspil"
     },
     "wishes": [
-      {
-        "title": "Codenames: Duet",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B072J234ZF&asins=B072J234ZF&linkId=53403b044991b189671025db92a738d3&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
-      },
       {
         "title": "Patchwork",
         "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00RCCAPPE&asins=B00RCCAPPE&linkId=ae21eb38786ce9c8771f9c8169114162&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
