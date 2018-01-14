@@ -47,8 +47,8 @@
       <script defer src="{{ page.extra_script_url }}"></script>
     {% endif %}
 
-    <script defer>
-      {% if page.id %}
+    {% if page.id %}
+      <script defer>
         var disqus_shortname  = 'omegahm';
         var disqus_title      = '{{ page.title }}';
         var disqus_identifier = '{{ page.url }}';
@@ -59,7 +59,7 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-      {% endif %}
-    </script>
+      </script>
+    {% endif %}
   </body>
 </html>
