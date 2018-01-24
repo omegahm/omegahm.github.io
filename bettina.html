@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Countdown!</title>
 
+    <link rel="stylesheet" href="bettina/flipclock.css">
+
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <style type="text/css">
       body {
@@ -16,156 +18,73 @@
       }
 
       .center-container {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        height: 100vh;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -0%);
+        top: 20%;
       }
 
       .heart {
+        text-align: center;
         font-size: 7.5em;
         text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
       }
 
-      time {
-        order: 1;
-        flex: 0 1 auto;
-        min-width: 0;
-        min-height: auto;
-        align-self: auto;
-        text-align: center;
-        font-size: 3.5em;
-        text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
-      }
+      /* Portrait */
+      @media only screen
+        and (min-device-width: 375px)
+        and (max-device-width: 667px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait) {
+          .heart {
+            font-size: 10em;
+            text-shadow: 5px 0 0 #eee, -5px 0 0 #eee, 0 5px 0 #eee, 0 -5px 0 #eee, 2.5px 2.5px #eee, -2.5px -2.5px 0 #eee, 2.5px -2.5px 0 #eee, -2.5px 2.5px 0 #eee;
+          }
 
-      time::after {
-        content: '';
-        margin-left: 5px;
-      }
-
-      .text {
-        font-size: 1.3em;
-        text-shadow: 2px 0 0 #eee, -2px 0 0 #eee, 0 2px 0 #eee, 0 -2px 0 #eee, 1.5px 1.5px #eee, -1.5px -1.5px 0 #eee, 1.5px -1.5px 0 #eee, -1.5px 1.5px 0 #eee;
-        position: relative;
-        top: -10px;
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-
-      .digit {
-        display: inline-block;
-        background: url(img/digits.png);
-        height: 90px;
-        width: 67px;
-        content: '';
-        background-position: 0 0;
-        zoom: 0.4;
-      }
-
-      .digit-animate {
-        transition: background-position 0.5s;
-        transition-timing-function: steps(6, start);
-      }
-
-      @media (min-width: 384px) {
-        .digit { zoom: 1; }
-        .text {
-          top: -30px;
-          font-size: 2em;
-        }
+          .clock {
+            zoom: 0.5;
+            -moz-transform: scale(0.5)
+          }
       }
     </style>
   </head>
   <body>
     <div class="center-container">
       <div class="heart">❤️</div>
-
-      <div>
-        <span class="digit day-0 digit-animate" style="background-position: 0 0;"></span>
-        <span class="digit day-1 digit-animate" style="background-position: 0 0;"></span>
-
-        <span class="text">dag<span class="e">e</span></span>
-      </div>
-
-      <div>
-        <span class="digit hour-0 digit-animate" style="background-position: 0 0;"></span>
-        <span class="digit hour-1 digit-animate" style="background-position: 0 0;"></span>
-
-        <span class="text">:</span>
-
-        <span class="digit minute-0 digit-animate" style="background-position: 0 0;"></span>
-        <span class="digit minute-1 digit-animate" style="background-position: 0 0;"></span>
-
-        <span class="text">:</span>
-
-        <span class="digit second-0 digit-animate" style="background-position: 0 0;"></span>
-        <span class="digit second-1 digit-animate" style="background-position: 0 0;"></span>
-
-        <span class="text">:</span>
-
-        <span class="digit millisecond-0" style="background-position: 0 0;"></span>
-        <span class="digit millisecond-1" style="background-position: 0 0;"></span>
-        <span class="digit millisecond-2" style="background-position: 0 0;"></span>
-      </div>
+      <div class="clock"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bettina/flipclock.min.js"></script>
     <script type="text/javascript">
-      function zeroPad(text, limit) {
-        zeros = "";
-        tmp = text;
-        if (tmp == 0) { tmp += 1; }
-        while (tmp < limit) {
-          zeros += "0";
-          tmp *= 10;
-        }
-        return zeros + text;
-      }
+      $(document).ready(function() {
+        var lastSync = 0;
+        var syncInterval = 60*1000; // Every minute
 
-      /* Waiting for Bettina <3 */
-      function startBettinaCounter() {
+        function syncPage() {
+          lastSync = new Date().getTime();
+
           var countDownDate = new Date("Feb 23, 2018 14:45:00 GMT-0800").getTime();
-
-          // Get todays date and time
           var d = new Date();
           var now = new Date(d.getTime() + (d.getTimezoneOffset() - 480) * 6000);
 
-          // Time calculations for days, hours, minutes and seconds
-          var days         = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
-          var hours        = Math.floor((countDownDate - now) / (1000 * 60 * 60)) - days * 24;
-          var minutes      = Math.floor((countDownDate - now) / (1000 * 60)) - 60*(hours + days * 24);
-          var seconds      = Math.floor((countDownDate - now) / 1000) - 60*(minutes + 60*(hours + days * 24));
-          var milliseconds = Math.floor((countDownDate - now)) - 1000*(seconds + 60*(minutes + 60*(hours + days*24)));
+          var clock = $(".clock").FlipClock((countDownDate - now)/1000, {
+              clockFace: "DailyCounter",
+              language: "da-dk",
+              countdown: true
+          });
+        }
 
-          if(days == 1) {
-            document.querySelector(".e").style.display = "none";
+        setInterval(function() {
+          var now = new Date().getTime();
+          if ((now - lastSync) > syncInterval) {
+            syncPage();
           }
+        }, 5000);
 
-          days         = zeroPad(days,          10);
-          hours        = zeroPad(hours,         10);
-          minutes      = zeroPad(minutes,       10);
-          seconds      = zeroPad(seconds,       10);
-          milliseconds = zeroPad(milliseconds, 100);
-
-          document.querySelector(".day-0").style.backgroundPositionY         = -540*parseInt(        days[0]) + "px";
-          document.querySelector(".day-1").style.backgroundPositionY         = -540*parseInt(        days[1]) + "px";
-          document.querySelector(".hour-0").style.backgroundPositionY        = -540*parseInt(       hours[0]) + "px";
-          document.querySelector(".hour-1").style.backgroundPositionY        = -540*parseInt(       hours[1]) + "px";
-          document.querySelector(".minute-0").style.backgroundPositionY      = -540*parseInt(     minutes[0]) + "px";
-          document.querySelector(".minute-1").style.backgroundPositionY      = -540*parseInt(     minutes[1]) + "px";
-          document.querySelector(".second-0").style.backgroundPositionY      = -540*parseInt(     seconds[0]) + "px";
-          document.querySelector(".second-1").style.backgroundPositionY      = -540*parseInt(     seconds[1]) + "px";
-          document.querySelector(".millisecond-0").style.backgroundPositionY = -540*parseInt(milliseconds[0]) + "px";
-          document.querySelector(".millisecond-1").style.backgroundPositionY = -540*parseInt(milliseconds[1]) + "px";
-          document.querySelector(".millisecond-2").style.backgroundPositionY = -540*parseInt(milliseconds[2]) + "px";
-      }
-
-      (function() {
-        /* Waiting for Bettina <3 */
-        setInterval(startBettinaCounter, 1);
-        startBettinaCounter();
-      })();
+        syncPage();
+      });
     </script>
   </body>
 </html>
