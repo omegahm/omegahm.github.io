@@ -10,32 +10,33 @@
     },
     "wishes": [
       {
-        "title": "SNES Classic Mini",
-        "url": "https://store.nintendo.co.uk/nintendo-classic-mini-hardware/nintendo-classic-mini-super-nintendo-entertainment-system/11495711.html"
+        "title": { "en": "New training outfit (tank top, shorts, and sneakers size EU 44)", "da": "Nyt træningstøj (tanktop, shorts og sko størrelse 44)" },
+        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
       },
       {
-        "title": { "en": "Zwilling Frying Pan 20cm", "da": "Zwilling Stegepande 20cm" },
-        "url": "https://dk.zwilling-shop.com/Koekken-univers/Gryder-Pander/Pander/Stegepander/Stegepande-Duraslide-Ultra-non-stick-belaegning-ZWILLING-40958-206-0.html"
+        "title": { "en": "Bose QuietComfort 35 Mk. 2 (wireless)", "da": "Bose QuietComfort 35 II (trådløse)" },
+        "url": "https://www.bose.dk/da_dk/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html",
+        "image": "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc35_ii/images/qc35_ii_product_page_hotspot_silo_1x1.psd/jcr:content/renditions/cq5dam.web.1280.1280.png"
       },
       {
         "title": { "en": "Raadvad Royal santuko knife", "da": "Raadvad Royal santukokniv" },
-        "url": "http://www.thegoodstuffshop.dk/product.asp?product=26409"
-      },
-      {
-        "title": { "en": "3x Herb/Spice Grinder", "da": "3x Rosendahl Grand Cru Krydderikværn" },
-        "url": "https://www.rosendahl.dk/shop/serier/grand-cru/kvaerne/p-112/gc-kvaern"
-      },
-      {
-        "title": "Dyson DC33 Stubborn",
-        "url": "https://www.wupti.com/produkter/husholdning/stoevsugere/poseloese-stoevsugere/dyson-dc33-stubborn-opretstaae"
+        "url": "http://www.thegoodstuffshop.dk/product.asp?product=26409",
+        "image": "https://www.thegoodstuffshop.dk/img/-img-17412-w710-h521.jpg"
       },
       {
         "title": { "en": "Automatic espresso machine", "da": "Automatisk espressomaskine ala Gaggia Velasca Black" },
-        "url": "https://www.rigtigkaffe.dk/automatiske-espressomaskiner/"
+        "url": "https://www.rigtigkaffe.dk/automatiske-espressomaskiner/",
+        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
       },
       {
-        "title": { "en": "Tassen mugs and bowls", "da": "Tassen kopper og skåle" },
-        "url": "https://tassen-shop.dk/en/home/330-grinende-kaffekop.html"
+        "title": { "en": "Växer (large) 55x35cm", "da": "Växer (stor) 55x35cm" },
+        "url": "https://www.ikea.com/dk/da/catalog/products/10318729/",
+        "image": "https://www.ikea.com/dk/da/images/products/vaxer-dyrkningss-t-gra__0441668_PE593494_S4.JPG"
+      },
+      {
+        "title": { "en": "Krydda (large) for 55x35cm Växer", "da": "Krydda (stor) til 55x35cm Växer" },
+        "url": "https://www.ikea.com/dk/da/catalog/products/50318440/",
+        "image": "https://www.ikea.com/dk/da/images/products/krydda-stativ-til-dyrkningss-t-sort__0441677_PE593497_S4.JPG"
       }
     ]
   },
@@ -51,7 +52,7 @@
   {
     "icon": "cubes",
     "title": {
-      "en": "Boardgames",
+      "en": "Board games",
       "da": "Brætspil"
     },
     "wishes": [
@@ -82,10 +83,6 @@
       {
         "title": "Pandemic Legacy: Season 1",
         "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00TQ0DXR2&asins=B00TQ0DXR2&linkId=490a80c44b5ded4a4f617ad889bc5587&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
-      },
-      {
-        "title": "Descent: Journey in the Dark (2nd Edition)",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=1616611898&asins=1616611898&linkId=744582a61c1293971723d9d28b7a480f&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
       }
     ]
   },
@@ -105,7 +102,6 @@
       { "title": "" },
       { "title": "A Tale of Two Citites - Charles Dickens",              "url": "http://amzn.to/2AYJ6gL" },
       { "title": "All Quiet on the Western Front - Erich Maria Remarque"                                 },
-      { "title": "Animal Farm - George Orwell",                          "url": "http://amzn.to/2yM1ljs" },
       { "title": "Artemis - Andy Weir"                                                                   },
       { "title": "Brave New World - Aldous Huxley"                                                       },
       { "title": "Catch-22 - Joseph Heller",                             "url": "http://amzn.to/2CGbCAJ" },
@@ -121,7 +117,6 @@
       { "title": "Meditations - Marcus Aurelius",                        "url": "http://amzn.to/2CqfrJF" },
       { "title": "Moby Dick - Herman Melville",                          "url": "http://amzn.to/2AZYTvP" },
       { "title": "Night - Elie Wiesel",                                  "url": "http://amzn.to/2kB18dX" },
-      { "title": "Of Mice and Men - John Steinbeck"                                                      },
       { "title": "One Hundred Years of Solitude - Gabriel García Márquez"                                },
       { "title": "Slaughterhouse-Five - Kurt Vonnegut",                  "url": "http://amzn.to/2AZ9oPH" },
       { "title": "Stardust - Neil Gaiman",                               "url": "http://amzn.to/2AYGO10" },
@@ -142,7 +137,6 @@
       { "title": "The Phantom Tollbooth - Norton Juster",                "url": "http://amzn.to/2yKoRNT" },
       { "title": "The Stand - Stephen King",                             "url": "http://amzn.to/2CKW6np" },
       { "title": "The Things They Carried - Tim O'Brien",                "url": "http://amzn.to/2Bx2lgS" },
-      { "title": "The War of the Worlds - H.G. Wells",                   "url": "http://amzn.to/2yLvu2h" },
       { "title": "The Wonderful Wizard of Oz - L. Frank Baum (Series)",  "url": "http://amzn.to/2By97ml" },
       { "title": "The Yellow Wallpaper - Charlote Perkins Gilman",       "url": "http://amzn.to/2kBSpbm" },
       { "title": "Thus Spoke Zarathustra - Friedrich Nietzsche",         "url": "http://amzn.to/2BlWvfO" },

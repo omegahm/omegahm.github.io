@@ -3,15 +3,12 @@
 ##########
 name: Ohm
 website: ohm.sh
+url: https://ohm.sh
 description: My Little Part of the Web
 metadescription: "Mads Ohm Larsen, Ph.D. student at Niels Bohr Institute, located in Copenhagen, Denmark, Ruby magician, Python ninja, trying hard or hardly trying."
 lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
 sass:
   sass_dir: _sass
@@ -33,7 +30,7 @@ navigation:
 - text: CV
   url: /cv.html
   symbol: fa-star
-- text: Wish-list
+- text: Wish list
   url: /wishlist.html
   symbol: fa-gift
 - text: Master Thesis (2012)

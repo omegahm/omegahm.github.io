@@ -40,13 +40,14 @@ class Wish
     @title = ko.pureComputed => data.title[language()] || data.title['en'] || data.title
     @url   = data.url
     @code  = data.code
+    @image = data.image
 
 $ ->
   wistList = new WishList(
     (location.hash || 'en').replace('#', ''),
     {
       "en": {
-        "wishlist": "Wish-list",
+        "wishlist": "Wish list",
         "change_language": "Change language:",
         "info": "Wishes are sorted by preference in each category."
       },
