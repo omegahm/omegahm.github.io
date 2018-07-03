@@ -14,19 +14,24 @@
         "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
       },
       {
+        "title": { "en": "Kindle Oasis", "da": "Kindle Oasis" },
+        "url": "https://www.pricerunner.dk/pl/1156-4340533/E-bogslaesere/Amazon-Kindle-Oasis-7-(2017)-8GB-Sammenlign-Priser",
+        "image": "https://images.pricerunner.com/product/400x400/1739761684/Amazon-Kindle-Oasis-7-(2017)-8GB.jpg"
+      },
+      {
         "title": { "en": "Bose QuietComfort 35 Mk. 2 (wireless)", "da": "Bose QuietComfort 35 II (trådløse)" },
         "url": "https://www.bose.dk/da_dk/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html",
         "image": "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc35_ii/images/qc35_ii_product_page_hotspot_silo_1x1.psd/jcr:content/renditions/cq5dam.web.1280.1280.png"
       },
       {
-        "title": { "en": "Raadvad Royal santuko knife", "da": "Raadvad Royal santukokniv" },
-        "url": "http://www.thegoodstuffshop.dk/product.asp?product=26409",
-        "image": "https://www.thegoodstuffshop.dk/img/-img-17412-w710-h521.jpg"
+        "title": { "en": "KitchenAid screen (Artisan)", "da": "KitchenAid Skærm (Artisan)" },
+        "url": "https://www.kitchenone.dk/produkt/kitchenaid-skaerm-klar/",
+        "image": "https://static.goshopping.dk/products/2000/skaerm-klar-5k7ps-6918-1.jpg"
       },
       {
-        "title": { "en": "Automatic espresso machine", "da": "Automatisk espressomaskine ala Gaggia Velasca Black" },
-        "url": "https://www.rigtigkaffe.dk/automatiske-espressomaskiner/",
-        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
+        "title": { "en": "Apple Watch 42mm band (not necessarily the one depicted)", "da": "Apple Watch 42mm rem (ikke nødvendigvis den på billedet)" },
+        "url": "https://www.apple.com/dk/shop/watch/bands",
+        "image": "https://store.storeimages.cdn-apple.com/4667/as-images.apple.com/is/image/AppleInc/aos/published/images/M/RY/MRY32/MRY32?wid=572&hei=572&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1526685942412"
       },
       {
         "title": { "en": "Växer (large) 55x35cm", "da": "Växer (stor) 55x35cm" },
@@ -37,6 +42,23 @@
         "title": { "en": "Krydda (large) for 55x35cm Växer", "da": "Krydda (stor) til 55x35cm Växer" },
         "url": "https://www.ikea.com/dk/da/catalog/products/50318440/",
         "image": "https://www.ikea.com/dk/da/images/products/krydda-stativ-til-dyrkningss-t-sort__0441677_PE593497_S4.JPG"
+      },
+      {
+        "title": { "en": "Philips Hue light bulbs (starter kit with bridge)", "da": "Philips Hue pærer (starter kit med bro)" },
+        "url": "https://www.proshop.dk/Smart-Home/Philips-Hue-White-3-Bulbs-Switch-Starter-Kit/2614256",
+        "image": "https://cdn.proshop-static.com/Images/300x251/2614256_ce286fbe2eb2.png"
+      },
+      {
+        "title": { "en" : "Giftcard for IKEA", "da": "Gavekort til IKEA" },
+        "image": "https://www.ikea.com/ms/img/header/ikea-logo.svg"
+      },
+      {
+        "title": { "en": "Nice gins and tonics", "da": "Gode gin og tonic" },
+        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
+      },
+      {
+        "title": { "en": "Exciting coffes (whole beans)", "da": "Spændende kaffe (hele bønner)" },
+        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
       }
     ]
   },
@@ -47,6 +69,31 @@
       "da": "Ting til maling/brætspil"
     },
     "wishes": [
+      {
+        "title": { "en": "Stand for paints (not necessarily the one depicted)", "da": "Holder til mailing (ikke nødvendigvis den på billedet)" },
+        "url": "https://www.amazon.co.uk/Vallejo-VJ26007-Acrylics-Paint-Stand/dp/B01720DWKU/",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51-YT0UYS0L.jpg"
+      },
+      {
+        "title": { "en": "Blood Bowl Ogre", "da": "Blood Bowl Ogre" },
+        "url": "https://www.games-workshop.com/en-DK/Blood-Bowl-Ogre",
+        "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120999001_BloodBowlOgre01.jpg"
+      },
+      {
+        "title": { "en": "The Drawf Giants Collection (Blood Bowl team)", "da": "The Drawf Giants Collection (Blood Bowl hold)" },
+        "url": "https://www.games-workshop.com/en-DK/Blood-Bowl-Dwarf-Bundle",
+        "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99020905001_DwarfBundle01.jpg"
+      },
+      {
+        "title": { "en": "Elven Union Team Collection (Blood Bowl team)", "da": "Elven Union Team Collection (Blood Bowl hold)" },
+        "url": "https://www.games-workshop.com/en-DK/Blood-Bowl-Elf-Union-Team-Collection-2017",
+        "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99020910001_ElfheimTeamCollection01.jpg"
+      },
+      {
+        "title": { "en": "Skavenblight Scramblers Collection (Blood Bowl team)", "da": "Skavenblight Scramblers Collection (Blood Bowl hold)" },
+        "url": "https://www.games-workshop.com/en-DK/Skavenblight-Scramblers-Collection-2017",
+        "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99020906006_SkavenblightScramblersCollection01.jpg"
+      }
     ]
   },
   {
@@ -57,32 +104,24 @@
     },
     "wishes": [
       {
-        "title": "Patchwork",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00RCCAPPE&asins=B00RCCAPPE&linkId=ae21eb38786ce9c8771f9c8169114162&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
-      },
-      {
         "title": "Kingdomino",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B01N3A4070&asins=B01N3A4070&linkId=6a22b989b6b478f4e8bcaf4ee8101ce9&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
+        "url": "https://www.amazon.com/Blue-Orange-Kingdomino-Winning-Strategy/dp/B01N3A4070",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/91j3ey6HyRL._SX679_.jpg"
       },
       {
         "title": "Forbidden Desert",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00B4ECHJI&asins=B00B4ECHJI&linkId=319e628a82a15aa0d0ca4c884b6c6927&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
+        "url": "https://www.amazon.com/Gamewright-415-Forbidden-Desert-Board/dp/B00B4ECHJI",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81ICi2SuX3L._SX679_.jpg"
       },
       {
         "title": "Necromunda: Underhive",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B0779M8VD5&asins=B0779M8VD5&linkId=f80f6ee8e3fd3763aa730ea904a83c56&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
-      },
-      {
-        "title": "Android: Netrunner",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=1616614609&asins=1616614609&linkId=2ff72a899766b2ac889c2e19581aac5d&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
+        "url": "https://www.amazon.com/Games-Workshop-60010599001-Necromunda-Underhive/dp/B0779M8VD5",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61n1N7AHsyL._SX679_.jpg"
       },
       {
         "title": "Hive",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B000EN5ZLW&asins=B000EN5ZLW&linkId=0235799d30bffda620b5a7308eb3f08d&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
-      },
-      {
-        "title": "Pandemic Legacy: Season 1",
-        "code": "<iframe style=\"width:120px;height:240px;\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" frameborder=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=madsohm-20&marketplace=amazon&region=US&placement=B00TQ0DXR2&asins=B00TQ0DXR2&linkId=490a80c44b5ded4a4f617ad889bc5587&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=428bca&bg_color=ffffff\"></iframe>"
+        "url": "https://www.amazon.com/Gen42-Games-Hive-Crawling-Possibilities/dp/B000EN5ZLW",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/A1YhmlIFNYL._SX679_.jpg"
       }
     ]
   },
