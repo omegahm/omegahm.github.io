@@ -10,10 +10,6 @@
     },
     "wishes": [
       {
-        "title": { "en": "New training outfit (tank top, shorts, and sneakers size EU 44)", "da": "Nyt træningstøj (tanktop, shorts og sko størrelse 44)" },
-        "image": "http://via.placeholder.com/125x100/ffffff?text=No%20image"
-      },
-      {
         "title": { "en": "Kindle Oasis", "da": "Kindle Oasis" },
         "url": "https://www.pricerunner.dk/pl/1156-4340533/E-bogslaesere/Amazon-Kindle-Oasis-7-(2017)-8GB-Sammenlign-Priser",
         "image": "https://images.pricerunner.com/product/400x400/1739761684/Amazon-Kindle-Oasis-7-(2017)-8GB.jpg"
@@ -122,11 +118,6 @@
         "title": "Necromunda: Underhive",
         "url": "https://www.amazon.com/Games-Workshop-60010599001-Necromunda-Underhive/dp/B0779M8VD5",
         "image": "https://images-na.ssl-images-amazon.com/images/I/61n1N7AHsyL._SX679_.jpg"
-      },
-      {
-        "title": "Hive",
-        "url": "https://www.amazon.com/Gen42-Games-Hive-Crawling-Possibilities/dp/B000EN5ZLW",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/A1YhmlIFNYL._SX679_.jpg"
       }
     ]
   },
