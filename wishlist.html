@@ -9,16 +9,11 @@ extra_script_url: '/js/wishlist.js'
   <div class="page-header">
     <h1>
       <i class="fa fa-gift"></i>
-      <span data-bind="text: headline"></span>
+      Wish List
     </h1>
   </div>
 
-  <div class="pull-right">
-    <span data-bind="text: changeLanguage"></span>
-    <select data-bind="options: languages, value: language"></select>
-  </div>
-
-  <i data-bind="text: info"></i>
+  <i>Wishes are sorted by preference in each category.</i>
 
   <div class="wish-categories" data-bind="foreach: wishCategories">
     <!-- ko ifnot: wishes().length == 0 -->
@@ -31,11 +26,6 @@ extra_script_url: '/js/wishlist.js'
       </div>
       <div class="panel-body">
         <ul class="wish-list" data-bind="foreach: wishes">
-          <!-- ko if: code -->
-          <div class="amazon-wish" data-bind="html: code"></div>
-          <!-- /ko -->
-
-          <!-- ko ifnot: code -->
           <!-- ko ifnot: url -->
           <li>
             <!-- ko ifnot: title -->
@@ -59,7 +49,6 @@ extra_script_url: '/js/wishlist.js'
               <span data-bind="text: title"></span>
             </a>
           </li>
-          <!-- /ko -->
           <!-- /ko -->
         </ul>
       </div>

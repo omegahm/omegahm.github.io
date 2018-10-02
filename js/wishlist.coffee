@@ -2,63 +2,42 @@
 ---
 
 class WishList
-  constructor: (language, @i18n) ->
+  constructor: () ->
     @wishCategories = ko.observableArray([])
-    @languages = ['en', 'da']
-    @language = ko.observable(language)
-
-    @language.subscribe (lang) ->
-      location.hash = lang
-
-    @headline       = @t('wishlist')
-    @changeLanguage = @t('change_language')
-    @info           = @t('info')
 
     ko.computed =>
-      $(document).prop('title', @headline() + " | {{ site.website }}")
+      $(document).prop('title', "Wish List | {{ site.website }}")
 
   addCategory: (category) =>
-    @wishCategories.push(new Category(category, @language))
-
-  t: (key) =>
-    ko.pureComputed => @i18n[@language()][key]
+    @wishCategories.push(category)
 
 class Category
-  constructor: (data, language) ->
-    @title  = ko.pureComputed => data.title[language()] || data.title['en']
-    @icon   = "fa-#{data.icon}"
+  constructor: (data) ->
+    @title  = data.gsx$name.$t.replace(/^-- /, '')
+    @icon   = "fa-#{data.gsx$image.$t}"
     @wishes = ko.observableArray([])
 
-    @initWishes(data.wishes, language)
-
-  initWishes: (wishesData, language) ->
-    wishesData.forEach (data) =>
-      @wishes.push(new Wish(data, language))
+  addWish: (wish) =>
+    @wishes.push(wish)
 
 class Wish
-  constructor: (data, language) ->
-    @title = ko.pureComputed => data.title[language()] || data.title['en'] || data.title
-    @url   = data.url
-    @code  = data.code
-    @image = data.image
+  constructor: (data) ->
+    @title = data.gsx$name.$t
+    @url   = data.gsx$link.$t
+    @image = data.gsx$image.$t
 
 $ ->
-  wistList = new WishList(
-    (location.hash || 'en').replace('#', ''),
-    {
-      "en": {
-        "wishlist": "Wish list",
-        "change_language": "Change language:",
-        "info": "Wishes are sorted by preference in each category."
-      },
-      "da": {
-        "wishlist": "Ønskeseddel",
-        "change_language": "Skift sprog:",
-        "info": "Ønskerne er sorteret efter præference i hver kategori."
-      }
-    }
-  )
-  ko.applyBindings wistList, document.getElementById('wishes')
+  wishList = new WishList
+  ko.applyBindings wishList, document.getElementById('wishes')
 
-  $.getJSON '/js/wishes.json', (data) ->
-    data.forEach (category) -> wistList.addCategory(category)
+  google_sheets_url = "https://spreadsheets.google.com/feeds/list/13ROGhTaYSxWIT509hgRsn1MGKRIKaRR7D6Pyiyv5O5M/od6/public/values?alt=json";
+
+  category = null
+  $.getJSON google_sheets_url, (data) =>
+    console.log data
+    for entry in data.feed.entry
+      if entry.gsx$name.$t.match(/^--/)
+        category = new Category(entry)
+        wishList.addCategory(category)
+      else
+        category.addWish(new Wish(entry))
