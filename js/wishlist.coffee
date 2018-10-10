@@ -5,9 +5,6 @@ class WishList
   constructor: () ->
     @wishCategories = ko.observableArray([])
 
-    ko.computed =>
-      $(document).prop('title', "Wish List | {{ site.website }}")
-
   addCategory: (category) =>
     @wishCategories.push(category)
 
@@ -34,7 +31,6 @@ $ ->
 
   category = null
   $.getJSON google_sheets_url, (data) =>
-    console.log data
     for entry in data.feed.entry
       if entry.gsx$name.$t.match(/^--/)
         category = new Category(entry)
