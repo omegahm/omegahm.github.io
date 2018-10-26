@@ -13,44 +13,58 @@ extra_script_url: '/js/wishlist.js'
     </h1>
   </div>
 
-  <i>Wishes are sorted by preference in each category.</i>
+  <i>Ønskerne er sorteret efter præference.</i>
 
-  <div class="wish-categories" data-bind="foreach: wishCategories">
-    <!-- ko ifnot: wishes().length == 0 -->
+  <div class="wish-people" data-bind="foreach: people">
+    <!-- ko ifnot: total_wishes() == 0 -->
     <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>
-          <i class="fa" data-bind="css: icon"></i>
-          <span data-bind="text: title"></span>
-        </h4>
+      <div class="panel-heading wish-person">
+        <h3>
+          <span data-bind="text: name"></span>
+          (<span data-bind="text: total_wishes"></span>)
+        </h3>
       </div>
       <div class="panel-body">
-        <ul class="wish-list" data-bind="foreach: wishes">
-          <!-- ko ifnot: url -->
-          <li>
-            <!-- ko ifnot: title -->
-            <hr style="margin: 0 -20px; left: -5px; position: relative;">
-            <!-- /ko -->
-            <!-- ko if: title -->
-            <!-- ko if: image -->
-            <img class="wish-image" data-bind="attr: { src: image }" />
-            <!-- /ko -->
-            <span data-bind="html: title"></span>
-            <!-- /ko -->
-          </li>
-          <!-- /ko -->
+        <div class="wish-categories" data-bind="foreach: wishCategories">
+          <!-- ko ifnot: wishes().length == 0 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>
+                <i class="fa" data-bind="css: icon"></i>
+                <span data-bind="text: title"></span>
+              </h4>
+            </div>
+            <div class="panel-body">
+              <ul class="wish-list" data-bind="foreach: wishes">
+                <!-- ko ifnot: url -->
+                <li>
+                  <!-- ko ifnot: title -->
+                  <hr style="margin: 0 -20px; left: -5px; position: relative;">
+                  <!-- /ko -->
+                  <!-- ko if: title -->
+                  <div class="wish-image-wrapper">
+                    <img class="wish-image" data-bind="attr: { src: image }" />
+                  </div>
+                  <span data-bind="html: title"></span>
+                  <!-- /ko -->
+                </li>
+                <!-- /ko -->
 
-          <!-- ko if: url  -->
-          <li>
-            <a data-bind="attr: { href: url }">
-              <!-- ko if: image -->
-              <img class="wish-image" data-bind="attr: { src: image }" />
-              <!-- /ko -->
-              <span data-bind="text: title"></span>
-            </a>
-          </li>
+                <!-- ko if: url  -->
+                <li>
+                  <a data-bind="attr: { href: url }">
+                    <div class="wish-image-wrapper">
+                      <img class="wish-image" data-bind="attr: { src: image }" />
+                    </div>
+                    <span data-bind="text: title"></span>
+                  </a>
+                </li>
+                <!-- /ko -->
+              </ul>
+            </div>
+          </div>
           <!-- /ko -->
-        </ul>
+        </div>
       </div>
     </div>
     <!-- /ko -->
