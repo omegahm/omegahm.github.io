@@ -5,7 +5,7 @@ name: Ohm
 website: ohm.sh
 url: https://ohm.sh
 description: My Little Part of the Web
-metadescription: "Mads Ohm Larsen, Ph.D. student at Niels Bohr Institute, located in Copenhagen, Denmark, Ruby magician, Python ninja, trying hard or hardly trying."
+metadescription: "Mads Ohm Larsen, Ph.D. Elastician located in Copenhagen, Denmark, Ruby magician, trying hard or hardly trying."
 lsi: false
 timezone: Europe/Copenhagen
 encoding: utf-8
@@ -33,6 +33,10 @@ navigation:
 - text: Wish list
   url: /wishlist.html
   symbol: fa-gift
+- text: PhD thesis
+  title: Bohrium and CSP
+  url: /files/phd.pdf
+  symbol: fa-flask
 - text: Master Thesis (2012)
   title: Exception Handling in Communicating Sequential Processes
   url: /files/thesis.pdf
