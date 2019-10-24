@@ -31,7 +31,7 @@ navigation:
   url: /cv.html
   symbol: fa-star
 - text: Wish list
-  url: /wishlist.html
+  url: https://ohmbrix.dk/ønsker
   symbol: fa-gift
 - text: PhD thesis
   title: Bohrium and CSP
