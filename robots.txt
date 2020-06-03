@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://ohm.sh/sitemap.xml
+Sitemap: https://mads.ohmbrix.dk/sitemap.xml
