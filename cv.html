@@ -6,6 +6,16 @@ permalink: /cv.html
 work:
 - title: Professional Experience
   entries:
+  - name: Elastic
+    url: https://www.elastic.co
+    place: Remote
+    position: Senior Software Developer
+    start_time: December 2018
+    end_time: present
+    tags:
+    - Ruby on Rails
+    - React
+    - Elasticsearch
   - name: Lokalebasen
     url: https://www.lokalebasen.dk
     place: Copenhagen, Denmark
@@ -47,7 +57,7 @@ other:
 - title: Service
   entries:
   - name: Moderator on MetaRuby.com
-    time: 2016 - present
+    time: 2016 - 2019
     description: Moderate people on the forum as well as actively posting
     url: https://metaruby.com/
   - name: Moderator on RailsForum.com
@@ -91,6 +101,36 @@ other:
   </h1>
 </div>
 
+{% for thing in page.work %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ thing.title }}</h3>
+    </div>
+    <div class="panel-body">
+      {% for entry in thing.entries %}
+        <div class="callout">
+          <h4 class="lead">
+            <a href="{{ entry.url }}">{{ entry.name }}</a>, {{ entry.place}}
+          </h4>
+
+          <div class="clearfix">
+            <em>{{ entry.position }}</em>
+            <span class="pull-right">
+              <time>{{ entry.start_time }}</time> - <time>{{ entry.end_time }}</time>
+            </span>
+          </div>
+
+          <div class="tags">
+            {% for tag in entry.tags %}
+              <span class="label label-primary">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Education</h3>
@@ -105,12 +145,14 @@ other:
       <div class="clearfix">
         <em>Ph.D. student</em>
         <span class="pull-right">
-          <time>January 2016</time> - <time>present</time>
+          <time>January 2016</time> - <time>December 2018</time>
         </span>
       </div>
 
       <p>
-        &mdash; Working title: <em>Concurrent Parallelism: an adventure into the world of parallel I/O and computations</em>
+        &mdash; Bohrium and CSP: an adventure in parallel processing and concurrent communication
+        <br>
+        &mdash; Published several times. See <a href="https://scholar.google.com/citations?user=KhgDoPEAAAAJ&hl=en">Google Scholar</a>
       </p>
 
       <p>
@@ -160,36 +202,6 @@ other:
 
   </div>
 </div>
-
-{% for thing in page.work %}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{ thing.title }}</h3>
-    </div>
-    <div class="panel-body">
-      {% for entry in thing.entries %}
-        <div class="callout">
-          <h4 class="lead">
-            <a href="{{ entry.url }}">{{ entry.name }}</a>, {{ entry.place}}
-          </h4>
-
-          <div class="clearfix">
-            <em>{{ entry.position }}</em>
-            <span class="pull-right">
-              <time>{{ entry.start_time }}</time> - <time>{{ entry.end_time }}</time>
-            </span>
-          </div>
-
-          <div class="tags">
-            {% for tag in entry.tags %}
-              <span class="label label-primary">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-{% endfor %}
 
 {% for thing in page.hobby %}
   <div class="panel panel-default">
